@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>gesture synth · Shreenand Bhattad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎛</text></svg>">
+<link rel="stylesheet" href="style.css">
+<style>
+main{max-width:960px}
+#stagebox{position:relative;width:100%;aspect-ratio:4/3;border-radius:18px;overflow:hidden;background:#0c0e14;
+  box-shadow:0 16px 44px rgba(90,100,80,.16);border:1px solid var(--line);transition:box-shadow .15s ease}
+#vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scaleX(-1);filter:brightness(.82) saturate(1.08) contrast(1.04)}
+#trail{position:absolute;inset:0;width:100%;height:100%}
+#vignette{position:absolute;inset:0;pointer-events:none;z-index:2;
+  box-shadow:inset 0 0 90px 20px rgba(0,0,0,.55);mix-blend-mode:multiply}
+#scanlines{position:absolute;inset:0;pointer-events:none;z-index:2;opacity:.05;
+  background:repeating-linear-gradient(0deg,#fff 0 1px,transparent 1px 3px)}
+.laghand{position:absolute;top:14px;left:50%;transform:translateX(-50%);z-index:4;
+  font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#e5967a;
+  background:rgba(10,12,18,.6);padding:4px 12px;border-radius:999px;opacity:0;transition:opacity .3s}
+.laghand.show{opacity:1}
+.startgate{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;
+  background:linear-gradient(160deg,#1a1e2b,#0c0e14);color:#e8e6e0;text-align:center;padding:24px;z-index:5}
+.startgate .ic{font-size:2.4rem}
+.startbtn{background:#5b7ea3;color:#fff;border:none;border-radius:999px;padding:13px 30px;
+  font-family:var(--sans);font-size:.92rem;font-weight:600;cursor:pointer;transition:background .3s,transform .2s}
+.startbtn:hover{background:#7495b5}
+.startbtn:active{transform:scale(.96)}
+.gatehint{font-size:.8rem;color:#9a978f;max-width:340px;line-height:1.6}
+.readout{position:absolute;top:14px;left:14px;right:14px;display:flex;justify-content:space-between;
+  font-family:var(--sans);color:#fff;pointer-events:none;z-index:3}
+.readout .side{background:rgba(10,12,18,.55);backdrop-filter:blur(6px);border-radius:12px;padding:8px 14px;min-width:120px}
+.readout .k{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;opacity:.6}
+.readout .v{font-size:1.05rem;font-weight:700;font-variant-numeric:tabular-nums;margin-top:2px}
+.readout .chord{color:#fff}
+.readout .side2{color:#fff;opacity:.8;font-weight:600;font-size:.82rem;margin-top:1px}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:16px}
+.chipbtn{border:1px solid var(--line);background:transparent;color:var(--soft);border-radius:999px;padding:7px 15px;
+  font-family:var(--sans);font-size:.82rem;cursor:pointer;transition:all .25s}
+.chipbtn:hover{color:var(--ink);border-color:var(--faint)}
+.chipbtn.on{background:var(--ink);color:#faf8f3;border-color:var(--ink)}
+body.night .chipbtn.on{background:#e8e6e0;color:#232838}
+.hint{font-size:.8rem;color:var(--faint);margin-top:12px;text-align:center;line-height:1.7}
+.legendrow{display:flex;gap:22px;justify-content:center;margin-top:6px;font-size:.78rem;color:var(--soft);flex-wrap:wrap}
+.legendrow span i{display:inline-block;width:11px;height:11px;margin-right:7px;vertical-align:middle;border:1.6px solid var(--ink);border-radius:50%;box-sizing:border-box}
+.legendrow span.dash i{border-style:dashed}
+body.night .legendrow span i{border-color:#e8e6e0}
+.notepill{position:absolute;top:14px;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:5px}
+.notepill span{background:rgba(10,12,18,.55);color:#fff;font-size:.62rem;padding:3px 7px;border-radius:6px;
+  font-family:var(--sans);opacity:.4;transition:opacity .2s,background .2s,transform .2s}
+.notepill span.active{opacity:1;background:#fff;color:#0c0e14;font-weight:700;transform:translateY(-2px)}
+</style>
+</head>
+<body>
+
+<div class="sky" id="sky"></div>
+
+<nav>
+  <a class="home" href="index">Shreenand</a>
+  <div class="pages">
+    <a href="about">about</a>
+    <a href="work">work</a>
+    <a href="projects">projects</a>
+    <a href="play" class="here">play</a>
+    <a href="guestbook">guestbook</a>
+    <a href="contact">say hi</a>
+  </div>
+</nav>
+
+<main>
+  <h1 class="page fade in">gesture synth</h1>
+  <p class="sub fade in">play chords with your bare hands. left hand picks the chord, right hand shapes it, tracked live by computer vision.</p>
+
+  <div id="stagebox">
+    <video id="vid" autoplay playsinline muted></video>
+    <canvas id="trail"></canvas>
+    <div id="scanlines"></div>
+    <div id="vignette"></div>
+    <div class="laghand" id="lagFlag">hand lost, holding last chord</div>
+    <div class="notepill" id="notePill"></div>
+    <div class="readout">
+      <div class="side">
+        <div class="k">left hand · chord</div>
+        <div class="v chord" id="chordOut">–</div>
+      </div>
+      <div class="side" style="text-align:right">
+        <div class="k">right hand · shape</div>
+        <div class="v" id="shapeOut">–</div>
+        <div class="side2" id="shapeOut2"></div>
+      </div>
+    </div>
+    <div class="startgate" id="startgate">
+      <div class="ic">🎛</div>
+      <div style="font-size:1.15rem;font-weight:600">turn your hands into a chord synth</div>
+      <div class="gatehint">this needs your camera, entirely in your browser, nothing is recorded or sent anywhere. left hand picks the chord, right hand shapes octave, inversion, filter and volume.</div>
+      <button class="startbtn" id="startBtn">✋ enable camera & sound</button>
+    </div>
+  </div>
+
+  <div class="legendrow">
+    <span><i></i>left hand → root note (side to side) & major/minor (up/down)</span>
+    <span class="dash"><i></i>right hand → octave (height), inversion (side to side), pinch = filter, fist = volume</span>
+  </div>
+
+  <div class="controls">
+    <span class="hint" style="margin:0">timbre:</span>
+    <button class="chipbtn on" data-inst="warm">🎹 warm synth</button>
+    <button class="chipbtn" data-inst="bright">✨ bright synth</button>
+    <button class="chipbtn" data-inst="retro">👾 retro synth</button>
+  </div>
+  <div class="hint">move both hands into frame to play · left hand's horizontal position picks the root (C..B), upper half = major, lower half = minor · right hand height sets octave, left/right sets inversion, pinch narrows the filter, open the hand fully for full volume</div>
+
+  <div class="next fade in"><a href="play">← back to play</a></div>
+</main>
+
+<script src="site.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+<script>
+/* ================================================================
+   GESTURE SYNTH: real hand tracking (MediaPipe Hands) driving a
+   real Web Audio chord synth. Left hand picks root + major/minor,
+   right hand shapes octave, inversion, filter brightness & volume.
+   ================================================================ */
+const vid = document.getElementById('vid');
+const trail = document.getElementById('trail');
+const tctx = trail.getContext('2d');
+let TW = 0, TH = 0;
+function fitTrail() {
+  const r = trail.getBoundingClientRect();
+  TW = r.width; TH = r.height;
+  trail.width = TW * (devicePixelRatio || 1);
+  trail.height = TH * (devicePixelRatio || 1);
+  tctx.setTransform(devicePixelRatio || 1, 0, 0, devicePixelRatio || 1, 0, 0);
+}
+addEventListener('resize', fitTrail);
+
+/* ---------------- chord theory ---------------- */
+const NOTE_NAMES = ['C', 'C♯', 'D', 'D♯', 'E', 'F', 'F♯', 'G', 'G♯', 'A', 'A♯', 'B'];
+const TRIAD = { major: [0, 4, 7], minor: [0, 3, 7] };
+function midiToFreq(midi) { return 440 * Math.pow(2, (midi - 69) / 12); }
+
+function rootForX(t) {
+  // t: 0 (left of frame) .. 1 (right). 12 roots across the frame.
+  return Math.max(0, Math.min(11, Math.floor(t * 12)));
+}
+function qualityForY(t) {
+  // t: 0 (top) .. 1 (bottom). upper half major, lower half minor.
+  return t < 0.5 ? 'major' : 'minor';
+}
+function invert(triad, inversion) {
+  // rotate the triad's lower notes up an octave per inversion step
+  const out = triad.slice();
+  for (let i = 0; i < inversion; i++) out.push(out.shift() + 12);
+  return out;
+}
+function chordMidi(root, quality, octave, inversion) {
+  const base = 48 + octave * 12 + root; // ~C3 base
+  const triad = invert(TRIAD[quality], inversion);
+  return triad.map(iv => base + iv);
+}
+
+/* ---------------- instrument voices ----------------
+   each "timbre" is a small harmonic recipe: a stack of oscillators at
+   different ratios/detunes/gains, which is what actually makes something
+   sound like a warm pad vs a bright pluck vs a retro square lead. */
+const INSTRUMENTS = {
+  warm: {
+    label: 'warm synth', filterBase: 500, filterSpan: 2600,
+    partials: [
+      { ratio: 1, type: 'sawtooth', gain: .5, detune: -6 },
+      { ratio: 1, type: 'sawtooth', gain: .5, detune: 6 },
+      { ratio: 2, type: 'sine', gain: .18 }
+    ]
+  },
+  bright: {
+    label: 'bright synth', filterBase: 1400, filterSpan: 4200,
+    partials: [
+      { ratio: 1, type: 'triangle', gain: .8 },
+      { ratio: 2, type: 'sawtooth', gain: .3 },
+      { ratio: 4, type: 'sine', gain: .12 }
+    ]
+  },
+  retro: {
+    label: 'retro synth', filterBase: 900, filterSpan: 3400,
+    partials: [
+      { ratio: 1, type: 'square', gain: .5 },
+      { ratio: 2, type: 'square', gain: .15 },
+      { ratio: .5, type: 'square', gain: .2 }
+    ]
+  }
+};
+let instName = 'warm';
+
+/* ---------------- audio engine: 3 harmonic-stack voices (one per chord tone) ---------------- */
+let actx = null, master = null, filt = null;
+let voices = []; // 3 voices, one per triad tone
+
+function makeVoice(dest, recipe) {
+  const g = actx.createGain();
+  g.gain.value = 0;
+  const oscs = recipe.partials.map(p => {
+    const o = actx.createOscillator();
+    o.type = p.type;
+    if (p.detune) o.detune.value = p.detune;
+    const pg = actx.createGain();
+    pg.gain.value = p.gain;
+    o.connect(pg).connect(g);
+    o.start();
+    return { osc: o, ratio: p.ratio };
+  });
+  g.connect(dest);
+  return { oscs, gain: g };
+}
+function setVoiceFreq(voice, freq) {
+  voice.oscs.forEach(o => o.osc.frequency.setTargetAtTime(freq * o.ratio, actx.currentTime, 0.045));
+}
+function rebuildVoices() {
+  const recipe = INSTRUMENTS[instName];
+  voices.forEach(v => {
+    v.oscs.forEach(o => { try { o.osc.stop(); o.osc.disconnect(); } catch (e) {} });
+    v.gain.disconnect();
+  });
+  voices = [makeVoice(master, recipe), makeVoice(master, recipe), makeVoice(master, recipe)];
+  filt.frequency.value = recipe.filterBase;
+  applyMixLevels();
+}
+function startAudio() {
+  actx = new (window.AudioContext || window.webkitAudioContext)();
+  filt = actx.createBiquadFilter();
+  filt.type = 'lowpass'; filt.frequency.value = 800; filt.Q.value = 1.1;
+  master = actx.createGain(); master.gain.value = 0;
+  master.connect(filt); filt.connect(actx.destination);
+  rebuildVoices();
+}
+function setChordPitches(freqs) {
+  voices.forEach((v, i) => { if (freqs[i]) setVoiceFreq(v, freqs[i]); });
+}
+function applyMixLevels() {
+  voices.forEach((v, i) => v.gain.gain.setTargetAtTime((i === 0 ? 0.55 : 0.32) * lastVol, actx.currentTime, 0.05));
+}
+let lastVol = 0;
+function setVolume(v) {
+  if (!master) return;
+  lastVol = v > 0 ? 1 : 0;
+  master.gain.setTargetAtTime(v, actx.currentTime, 0.06);
+  applyMixLevels();
+}
+function setBrightness(v) {
+  if (!filt) return;
+  const recipe = INSTRUMENTS[instName];
+  filt.frequency.setTargetAtTime(recipe.filterBase + v * recipe.filterSpan, actx.currentTime, 0.08);
+}
+function setInstrument(name) {
+  instName = name;
+  if (actx) rebuildVoices();
+}
+
+document.querySelectorAll('[data-inst]').forEach(b => b.addEventListener('click', () => {
+  setInstrument(b.dataset.inst);
+  document.querySelectorAll('[data-inst]').forEach(x => x.classList.remove('on'));
+  b.classList.add('on');
+}));
+
+/* ---------------- note pills: little markers showing the 12 root slots ---------------- */
+function buildNotePills() {
+  const box = document.getElementById('notePill');
+  box.innerHTML = NOTE_NAMES.map((n, i) => `<span data-deg="${i}">${n}</span>`).join('');
+}
+buildNotePills();
+function highlightPill(root) {
+  document.querySelectorAll('#notePill span').forEach(el =>
+    el.classList.toggle('active', +el.dataset.deg === root));
+}
+
+/* ---------------- hand tracking, smoothed against camera jitter ---------------- */
+let rightHand = null, leftHand = null; // smoothed {x,y,pinch}
+let rightRaw = null, leftRaw = null;
+let rightLastSeen = 0, leftLastSeen = 0;
+const LAG_GRACE = 550; // ms to hold the last chord before actually going silent
+const SMOOTH = 0.68;   // exponential smoothing factor, higher = snappier, lower = smoother
+const particles = [];
+let volSmoothed = 0;
+
+function smooth(prev, next) {
+  if (!prev) return next;
+  return {
+    x: prev.x + (next.x - prev.x) * SMOOTH,
+    y: prev.y + (next.y - prev.y) * SMOOTH,
+    pinch: prev.pinch + (next.pinch - prev.pinch) * SMOOTH
+  };
+}
+
+function onResults(results) {
+  fitTrail();
+  rightRaw = null; leftRaw = null;
+  const now = performance.now();
+
+  if (results.multiHandLandmarks && results.multiHandLandmarks.length) {
+    results.multiHandLandmarks.forEach((lm, i) => {
+      const handedness = results.multiHandedness[i].label; // "Left"/"Right" from the camera's POV
+      // camera is mirrored (scaleX(-1) on video), so flip handedness label for intuitive left/right
+      const label = handedness === 'Left' ? 'Right' : 'Left';
+      const tip = lm[8], thumb = lm[4];
+      const pinch = Math.hypot(tip.x - thumb.x, tip.y - thumb.y);
+      const info = { x: 1 - tip.x, y: tip.y, pinch };
+      if (label === 'Right') { rightRaw = info; rightLastSeen = now; }
+      else { leftRaw = info; leftLastSeen = now; }
+    });
+  }
+
+  if (rightRaw) rightHand = smooth(rightHand, rightRaw);
+  else if (now - rightLastSeen > LAG_GRACE) rightHand = null;
+  if (leftRaw) leftHand = smooth(leftHand, leftRaw);
+  else if (now - leftLastSeen > LAG_GRACE) leftHand = null;
+
+  const lagging = (!rightRaw && rightHand) || (!leftRaw && leftHand);
+  document.getElementById('lagFlag').classList.toggle('show', lagging);
+
+  if (leftHand) {
+    const root = rootForX(leftHand.x);
+    const quality = qualityForY(leftHand.y);
+    highlightPill(root);
+    document.getElementById('chordOut').textContent = NOTE_NAMES[root] + (quality === 'major' ? '' : 'm');
+
+    const octave = rightHand ? Math.round((1 - rightHand.y) * 3) : 1; // 0..3, default mid
+    const inversion = rightHand ? Math.min(2, Math.floor(rightHand.x * 3)) : 0; // 0,1,2
+    setChordPitches(chordMidi(root, quality, octave, inversion).map(midiToFreq));
+
+    if (rightHand) {
+      document.getElementById('shapeOut').textContent = 'inv ' + inversion + ' · oct ' + (octave + 3);
+      const bright = Math.max(0, 1 - rightHand.pinch * 8);
+      setBrightness(bright);
+      const vol = Math.max(0, Math.min(1, rightHand.pinch * 8));
+      volSmoothed += (vol - volSmoothed) * .2;
+      setVolume(volSmoothed * .28);
+      document.getElementById('shapeOut2').textContent = Math.round(volSmoothed * 100) + '% vol · ' + Math.round(bright * 100) + '% bright';
+    } else {
+      document.getElementById('shapeOut').textContent = '–';
+      document.getElementById('shapeOut2').textContent = '';
+      volSmoothed += (0 - volSmoothed) * .15;
+      setVolume(volSmoothed * .28);
+    }
+  } else {
+    document.getElementById('chordOut').textContent = '–';
+    document.getElementById('shapeOut').textContent = '–';
+    document.getElementById('shapeOut2').textContent = '';
+    highlightPill(-1);
+    volSmoothed += (0 - volSmoothed) * .15;
+    setVolume(volSmoothed * .28);
+  }
+
+  if (rightHand) spawnTrail(rightHand, 'right');
+  if (leftHand) spawnTrail(leftHand, 'left');
+
+  drawTrail();
+}
+
+/* a clean, restrained trail: small fading dots along the path, no blobs */
+function spawnTrail(hand, side) {
+  const x = hand.x * TW, y = hand.y * TH;
+  particles.push({ x, y, side, life: 22, maxLife: 22 });
+}
+
+/* audio-reactive glow: a faint, tasteful lift with volume, monochrome */
+function updateGlow() {
+  const glow = Math.min(volSmoothed * 34, 22);
+  document.getElementById('stagebox').style.boxShadow =
+    `0 16px 44px rgba(90,100,80,.16), 0 0 ${glow}px ${glow * .3}px rgba(255,255,255,${volSmoothed * .22})`;
+}
+
+function drawTrail() {
+  tctx.clearRect(0, 0, TW, TH);
+  updateGlow();
+  for (let i = particles.length - 1; i >= 0; i--) {
+    const p = particles[i];
+    p.life--;
+    if (p.life <= 0) { particles.splice(i, 1); continue; }
+    const a = (p.life / p.maxLife) * .5;
+    tctx.beginPath();
+    tctx.arc(p.x, p.y, 2.2, 0, Math.PI * 2);
+    tctx.fillStyle = `rgba(255,255,255,${a})`;
+    tctx.fill();
+  }
+  // clean rings on current hand positions: solid for the left (chord) hand,
+  // dashed for the right (shape) hand — shape tells them apart, not colour
+  [[leftHand, false], [rightHand, true]].forEach(([h, dashed]) => {
+    if (!h) return;
+    const x = h.x * TW, y = h.y * TH;
+    tctx.strokeStyle = '#fff'; tctx.lineWidth = 1.5;
+    tctx.setLineDash(dashed ? [3, 4] : []);
+    tctx.beginPath(); tctx.arc(x, y, 15, 0, Math.PI * 2); tctx.stroke();
+    tctx.setLineDash([]);
+    tctx.beginPath(); tctx.arc(x, y, 1.8, 0, Math.PI * 2); tctx.fillStyle = '#fff'; tctx.fill();
+  });
+}
+
+/* ---------------- boot: only after the user opts in ---------------- */
+document.getElementById('startBtn').addEventListener('click', async () => {
+  const btn = document.getElementById('startBtn');
+  btn.textContent = 'starting…'; btn.disabled = true;
+  try {
+    startAudio();
+    const hands = new Hands({ locateFile: f => `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${f}` });
+    // modelComplexity 0 = the "lite" model: noticeably faster per-frame inference,
+    // which matters far more for responsiveness here than the small accuracy gain of "full".
+    hands.setOptions({ maxNumHands: 2, modelComplexity: 0, minDetectionConfidence: 0.5, minTrackingConfidence: 0.4 });
+    hands.onResults(onResults);
+    const camera = new Camera(vid, {
+      onFrame: async () => { await hands.send({ image: vid }); },
+      width: 400, height: 300
+    });
+    await camera.start();
+    document.getElementById('startgate').style.display = 'none';
+    fitTrail();
+  } catch (e) {
+    btn.textContent = "couldn't reach your camera, check permissions and try again";
+    btn.disabled = false;
+  }
+});
+</script>
+</body>
+</html>
