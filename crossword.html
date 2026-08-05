@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>crossword · nerds · Shreenand Bhattad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✏️</text></svg>">
+<link rel="stylesheet" href="style.css">
+<style>
+main{max-width:620px}
+.gamehead{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;flex-wrap:wrap;gap:10px}
+.modeswitch{display:flex;gap:6px}
+.modebtn{border:1px solid var(--line);background:transparent;color:var(--soft);border-radius:999px;padding:6px 14px;
+  font-family:var(--sans);font-size:.78rem;cursor:pointer;transition:all .25s}
+.modebtn:hover{color:var(--ink);border-color:var(--faint)}
+.modebtn.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+body.night .modebtn{border-color:rgba(255,255,255,.16);color:#a8a49b}
+body.night .modebtn.on{background:#e8e6e0;color:#232838}
+.newbtn{border:1px solid var(--line);background:transparent;color:var(--soft);border-radius:999px;padding:6px 14px;
+  font-family:var(--sans);font-size:.78rem;cursor:pointer;transition:all .25s}
+.newbtn:hover{color:var(--ink);border-color:var(--faint)}
+body.night .newbtn{border-color:rgba(255,255,255,.16);color:#a8a49b}
+
+.xwrap{display:flex;flex-direction:column;align-items:center;margin:22px 0 18px}
+.xgrid{display:grid;gap:2px;background:var(--ink);border-radius:8px;padding:2px;box-shadow:0 10px 26px rgba(58,54,47,.12)}
+body.night .xgrid{background:#181c28}
+.xcell{position:relative;width:52px;height:52px;background:#fffdf9;display:flex;align-items:center;justify-content:center}
+.xcell.black{background:var(--ink)}
+body.night .xcell{background:#2e3345}
+body.night .xcell.black{background:#181c28}
+.xcell input{width:100%;height:100%;border:none;background:none;text-align:center;text-transform:uppercase;
+  font-family:var(--sans);font-weight:700;font-size:1.15rem;color:var(--ink);outline:none;caret-color:var(--blue)}
+body.night .xcell input{color:#e8e6e0}
+.xcell.active input{background:#e8f0f7}
+body.night .xcell.active input{background:rgba(91,126,163,.25)}
+.xcell.correct input{background:#e4f0df;color:#3a5f36}
+body.night .xcell.correct input{background:rgba(143,174,126,.25);color:#a8c9a0}
+.xnum{position:absolute;top:2px;left:4px;font-size:.55rem;font-weight:700;color:var(--soft);pointer-events:none}
+body.night .xnum{color:#8b8880}
+@media(max-width:480px){.xcell{width:15vw;height:15vw;max-width:52px;max-height:52px}}
+
+.clueline{text-align:center;min-height:44px;display:flex;align-items:center;justify-content:center;gap:10px;
+  font-family:var(--sans);font-size:.92rem;color:var(--ink);margin-bottom:14px;padding:0 10px}
+body.night .clueline{color:#e8e6e0}
+.clueline .dir{font-weight:700;color:var(--blue);flex-shrink:0}
+.cluebtn{background:none;border:1px solid var(--line);color:var(--soft);border-radius:999px;width:30px;height:30px;
+  font-size:.85rem;cursor:pointer;flex-shrink:0;transition:all .2s}
+.cluebtn:hover{color:var(--ink);border-color:var(--faint)}
+body.night .cluebtn{border-color:rgba(255,255,255,.16);color:#a8a49b}
+
+.xcontrols{display:flex;justify-content:center;gap:10px;margin-bottom:8px}
+.actbtn{border:1.5px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:9px 18px;
+  font-family:var(--sans);font-weight:600;font-size:.8rem;cursor:pointer;transition:all .2s}
+.actbtn:hover{background:var(--ink);color:var(--paper)}
+body.night .actbtn{border-color:#e8e6e0;color:#e8e6e0}
+body.night .actbtn:hover{background:#e8e6e0;color:#232838}
+
+.winmsg{text-align:center;font-size:1rem;font-weight:600;color:#5a8a52;margin:18px 0;opacity:0;transition:opacity .4s}
+.winmsg.show{opacity:1}
+.cluelist{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:0 24px;font-size:.82rem;color:var(--soft)}
+.cluelist h4{grid-column:1/-1;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin:14px 0 6px}
+.cluelist .crow{padding:3px 0;cursor:pointer;transition:color .2s}
+.cluelist .crow:hover{color:var(--ink)}
+.cluelist .crow.active{color:var(--blue);font-weight:600}
+body.night .cluelist{color:#a8a49b}
+</style>
+</head>
+<body>
+
+<div class="sky" id="sky"></div>
+
+<nav>
+  <a class="home" href="index">Shreenand</a>
+  <div class="pages">
+    <a href="about">about</a>
+    <a href="work">work</a>
+    <a href="projects">projects</a>
+    <a href="play">play</a>
+    <a href="guestbook">guestbook</a>
+    <a href="contact">say hi</a>
+  </div>
+</nav>
+
+<main>
+  <div class="gamehead">
+    <div>
+      <h1 class="page fade in">mini crossword</h1>
+      <p class="sub fade in" style="margin-bottom:0">a proper 5×5, every day unlimited.</p>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <div class="modeswitch">
+        <button class="modebtn on" id="modeGlobal">🌍 global</button>
+        <button class="modebtn" id="modeIndia">🇮🇳 india</button>
+      </div>
+      <button class="newbtn" id="newBtn">🔀 new</button>
+    </div>
+  </div>
+
+  <div class="xwrap">
+    <div class="xgrid" id="xgrid"></div>
+  </div>
+
+  <div class="clueline">
+    <button class="cluebtn" id="prevClue">←</button>
+    <span class="dir" id="clueDir"></span>
+    <span id="clueText"></span>
+    <button class="cluebtn" id="nextClue">→</button>
+  </div>
+
+  <div class="xcontrols">
+    <button class="actbtn" id="checkBtn">check</button>
+    <button class="actbtn" id="revealBtn">reveal</button>
+    <button class="actbtn" id="clearBtn">clear</button>
+  </div>
+
+  <div class="winmsg" id="winMsg"></div>
+
+  <div class="cluelist" id="clueList"></div>
+
+  <div class="next fade in"><a href="nerds">← back to nerds</a></div>
+</main>
+
+<footer>✈ click anywhere to send a plane</footer>
+
+<script src="site.js"></script>
+<script>
+let DATA = { global: [], india: [] };
+let mode = 'global';
+let puzzle = null;
+let size = 5;
+let cellEls = [];       // [r][c] -> input element
+let cellSlots = [];      // [r][c] -> {A: slotIdx|null, D: slotIdx|null}
+let slots = [];          // flat list: {dir, row, col, len, answer, clue, number}
+let curSlot = 0;
+let curCellInSlot = 0;
+let solved = false;
+
+async function loadData() {
+  const r = await fetch('data/crossword-data.json');
+  DATA = await r.json();
+}
+
+function buildSlots(p) {
+  const list = [];
+  const numbering = {}; // "r,c" -> number
+  let n = 1;
+  const grid2d = [];
+  for (let r = 0; r < p.size; r++) grid2d.push(p.grid.slice(r * p.size, (r + 1) * p.size));
+
+  function needsNumber(r, c) {
+    if (grid2d[r][c] === '#') return false;
+    const startsAcross = (c === 0 || grid2d[r][c - 1] === '#') && c + 1 < p.size && grid2d[r][c + 1] !== '#';
+    const startsDown = (r === 0 || grid2d[r - 1][c] === '#') && r + 1 < p.size && grid2d[r + 1][c] !== '#';
+    return startsAcross || startsDown;
+  }
+  for (let r = 0; r < p.size; r++) {
+    for (let c = 0; c < p.size; c++) {
+      if (needsNumber(r, c)) numbering[r + ',' + c] = n++;
+    }
+  }
+  p.across.forEach(e => list.push({ dir: 'A', row: e.row, col: e.col, len: e.answer.length, answer: e.answer.toUpperCase(), clue: e.clue, number: numbering[e.row + ',' + e.col] }));
+  p.down.forEach(e => list.push({ dir: 'D', row: e.row, col: e.col, len: e.answer.length, answer: e.answer.toUpperCase(), clue: e.clue, number: numbering[e.row + ',' + e.col] }));
+  return { list, grid2d, numbering };
+}
+
+function startPuzzle() {
+  const bank = DATA[mode];
+  puzzle = bank[Math.floor(Math.random() * bank.length)];
+  size = puzzle.size;
+  const built = buildSlots(puzzle);
+  slots = built.list;
+  const grid2d = built.grid2d;
+
+  cellSlots = Array.from({ length: size }, () => Array(size).fill(null).map(() => ({ A: null, D: null })));
+  slots.forEach((s, si) => {
+    for (let i = 0; i < s.len; i++) {
+      const r = s.dir === 'A' ? s.row : s.row + i;
+      const c = s.dir === 'A' ? s.col + i : s.col;
+      cellSlots[r][c][s.dir] = si;
+    }
+  });
+
+  const grid = document.getElementById('xgrid');
+  grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+  grid.innerHTML = '';
+  cellEls = Array.from({ length: size }, () => Array(size).fill(null));
+  for (let r = 0; r < size; r++) {
+    for (let c = 0; c < size; c++) {
+      const cell = document.createElement('div');
+      if (grid2d[r][c] === '#') {
+        cell.className = 'xcell black';
+      } else {
+        cell.className = 'xcell';
+        const num = built.numbering[r + ',' + c];
+        if (num) { const nm = document.createElement('div'); nm.className = 'xnum'; nm.textContent = num; cell.appendChild(nm); }
+        const inp = document.createElement('input');
+        inp.maxLength = 1;
+        inp.dataset.r = r; inp.dataset.c = c;
+        inp.addEventListener('focus', () => onFocusCell(r, c));
+        inp.addEventListener('input', () => onType(r, c));
+        inp.addEventListener('keydown', e => onKey(e, r, c));
+        cell.appendChild(inp);
+        cellEls[r][c] = inp;
+      }
+      grid.appendChild(cell);
+    }
+  }
+
+  curSlot = slots.findIndex(s => s.dir === 'A');
+  curCellInSlot = 0;
+  solved = false;
+  document.getElementById('winMsg').className = 'winmsg';
+  renderClueLine();
+  renderClueList();
+  focusCurrent();
+}
+
+function slotCells(s) {
+  const arr = [];
+  for (let i = 0; i < s.len; i++) {
+    const r = s.dir === 'A' ? s.row : s.row + i;
+    const c = s.dir === 'A' ? s.col + i : s.col;
+    arr.push([r, c]);
+  }
+  return arr;
+}
+
+function highlightSlot() {
+  document.querySelectorAll('.xcell').forEach(el => el.classList.remove('active'));
+  const s = slots[curSlot];
+  slotCells(s).forEach(([r, c]) => { if (cellEls[r][c]) cellEls[r][c].closest('.xcell').classList.add('active'); });
+}
+
+function renderClueLine() {
+  const s = slots[curSlot];
+  document.getElementById('clueDir').textContent = (s.number || '') + (s.dir === 'A' ? 'A' : 'D');
+  document.getElementById('clueText').textContent = s.clue;
+  highlightSlot();
+  renderClueList();
+}
+
+function focusCurrent() {
+  const s = slots[curSlot];
+  const cells = slotCells(s);
+  const [r, c] = cells[curCellInSlot] || cells[0];
+  if (cellEls[r][c]) cellEls[r][c].focus();
+}
+
+function onFocusCell(r, c) {
+  const cs = cellSlots[r][c];
+  // prefer keeping current direction if this cell belongs to it, else switch
+  const s = slots[curSlot];
+  let slotIdx = (s && cs[s.dir] !== null) ? cs[s.dir] : (cs.A !== null ? cs.A : cs.D);
+  if (slotIdx === null) return;
+  curSlot = slotIdx;
+  const cells = slotCells(slots[curSlot]);
+  curCellInSlot = cells.findIndex(([rr, cc]) => rr === r && cc === c);
+  renderClueLine();
+}
+
+function onType(r, c) {
+  const inp = cellEls[r][c];
+  inp.value = inp.value.toUpperCase().replace(/[^A-Z]/g, '').slice(-1);
+  inp.closest('.xcell').classList.remove('correct');
+  if (inp.value) {
+    const cells = slotCells(slots[curSlot]);
+    const idx = cells.findIndex(([rr, cc]) => rr === r && cc === c);
+    if (idx > -1 && idx < cells.length - 1) {
+      const [nr, nc] = cells[idx + 1];
+      curCellInSlot = idx + 1;
+      cellEls[nr][nc].focus();
+    }
+  }
+  checkWin(true);
+}
+
+function onKey(e, r, c) {
+  if (e.key === 'Backspace' && !cellEls[r][c].value) {
+    const cells = slotCells(slots[curSlot]);
+    const idx = cells.findIndex(([rr, cc]) => rr === r && cc === c);
+    if (idx > 0) {
+      const [pr, pc] = cells[idx - 1];
+      curCellInSlot = idx - 1;
+      cellEls[pr][pc].focus();
+    }
+  } else if (e.key === 'ArrowRight' || e.key === 'ArrowLeft' || e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+    e.preventDefault();
+    const dr = e.key === 'ArrowDown' ? 1 : e.key === 'ArrowUp' ? -1 : 0;
+    const dc = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+    let nr = r + dr, nc = c + dc;
+    if (nr >= 0 && nr < size && nc >= 0 && nc < size && cellEls[nr][nc]) cellEls[nr][nc].focus();
+  } else if (e.key === 'Tab') {
+    e.preventDefault();
+    switchClue(e.shiftKey ? -1 : 1);
+  }
+}
+
+function switchClue(delta) {
+  curSlot = (curSlot + delta + slots.length) % slots.length;
+  curCellInSlot = 0;
+  renderClueLine();
+  focusCurrent();
+}
+
+function renderClueList() {
+  const box = document.getElementById('clueList');
+  box.innerHTML = '<h4>across</h4>';
+  slots.forEach((s, si) => {
+    if (s.dir !== 'A') return;
+    const row = document.createElement('div');
+    row.className = 'crow' + (si === curSlot ? ' active' : '');
+    row.textContent = (s.number || '') + '. ' + s.clue;
+    row.addEventListener('click', () => { curSlot = si; curCellInSlot = 0; renderClueLine(); focusCurrent(); });
+    box.appendChild(row);
+  });
+  const downHead = document.createElement('h4'); downHead.textContent = 'down';
+  box.appendChild(downHead);
+  slots.forEach((s, si) => {
+    if (s.dir !== 'D') return;
+    const row = document.createElement('div');
+    row.className = 'crow' + (si === curSlot ? ' active' : '');
+    row.textContent = (s.number || '') + '. ' + s.clue;
+    row.addEventListener('click', () => { curSlot = si; curCellInSlot = 0; renderClueLine(); focusCurrent(); });
+    box.appendChild(row);
+  });
+}
+
+function checkWin(silent) {
+  let allFilled = true, allCorrect = true;
+  slots.forEach(s => {
+    slotCells(s).forEach(([r, c], i) => {
+      const v = cellEls[r][c].value;
+      if (!v) allFilled = false;
+      if (v !== s.answer[i]) allCorrect = false;
+    });
+  });
+  if (allFilled && allCorrect && !solved) {
+    solved = true;
+    document.querySelectorAll('.xcell:not(.black)').forEach(el => el.classList.add('correct'));
+    const m = document.getElementById('winMsg');
+    m.textContent = 'solved! nicely done.';
+    m.classList.add('show');
+  }
+}
+
+function checkNow() {
+  let anyWrong = false;
+  // for every filled cell, compare against whichever slot covers it
+  for (let r = 0; r < size; r++) for (let c = 0; c < size; c++) {
+    if (!cellEls[r][c]) continue;
+    const v = cellEls[r][c].value;
+    if (!v) continue;
+    const cs = cellSlots[r][c];
+    const slotIdx = cs.A !== null ? cs.A : cs.D;
+    const s = slots[slotIdx];
+    const cells = slotCells(s);
+    const idx = cells.findIndex(([rr, cc]) => rr === r && cc === c);
+    const correct = s.answer[idx] === v;
+    cellEls[r][c].closest('.xcell').classList.toggle('correct', correct);
+    if (!correct) { cellEls[r][c].closest('.xcell').classList.remove('correct'); anyWrong = true; }
+  }
+  checkWin(true);
+}
+
+function revealAll() {
+  slots.forEach(s => {
+    slotCells(s).forEach(([r, c], i) => { cellEls[r][c].value = s.answer[i]; });
+  });
+  document.querySelectorAll('.xcell:not(.black)').forEach(el => el.classList.add('correct'));
+  solved = true;
+  const m = document.getElementById('winMsg');
+  m.textContent = 'here you go.';
+  m.classList.add('show');
+}
+
+function clearAll() {
+  document.querySelectorAll('.xcell input').forEach(inp => inp.value = '');
+  document.querySelectorAll('.xcell').forEach(el => el.classList.remove('correct'));
+  solved = false;
+  document.getElementById('winMsg').className = 'winmsg';
+}
+
+document.getElementById('prevClue').addEventListener('click', () => switchClue(-1));
+document.getElementById('nextClue').addEventListener('click', () => switchClue(1));
+document.getElementById('checkBtn').addEventListener('click', checkNow);
+document.getElementById('revealBtn').addEventListener('click', revealAll);
+document.getElementById('clearBtn').addEventListener('click', clearAll);
+document.getElementById('newBtn').addEventListener('click', startPuzzle);
+document.getElementById('modeGlobal').addEventListener('click', () => {
+  mode = 'global';
+  document.getElementById('modeGlobal').classList.add('on');
+  document.getElementById('modeIndia').classList.remove('on');
+  startPuzzle();
+});
+document.getElementById('modeIndia').addEventListener('click', () => {
+  mode = 'india';
+  document.getElementById('modeIndia').classList.add('on');
+  document.getElementById('modeGlobal').classList.remove('on');
+  startPuzzle();
+});
+
+loadData().then(startPuzzle);
+</script>
+</body>
+</html>

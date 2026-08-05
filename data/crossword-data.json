@@ -1,0 +1,234 @@
+{
+  "global": [
+    {
+      "title": "Global Mini 1",
+      "size": 5,
+      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
+      "across": [
+        { "row": 0, "col": 0, "answer": "THAT", "clue": "\"___'s a good idea\"" },
+        { "row": 1, "col": 0, "answer": "HOURS", "clue": "9-to-5, e.g." },
+        { "row": 2, "col": 0, "answer": "AUDIO", "clue": "Podcast format" },
+        { "row": 3, "col": 0, "answer": "TRIAL", "clue": "Courtroom event, or a free software period" },
+        { "row": 4, "col": 1, "answer": "SOLD", "clue": "No longer available, on a listing" }
+      ],
+      "down": [
+        { "row": 0, "col": 0, "answer": "THAT", "clue": "The opposite of \"this\"" },
+        { "row": 0, "col": 1, "answer": "HOURS", "clue": "Business ___" },
+        { "row": 0, "col": 2, "answer": "AUDIO", "clue": "Sound, as opposed to video" },
+        { "row": 0, "col": 3, "answer": "TRIAL", "clue": "Test run" },
+        { "row": 1, "col": 4, "answer": "SOLD", "clue": "Convinced, as in \"I'm ___ on this idea\"" }
+      ]
+    },
+    {
+      "title": "Global Mini 2",
+      "size": 5,
+      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
+      "across": [
+        { "row": 0, "col": 0, "answer": "HAVE", "clue": "Possess" },
+        { "row": 1, "col": 0, "answer": "ABOVE", "clue": "Higher than" },
+        { "row": 2, "col": 0, "answer": "VOCAL", "clue": "Outspoken, or relating to singing" },
+        { "row": 3, "col": 0, "answer": "EVANS", "clue": "Chris ___, actor who played Captain America" },
+        { "row": 4, "col": 1, "answer": "ELSE", "clue": "\"Anything ___?\"" }
+      ],
+      "down": [
+        { "row": 0, "col": 0, "answer": "HAVE", "clue": "\"I ___ a dream\"" },
+        { "row": 0, "col": 1, "answer": "ABOVE", "clue": "Overhead" },
+        { "row": 0, "col": 2, "answer": "VOCAL", "clue": "___ cords" },
+        { "row": 0, "col": 3, "answer": "EVANS", "clue": "Actress Evans or actor Evans, take your pick" },
+        { "row": 1, "col": 4, "answer": "ELSE", "clue": "Otherwise" }
+      ]
+    },
+    {
+      "title": "Global Mini 3",
+      "size": 5,
+      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
+      "across": [
+        { "row": 0, "col": 0, "answer": "THIS", "clue": "\"___ is the way\"" },
+        { "row": 1, "col": 0, "answer": "HINTS", "clue": "Subtle clues" },
+        { "row": 2, "col": 0, "answer": "INDIA", "clue": "Home to the Taj Mahal" },
+        { "row": 3, "col": 0, "answer": "STILL", "clue": "Motionless, or \"nevertheless\"" },
+        { "row": 4, "col": 1, "answer": "SALE", "clue": "50% off event" }
+      ],
+      "down": [
+        { "row": 0, "col": 0, "answer": "THIS", "clue": "Not that, but ___" },
+        { "row": 0, "col": 1, "answer": "HINTS", "clue": "Gives away, in small pieces" },
+        { "row": 0, "col": 2, "answer": "INDIA", "clue": "NATO alphabet letter for \"I\"" },
+        { "row": 0, "col": 3, "answer": "STILL", "clue": "Even now" },
+        { "row": 1, "col": 4, "answer": "SALE", "clue": "\"For ___\" sign" }
+      ]
+    },
+    {
+      "title": "Global Mini 4",
+      "size": 5,
+      "grid": ["#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#"],
+      "across": [
+        { "row": 0, "col": 1, "answer": "FROM", "clue": "Originating at" },
+        { "row": 1, "col": 0, "answer": "FRAME", "clue": "Picture holder" },
+        { "row": 2, "col": 0, "answer": "RATES", "clue": "Interest ___" },
+        { "row": 3, "col": 0, "answer": "OMEGA", "clue": "Last letter of the Greek alphabet" },
+        { "row": 4, "col": 0, "answer": "MESA", "clue": "Flat-topped landform" }
+      ],
+      "down": [
+        { "row": 0, "col": 1, "answer": "FRAME", "clue": "Bone structure, informally" },
+        { "row": 0, "col": 2, "answer": "RATES", "clue": "Judges, as a movie" },
+        { "row": 0, "col": 3, "answer": "OMEGA", "clue": "Watch brand, or the end" },
+        { "row": 0, "col": 4, "answer": "MESA", "clue": "Arizona city" },
+        { "row": 1, "col": 0, "answer": "FROM", "clue": "\"Where are you ___?\"" }
+      ]
+    },
+    {
+      "title": "Global Mini 5",
+      "size": 5,
+      "grid": ["#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#"],
+      "across": [
+        { "row": 0, "col": 1, "answer": "WHAT", "clue": "\"___'s up?\"" },
+        { "row": 1, "col": 0, "answer": "WHOLE", "clue": "Entire, complete" },
+        { "row": 2, "col": 0, "answer": "HOMES", "clue": "Where people live" },
+        { "row": 3, "col": 0, "answer": "ALERT", "clue": "Wide awake, or a warning notice" },
+        { "row": 4, "col": 0, "answer": "TEST", "clue": "Exam" }
+      ],
+      "down": [
+        { "row": 0, "col": 1, "answer": "WHOLE", "clue": "Not partial" },
+        { "row": 0, "col": 2, "answer": "HOMES", "clue": "Real estate listings" },
+        { "row": 0, "col": 3, "answer": "ALERT", "clue": "On high ___" },
+        { "row": 0, "col": 4, "answer": "TEST", "clue": "Pop quiz" },
+        { "row": 1, "col": 0, "answer": "WHAT", "clue": "Question word" }
+      ]
+    },
+    {
+      "title": "Global Mini 6",
+      "size": 5,
+      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
+      "across": [
+        { "row": 0, "col": 0, "answer": "THAT", "clue": "\"___ one, please\" (pointing)" },
+        { "row": 1, "col": 0, "answer": "HUMAN", "clue": "Not a robot" },
+        { "row": 2, "col": 0, "answer": "AMINO", "clue": "___ acid, protein building block" },
+        { "row": 3, "col": 0, "answer": "TANKS", "clue": "Military vehicles, or fish homes" },
+        { "row": 4, "col": 1, "answer": "NOSE", "clue": "Sniffer" }
+      ],
+      "down": [
+        { "row": 0, "col": 0, "answer": "THAT", "clue": "\"I can't believe ___ happened\"" },
+        { "row": 0, "col": 1, "answer": "HUMAN", "clue": "Person" },
+        { "row": 0, "col": 2, "answer": "AMINO", "clue": "Part of a protein's chemical name" },
+        { "row": 0, "col": 3, "answer": "TANKS", "clue": "Fails badly, in slang" },
+        { "row": 1, "col": 4, "answer": "NOSE", "clue": "\"By a ___\" (close race finish)" }
+      ]
+    },
+    {
+      "title": "Global Mini 7",
+      "size": 5,
+      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
+      "across": [
+        { "row": 0, "col": 0, "answer": "THIS", "clue": "Not that, ___" },
+        { "row": 1, "col": 0, "answer": "HENCE", "clue": "Therefore" },
+        { "row": 2, "col": 0, "answer": "INDEX", "clue": "Book's back-page lookup" },
+        { "row": 3, "col": 0, "answer": "SCENE", "clue": "Movie segment" },
+        { "row": 4, "col": 1, "answer": "EXEC", "clue": "Company officer, for short" }
+      ],
+      "down": [
+        { "row": 0, "col": 0, "answer": "THIS", "clue": "\"___ just in\" (news bulletin)" },
+        { "row": 0, "col": 1, "answer": "HENCE", "clue": "As a result" },
+        { "row": 0, "col": 2, "answer": "INDEX", "clue": "___ finger" },
+        { "row": 0, "col": 3, "answer": "SCENE", "clue": "\"Behind the ___\"" },
+        { "row": 1, "col": 4, "answer": "EXEC", "clue": "CEO, e.g., informally" }
+      ]
+    },
+    {
+      "title": "Global Mini 8",
+      "size": 5,
+      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
+      "across": [
+        { "row": 0, "col": 0, "answer": "WITH", "clue": "Accompanied by" },
+        { "row": 1, "col": 0, "answer": "ISAAC", "clue": "Biblical patriarch, son of Abraham" },
+        { "row": 2, "col": 0, "answer": "TAMIL", "clue": "Language of Tamil Nadu and Sri Lanka" },
+        { "row": 3, "col": 0, "answer": "HAITI", "clue": "Caribbean nation sharing an island with the Dominican Republic" },
+        { "row": 4, "col": 1, "answer": "CLIP", "clue": "Paper fastener" }
+      ],
+      "down": [
+        { "row": 0, "col": 0, "answer": "WITH", "clue": "\"___ or without you\"" },
+        { "row": 0, "col": 1, "answer": "ISAAC", "clue": "Newton, of gravity fame" },
+        { "row": 0, "col": 2, "answer": "TAMIL", "clue": "One of India's classical languages" },
+        { "row": 0, "col": 3, "answer": "HAITI", "clue": "Port-au-Prince is its capital" },
+        { "row": 1, "col": 4, "answer": "CLIP", "clue": "Short video snippet" }
+      ]
+    }
+  ],
+  "india": [
+    {
+      "title": "India Mini 1",
+      "size": 5,
+      "grid": ["#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#"],
+      "across": [
+        { "row": 0, "col": 1, "answer": "DIAL", "clue": "Turn, like an old phone" },
+        { "row": 1, "col": 0, "answer": "DENSE", "clue": "Thickly packed, like Mumbai's population" },
+        { "row": 2, "col": 0, "answer": "INDIA", "clue": "Country with 22 official languages" },
+        { "row": 3, "col": 0, "answer": "ASIAN", "clue": "Continental adjective for India" },
+        { "row": 4, "col": 0, "answer": "LEAN", "clue": "Not much fat on this cut of meat" }
+      ],
+      "down": [
+        { "row": 0, "col": 1, "answer": "DENSE", "clue": "Hard to see through, like fog" },
+        { "row": 0, "col": 2, "answer": "INDIA", "clue": "NATO alphabet's \"I\"" },
+        { "row": 0, "col": 3, "answer": "ASIAN", "clue": "From the world's largest continent" },
+        { "row": 0, "col": 4, "answer": "LEAN", "clue": "Tilt to one side" },
+        { "row": 1, "col": 0, "answer": "DIAL", "clue": "Sundial's face" }
+      ]
+    },
+    {
+      "title": "India Mini 2",
+      "size": 5,
+      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
+      "across": [
+        { "row": 0, "col": 0, "answer": "LOTS", "clue": "Plenty" },
+        { "row": 1, "col": 0, "answer": "OMAHA", "clue": "Nebraska's largest city" },
+        { "row": 2, "col": 0, "answer": "TAMIL", "clue": "Language of Tamil Nadu and Sri Lanka" },
+        { "row": 3, "col": 0, "answer": "SHIPS", "clue": "Cargo vessels" },
+        { "row": 4, "col": 1, "answer": "ALSO", "clue": "In addition" }
+      ],
+      "down": [
+        { "row": 0, "col": 0, "answer": "LOTS", "clue": "\"___ of love\"" },
+        { "row": 0, "col": 1, "answer": "OMAHA", "clue": "One of the D-Day landing beaches" },
+        { "row": 0, "col": 2, "answer": "TAMIL", "clue": "One of India's classical languages" },
+        { "row": 0, "col": 3, "answer": "SHIPS", "clue": "\"When my ___ come in\"" },
+        { "row": 1, "col": 4, "answer": "ALSO", "clue": "Too, as well" }
+      ]
+    },
+    {
+      "title": "India Mini 3",
+      "size": 5,
+      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
+      "across": [
+        { "row": 0, "col": 0, "answer": "TAGS", "clue": "Price ___" },
+        { "row": 1, "col": 0, "answer": "AGAIN", "clue": "Once more" },
+        { "row": 2, "col": 0, "answer": "GANGA", "clue": "The Ganges River, in Hindi" },
+        { "row": 3, "col": 0, "answer": "SIGNS", "clue": "Roadside indicators" },
+        { "row": 4, "col": 1, "answer": "NASA", "clue": "US space agency" }
+      ],
+      "down": [
+        { "row": 0, "col": 0, "answer": "TAGS", "clue": "Labels" },
+        { "row": 0, "col": 1, "answer": "AGAIN", "clue": "\"Here we go ___\"" },
+        { "row": 0, "col": 2, "answer": "GANGA", "clue": "India's most sacred river" },
+        { "row": 0, "col": 3, "answer": "SIGNS", "clue": "Zodiac ___" },
+        { "row": 1, "col": 4, "answer": "NASA", "clue": "ISRO's American counterpart" }
+      ]
+    },
+    {
+      "title": "India Mini 4",
+      "size": 5,
+      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
+      "across": [
+        { "row": 0, "col": 0, "answer": "WILL", "clue": "\"Where there's a ___...\"" },
+        { "row": 1, "col": 0, "answer": "IDEAS", "clue": "Brainstorm results" },
+        { "row": 2, "col": 0, "answer": "LEONE", "clue": "Sierra ___, West African nation" },
+        { "row": 3, "col": 0, "answer": "LANKA", "clue": "Sri ___, island nation south of India" },
+        { "row": 4, "col": 1, "answer": "SEAT", "clue": "Chair, or a seat in Parliament" }
+      ],
+      "down": [
+        { "row": 0, "col": 0, "answer": "WILL", "clue": "Legal document, or determination" },
+        { "row": 0, "col": 1, "answer": "IDEAS", "clue": "Concepts" },
+        { "row": 0, "col": 2, "answer": "LEONE", "clue": "Sergio ___, spaghetti-western director" },
+        { "row": 0, "col": 3, "answer": "LANKA", "clue": "Home to Adam's Peak" },
+        { "row": 1, "col": 4, "answer": "SEAT", "clue": "\"Take a ___\"" }
+      ]
+    }
+  ]
+}
