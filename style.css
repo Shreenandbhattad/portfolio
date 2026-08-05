@@ -8,6 +8,13 @@
   --line:#e9e4da;
   --serif:'Inter',system-ui,sans-serif;
   --sans:'Inter',system-ui,sans-serif;
+  /* flat accent tiles, NYT-Games style: one bold flat color per card, cycled */
+  --tile-1:#e8b4c0; --tile-1-ink:#7a3547;
+  --tile-2:#a9bfd4; --tile-2-ink:#33526f;
+  --tile-3:#f0d491; --tile-3-ink:#7a5c1c;
+  --tile-4:#a8c9a0; --tile-4-ink:#3a5f36;
+  --tile-5:#c9b8e0; --tile-5-ink:#5a4478;
+  --tile-6:#f0b48a; --tile-6-ink:#8a4a1d;
 }
 em,i{font-style:normal}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -117,14 +124,24 @@ a.item:hover h3 span{color:var(--blue);margin-left:10px}
 a.item:hover .stack span{border-color:var(--blue-light);color:var(--blue)}
 body.night .stack span{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);color:#a8a49b}
 
-/* soft cards (play page) */
-.card{display:block;border:1px solid var(--line);border-radius:16px;padding:26px;margin-bottom:18px;background:#fffdf9;transition:transform .35s ease,box-shadow .35s ease,border-color .35s}
-.card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(90,110,140,.08);border-color:var(--blue-light)}
-.card h3{font-weight:500;font-size:1.05rem;margin-bottom:6px}
-.card h3 span{color:var(--faint);margin-left:6px;transition:color .3s}
-.card:hover h3 span{color:var(--blue)}
-.card p{color:var(--soft);font-size:.92rem}
-.card .note{margin-top:10px;font-size:.78rem;color:var(--faint)}
+/* flat tile cards (play page), NYT-Games style: bold flat color, no gradient */
+.cardgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.card{display:block;border:none;border-radius:18px;padding:22px;background:var(--tile-c,var(--tile-1));
+  transition:transform .2s ease,box-shadow .2s ease}
+.card:hover{transform:translateY(-3px) scale(1.015);box-shadow:0 10px 26px rgba(58,54,47,.14)}
+.card:active{transform:translateY(-1px) scale(1)}
+.card h3{font-weight:700;font-size:1.02rem;margin-bottom:6px;color:var(--tile-ink,var(--tile-1-ink))}
+.card h3 span{color:var(--tile-ink,var(--tile-1-ink));opacity:.45;margin-left:6px;transition:opacity .3s,margin-left .3s}
+.card:hover h3 span{opacity:.9;margin-left:10px}
+.card p{color:var(--tile-ink,var(--tile-1-ink));opacity:.75;font-size:.86rem;line-height:1.55}
+.card .note{margin-top:10px;font-size:.78rem;opacity:.6;color:var(--tile-ink,var(--tile-1-ink))}
+.card:nth-of-type(6n+1){--tile-c:var(--tile-1);--tile-ink:var(--tile-1-ink)}
+.card:nth-of-type(6n+2){--tile-c:var(--tile-2);--tile-ink:var(--tile-2-ink)}
+.card:nth-of-type(6n+3){--tile-c:var(--tile-3);--tile-ink:var(--tile-3-ink)}
+.card:nth-of-type(6n+4){--tile-c:var(--tile-4);--tile-ink:var(--tile-4-ink)}
+.card:nth-of-type(6n+5){--tile-c:var(--tile-5);--tile-ink:var(--tile-5-ink)}
+.card:nth-of-type(6n+6){--tile-c:var(--tile-6);--tile-ink:var(--tile-6-ink)}
+body.night .card{filter:brightness(.82) saturate(.85)}
 
 /* footer / next-page link */
 .next{margin-top:64px;text-align:center}
@@ -173,15 +190,15 @@ body.night .sun{opacity:0}
 body.night .cloud{filter:brightness(.6) opacity(.5)}
 .hills{transition:filter 12s ease,opacity 12s ease}
 body.night .hills{opacity:.8;filter:brightness(.72) saturate(.8)}
-body.night p.quiet,body.night .sub,body.night .item p,body.night .card p{color:#a8a49b}
+body.night p.quiet,body.night .sub,body.night .item p{color:#a8a49b}
 body.night .item,body.night .item:first-of-type{border-color:rgba(255,255,255,.1)}
-body.night .card,body.night .book{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12)}
+body.night .book{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12)}
 body.night a.item:hover{background:rgba(255,255,255,.05)}
-p.quiet,.sub,.item p,.card p,footer,.where,.stack span,.hint,.card .note,
+p.quiet,.sub,.item p,footer,.where,.stack span,.hint,
 canvas,.empty,h1,h2,h3,p.lead{transition-property:color,background,border-color,filter;transition-duration:6s}
 
 /* night: every element follows the sky */
-body.night footer,body.night .hint,body.night .where,body.night .card .note,body.night .empty{color:#7e7a72}
+body.night footer,body.night .hint,body.night .where,body.night .empty{color:#7e7a72}
 body.night .next a{color:#a8a49b;border-color:#55524c}
 body.night .next a:hover{color:#a9bfd4;border-color:#a9bfd4}
 body.night nav a{color:#8b8880}
@@ -189,8 +206,8 @@ body.night input,body.night textarea{background:rgba(255,255,255,.07);border-col
 body.night input:focus,body.night textarea:focus{border-color:#7b95b3}
 body.night ::placeholder{color:#6d6a63}
 body.night .clear{color:#a8a49b;border-color:#55524c}
-body.night a.item h3 span,body.night .card h3 span{color:#6d6a63}
-body.night a.item:hover h3 span,body.night .card:hover h3 span{color:#a9bfd4}
+body.night a.item h3 span{color:#6d6a63}
+body.night a.item:hover h3 span{color:#a9bfd4}
 body.night #garden,body.night #flock,body.night #game{background:linear-gradient(180deg,#2a2f3f 0%,#333748 100%);border-color:rgba(255,255,255,.12)}
 body.night #pad{background:#2e3345;border-color:#55524c}
 body.night .dotbtn.on{border-color:#e8e6e0}

@@ -7,13 +7,10 @@ const sun = document.createElement('div');
 sun.className = 'sun';
 sky.appendChild(sun);
 
-/* ---------- clouds ---------- */
+/* ---------- clouds (kept sparse: one or two, slow) ---------- */
 [
-  { top: 8,  w: 120, h: 34, dur: 95,  delay: -20, op: .8 },
-  { top: 16, w: 80,  h: 24, dur: 130, delay: -70, op: .6 },
-  { top: 27, w: 150, h: 40, dur: 110, delay: -40, op: .7 },
-  { top: 6,  w: 60,  h: 18, dur: 150, delay: -110, op: .5 },
-  { top: 36, w: 95,  h: 26, dur: 140, delay: -15, op: .55 }
+  { top: 10, w: 120, h: 34, dur: 150, delay: -20, op: .65 },
+  { top: 24, w: 80,  h: 24, dur: 190, delay: -110, op: .5 }
 ].forEach(c => {
   const el = document.createElement('div');
   el.className = 'cloud';
@@ -77,9 +74,8 @@ function sendBird() {
   sky.appendChild(b);
   setTimeout(() => b.remove(), dur * 1000 + 500);
 }
-sendBird();
-setTimeout(sendBird, 4000);
-setInterval(() => { if (Math.random() < .75) sendBird(); }, 9000);
+setTimeout(sendBird, 6000);
+setInterval(() => { if (Math.random() < .4) sendBird(); }, 60000);
 
 /* ---------- paper planes ---------- */
 const PLANE = '<svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>';
@@ -93,10 +89,7 @@ function addPlane(top, dur, delay) {
   sky.appendChild(p);
   return p;
 }
-addPlane(20, 36, -6);
-addPlane(50, 44, -25);
-
-/* click anywhere to send one more */
+/* click anywhere to send one */
 document.addEventListener('click', e => {
   if (e.target.closest('a, nav, button, input, textarea, canvas')) return;
   const p = addPlane(Math.min(80, e.clientY / innerHeight * 100), 16, 0);
@@ -128,9 +121,8 @@ function makeButterfly() {
   })();
 }
 makeButterfly();
-makeButterfly();
 
-/* ---------- falling petals ---------- */
+/* ---------- falling petals (rare, occasional, not a constant flurry) ---------- */
 const PETAL_COLORS = ['#f2cdd6', '#e8b4c0', '#f7e3c8', '#dce8d0'];
 function dropPetal() {
   if (weather === 'rain' || weather === 'snow') return;
@@ -143,8 +135,7 @@ function dropPetal() {
   sky.appendChild(p);
   setTimeout(() => p.remove(), 17000);
 }
-setInterval(dropPetal, 3200);
-dropPetal();
+setInterval(() => { if (Math.random() < .5) dropPetal(); }, 20000);
 
 /* ---------- day / night cycle: a full day every 5 minutes ---------- */
 const nightsky = document.createElement('div');
