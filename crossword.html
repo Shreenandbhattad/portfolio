@@ -32,10 +32,10 @@ body.night .xgrid{background:#181c28}
 body.night .xcell{background:#2e3345}
 body.night .xcell.black{background:#181c28}
 .xcell input{width:100%;height:100%;border:none;background:none;text-align:center;text-transform:uppercase;
-  font-family:var(--sans);font-weight:700;font-size:1.15rem;color:var(--ink);outline:none;caret-color:var(--blue)}
+  font-family:var(--sans);font-weight:700;font-size:1.15rem;color:var(--ink);outline:none;caret-color:#5a8a52}
 body.night .xcell input{color:#e8e6e0}
-.xcell.active input{background:#e8f0f7}
-body.night .xcell.active input{background:rgba(91,126,163,.25)}
+.xcell.active input{background:#eef3ec}
+body.night .xcell.active input{background:rgba(143,174,126,.22)}
 .xcell.correct input{background:#e4f0df;color:#3a5f36}
 body.night .xcell.correct input{background:rgba(143,174,126,.25);color:#a8c9a0}
 .xnum{position:absolute;top:2px;left:4px;font-size:.55rem;font-weight:700;color:var(--soft);pointer-events:none}
@@ -45,7 +45,8 @@ body.night .xnum{color:#8b8880}
 .clueline{text-align:center;min-height:44px;display:flex;align-items:center;justify-content:center;gap:10px;
   font-family:var(--sans);font-size:.92rem;color:var(--ink);margin-bottom:14px;padding:0 10px}
 body.night .clueline{color:#e8e6e0}
-.clueline .dir{font-weight:700;color:var(--blue);flex-shrink:0}
+.clueline .dir{font-weight:700;color:#5a8a52;flex-shrink:0}
+body.night .clueline .dir{color:#a8c9a0}
 .cluebtn{background:none;border:1px solid var(--line);color:var(--soft);border-radius:999px;width:30px;height:30px;
   font-size:.85rem;cursor:pointer;flex-shrink:0;transition:all .2s}
 .cluebtn:hover{color:var(--ink);border-color:var(--faint)}
@@ -64,7 +65,8 @@ body.night .actbtn:hover{background:#e8e6e0;color:#232838}
 .cluelist h4{grid-column:1/-1;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin:14px 0 6px}
 .cluelist .crow{padding:3px 0;cursor:pointer;transition:color .2s}
 .cluelist .crow:hover{color:var(--ink)}
-.cluelist .crow.active{color:var(--blue);font-weight:600}
+.cluelist .crow.active{color:#5a8a52;font-weight:600}
+body.night .cluelist .crow.active{color:#a8c9a0}
 body.night .cluelist{color:#a8a49b}
 </style>
 </head>
