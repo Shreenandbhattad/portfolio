@@ -10,7 +10,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✏️</text></svg>">
 <link rel="stylesheet" href="style.css">
 <style>
-main{max-width:620px}
+main{max-width:920px}
 .gamehead{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;flex-wrap:wrap;gap:10px}
 .modeswitch{display:flex;gap:6px}
 .modebtn{border:1px solid var(--line);background:transparent;color:var(--soft);border-radius:999px;padding:6px 14px;
@@ -24,7 +24,21 @@ body.night .modebtn.on{background:#e8e6e0;color:#232838}
 .newbtn:hover{color:var(--ink);border-color:var(--faint)}
 body.night .newbtn{border-color:rgba(255,255,255,.16);color:#a8a49b}
 
-.xwrap{display:flex;flex-direction:column;align-items:center;margin:22px 0 18px}
+/* ---------------- stats strip ---------------- */
+.statsrow{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 20px}
+.statchip{flex:1;min-width:100px;background:#f1ede4;border-radius:12px;padding:10px 14px;text-align:center}
+.statchip .sv{font-size:1.15rem;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
+.statchip .sk{font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);margin-top:2px}
+body.night .statchip{background:#2e3345}
+body.night .statchip .sv{color:#e8e6e0}
+.statchip.timer .sv{color:#5a8a52}
+body.night .statchip.timer .sv{color:#a8c9a0}
+
+/* ---------------- side-by-side layout ---------------- */
+.xlayout{display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:start;margin:10px 0 18px}
+@media(max-width:720px){.xlayout{grid-template-columns:1fr}}
+
+.xwrap{display:flex;flex-direction:column;align-items:center}
 .xgrid{display:grid;gap:2px;background:var(--ink);border-radius:8px;padding:2px;box-shadow:0 10px 26px rgba(58,54,47,.12)}
 body.night .xgrid{background:#181c28}
 .xcell{position:relative;width:52px;height:52px;background:#fffdf9;display:flex;align-items:center;justify-content:center}
@@ -36,38 +50,61 @@ body.night .xcell.black{background:#181c28}
 body.night .xcell input{color:#e8e6e0}
 .xcell.active input{background:#eef3ec}
 body.night .xcell.active input{background:rgba(143,174,126,.22)}
+.xcell.inword input{background:#f7f9f5}
+body.night .xcell.inword input{background:rgba(143,174,126,.1)}
 .xcell.correct input{background:#e4f0df;color:#3a5f36}
 body.night .xcell.correct input{background:rgba(143,174,126,.25);color:#a8c9a0}
+.xcell.wrong input{background:#faeaea;color:#a4454f}
+body.night .xcell.wrong input{background:rgba(194,85,98,.2);color:#e0a3aa}
 .xnum{position:absolute;top:2px;left:4px;font-size:.55rem;font-weight:700;color:var(--soft);pointer-events:none}
 body.night .xnum{color:#8b8880}
-@media(max-width:480px){.xcell{width:15vw;height:15vw;max-width:52px;max-height:52px}}
+@media(max-width:480px){.xcell{width:16vw;height:16vw;max-width:58px;max-height:58px}}
 
-.clueline{text-align:center;min-height:44px;display:flex;align-items:center;justify-content:center;gap:10px;
-  font-family:var(--sans);font-size:.92rem;color:var(--ink);margin-bottom:14px;padding:0 10px}
-body.night .clueline{color:#e8e6e0}
-.clueline .dir{font-weight:700;color:#5a8a52;flex-shrink:0}
+.clueline{text-align:left;min-height:44px;display:flex;align-items:center;gap:10px;
+  font-family:var(--sans);font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:14px;padding:12px 16px;
+  background:#f1ede4;border-radius:12px}
+body.night .clueline{color:#e8e6e0;background:#2e3345}
+.clueline .dir{font-weight:800;color:#5a8a52;flex-shrink:0}
 body.night .clueline .dir{color:#a8c9a0}
-.cluebtn{background:none;border:1px solid var(--line);color:var(--soft);border-radius:999px;width:30px;height:30px;
-  font-size:.85rem;cursor:pointer;flex-shrink:0;transition:all .2s}
+.cluebtn{background:none;border:1px solid var(--line);color:var(--soft);border-radius:999px;width:28px;height:28px;
+  font-size:.8rem;cursor:pointer;flex-shrink:0;transition:all .2s;margin-left:auto}
 .cluebtn:hover{color:var(--ink);border-color:var(--faint)}
 body.night .cluebtn{border-color:rgba(255,255,255,.16);color:#a8a49b}
 
-.xcontrols{display:flex;justify-content:center;gap:10px;margin-bottom:8px}
+.xcontrols{display:flex;gap:10px;margin-bottom:8px}
 .actbtn{border:1.5px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:9px 18px;
   font-family:var(--sans);font-weight:600;font-size:.8rem;cursor:pointer;transition:all .2s}
 .actbtn:hover{background:var(--ink);color:var(--paper)}
 body.night .actbtn{border-color:#e8e6e0;color:#e8e6e0}
 body.night .actbtn:hover{background:#e8e6e0;color:#232838}
 
-.winmsg{text-align:center;font-size:1rem;font-weight:600;color:#5a8a52;margin:18px 0;opacity:0;transition:opacity .4s}
-.winmsg.show{opacity:1}
-.cluelist{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:0 24px;font-size:.82rem;color:var(--soft)}
-.cluelist h4{grid-column:1/-1;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin:14px 0 6px}
-.cluelist .crow{padding:3px 0;cursor:pointer;transition:color .2s}
+.winmsg{font-size:1.05rem;font-weight:700;color:#5a8a52;margin:14px 0;opacity:0;transition:opacity .4s;transform:translateY(-6px)}
+.winmsg.show{opacity:1;transform:none}
+body.night .winmsg{color:#a8c9a0}
+.nerdscore{font-size:.82rem;color:var(--soft);margin-top:-8px;margin-bottom:14px}
+.nerdscore b{color:#5a8a52}
+body.night .nerdscore b{color:#a8c9a0}
+
+.cluelist{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;font-size:.92rem;color:var(--soft)}
+.cluelist h4{grid-column:1/-1;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin:14px 0 6px}
+.cluelist h4:first-child{margin-top:0}
+.cluelist .crow{padding:4px 0;cursor:pointer;transition:color .2s;line-height:1.4}
 .cluelist .crow:hover{color:var(--ink)}
-.cluelist .crow.active{color:#5a8a52;font-weight:600}
+.cluelist .crow.active{color:#5a8a52;font-weight:700}
+.cluelist .crow.done{text-decoration:line-through;opacity:.5}
 body.night .cluelist .crow.active{color:#a8c9a0}
 body.night .cluelist{color:#a8a49b}
+@media(max-width:480px){.cluelist{grid-template-columns:1fr}}
+
+/* ---------------- history panel ---------------- */
+.histwrap{margin-top:36px}
+.histwrap h2{margin:0 0 14px}
+.histrow{display:flex;justify-content:space-between;font-size:.85rem;color:var(--soft);padding:8px 0;border-bottom:1px solid var(--line)}
+.histrow:first-of-type{border-top:1px solid var(--line)}
+.histrow b{color:var(--ink);font-weight:600}
+body.night .histrow{border-color:rgba(255,255,255,.1);color:#a8a49b}
+body.night .histrow b{color:#e8e6e0}
+.emptyhist{font-size:.85rem;color:var(--faint);padding:14px 0}
 </style>
 </head>
 <body>
@@ -101,26 +138,40 @@ body.night .cluelist{color:#a8a49b}
     </div>
   </div>
 
-  <div class="xwrap">
-    <div class="xgrid" id="xgrid"></div>
+  <div class="statsrow fade in">
+    <div class="statchip timer"><div class="sv" id="statTimer">0:00</div><div class="sk">time</div></div>
+    <div class="statchip"><div class="sv" id="statSolved">0</div><div class="sk">solved</div></div>
+    <div class="statchip"><div class="sv" id="statStreak">0</div><div class="sk">streak</div></div>
+    <div class="statchip"><div class="sv" id="statScore">0</div><div class="sk">nerd score 🤓</div></div>
   </div>
 
-  <div class="clueline">
-    <button class="cluebtn" id="prevClue">←</button>
-    <span class="dir" id="clueDir"></span>
-    <span id="clueText"></span>
-    <button class="cluebtn" id="nextClue">→</button>
+  <div class="xlayout">
+    <div class="xwrap">
+      <div class="xgrid" id="xgrid"></div>
+      <div class="xcontrols" style="margin-top:16px">
+        <button class="actbtn" id="checkBtn">check</button>
+        <button class="actbtn" id="revealBtn">reveal</button>
+        <button class="actbtn" id="clearBtn">clear</button>
+      </div>
+    </div>
+
+    <div>
+      <div class="clueline">
+        <span class="dir" id="clueDir"></span>
+        <span id="clueText"></span>
+        <button class="cluebtn" id="prevClue">←</button>
+        <button class="cluebtn" id="nextClue">→</button>
+      </div>
+      <div class="winmsg" id="winMsg"></div>
+      <div class="nerdscore" id="nerdMsg" style="display:none"></div>
+      <div class="cluelist" id="clueList"></div>
+    </div>
   </div>
 
-  <div class="xcontrols">
-    <button class="actbtn" id="checkBtn">check</button>
-    <button class="actbtn" id="revealBtn">reveal</button>
-    <button class="actbtn" id="clearBtn">clear</button>
+  <div class="histwrap fade in">
+    <h2>recent solves</h2>
+    <div id="histList"></div>
   </div>
-
-  <div class="winmsg" id="winMsg"></div>
-
-  <div class="cluelist" id="clueList"></div>
 
   <div class="next fade in"><a href="nerds">← back to nerds</a></div>
 </main>
@@ -139,7 +190,68 @@ let slots = [];          // flat list: {dir, row, col, len, answer, clue, number
 let curSlot = 0;
 let curCellInSlot = 0;
 let solved = false;
+let startTime = null;
+let timerHandle = null;
+let elapsedMs = 0;
 
+/* ================= stats: localStorage, per-browser ================= */
+const STATS_KEY = 'nerds_crossword_stats';
+function loadStats() {
+  try {
+    const raw = localStorage.getItem(STATS_KEY);
+    if (raw) return JSON.parse(raw);
+  } catch (e) {}
+  return { solved: 0, streak: 0, lastSolveDay: null, score: 0, history: [], bestTimeMs: {} };
+}
+function saveStats(s) {
+  try { localStorage.setItem(STATS_KEY, JSON.stringify(s)); } catch (e) {}
+}
+let STATS = loadStats();
+
+function renderStatsChips() {
+  document.getElementById('statSolved').textContent = STATS.solved;
+  document.getElementById('statStreak').textContent = STATS.streak;
+  document.getElementById('statScore').textContent = STATS.score;
+}
+
+function renderHistory() {
+  const box = document.getElementById('histList');
+  if (!STATS.history.length) {
+    box.innerHTML = '<div class="emptyhist">solve one and it\'ll show up here.</div>';
+    return;
+  }
+  box.innerHTML = STATS.history.slice(0, 10).map(h => `
+    <div class="histrow">
+      <span><b>${h.title}</b> · ${h.mode === 'india' ? '🇮🇳' : '🌍'}</span>
+      <span>${formatTime(h.timeMs)} · +${h.points} pts</span>
+    </div>`).join('');
+}
+
+function formatTime(ms) {
+  const s = Math.floor(ms / 1000);
+  const m = Math.floor(s / 60);
+  const rem = s % 60;
+  return m + ':' + String(rem).padStart(2, '0');
+}
+
+function tickTimer() {
+  if (startTime === null || solved) return;
+  elapsedMs = Date.now() - startTime;
+  document.getElementById('statTimer').textContent = formatTime(elapsedMs);
+}
+
+function startTimerIfNeeded() {
+  if (startTime !== null) return;
+  startTime = Date.now();
+  timerHandle = setInterval(tickTimer, 250);
+}
+
+function stopTimer() {
+  if (timerHandle) clearInterval(timerHandle);
+  timerHandle = null;
+}
+
+/* ================= data + grid setup ================= */
 async function loadData() {
   const r = await fetch('data/crossword-data.json');
   DATA = await r.json();
@@ -169,6 +281,12 @@ function buildSlots(p) {
 }
 
 function startPuzzle() {
+  stopTimer();
+  startTime = null;
+  elapsedMs = 0;
+  document.getElementById('statTimer').textContent = '0:00';
+  document.getElementById('nerdMsg').style.display = 'none';
+
   const bank = DATA[mode];
   puzzle = bank[Math.floor(Math.random() * bank.length)];
   size = puzzle.size;
@@ -230,10 +348,18 @@ function slotCells(s) {
   return arr;
 }
 
+function slotIsFull(s) {
+  return slotCells(s).every(([r, c]) => cellEls[r][c].value);
+}
+
 function highlightSlot() {
-  document.querySelectorAll('.xcell').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.xcell').forEach(el => el.classList.remove('active', 'inword'));
   const s = slots[curSlot];
-  slotCells(s).forEach(([r, c]) => { if (cellEls[r][c]) cellEls[r][c].closest('.xcell').classList.add('active'); });
+  const cells = slotCells(s);
+  cells.forEach(([r, c], i) => {
+    if (!cellEls[r][c]) return;
+    cellEls[r][c].closest('.xcell').classList.add(i === curCellInSlot ? 'active' : 'inword');
+  });
 }
 
 function renderClueLine() {
@@ -263,20 +389,43 @@ function onFocusCell(r, c) {
   renderClueLine();
 }
 
+/* find the next slot (in clue order) that still has an empty cell, wrapping around */
+function nextUnfilledSlot(fromIdx) {
+  for (let step = 1; step <= slots.length; step++) {
+    const idx = (fromIdx + step) % slots.length;
+    if (!slotIsFull(slots[idx])) return idx;
+  }
+  return null; // everything's full
+}
+
 function onType(r, c) {
   const inp = cellEls[r][c];
   inp.value = inp.value.toUpperCase().replace(/[^A-Z]/g, '').slice(-1);
-  inp.closest('.xcell').classList.remove('correct');
+  inp.closest('.xcell').classList.remove('correct', 'wrong');
+  startTimerIfNeeded();
+
   if (inp.value) {
     const cells = slotCells(slots[curSlot]);
     const idx = cells.findIndex(([rr, cc]) => rr === r && cc === c);
     if (idx > -1 && idx < cells.length - 1) {
+      // more letters to go in this word: just advance within it
       const [nr, nc] = cells[idx + 1];
       curCellInSlot = idx + 1;
       cellEls[nr][nc].focus();
+    } else if (idx === cells.length - 1 && slotIsFull(slots[curSlot])) {
+      // word just got completed (right or wrong, doesn't matter yet) — jump onward
+      const next = nextUnfilledSlot(curSlot);
+      if (next !== null) {
+        curSlot = next;
+        curCellInSlot = 0;
+        renderClueLine();
+        focusCurrent();
+      } else {
+        renderClueLine();
+      }
     }
   }
-  checkWin(true);
+  checkWin();
 }
 
 function onKey(e, r, c) {
@@ -313,7 +462,7 @@ function renderClueList() {
   slots.forEach((s, si) => {
     if (s.dir !== 'A') return;
     const row = document.createElement('div');
-    row.className = 'crow' + (si === curSlot ? ' active' : '');
+    row.className = 'crow' + (si === curSlot ? ' active' : '') + (slotIsFull(s) ? ' done' : '');
     row.textContent = (s.number || '') + '. ' + s.clue;
     row.addEventListener('click', () => { curSlot = si; curCellInSlot = 0; renderClueLine(); focusCurrent(); });
     box.appendChild(row);
@@ -323,14 +472,53 @@ function renderClueList() {
   slots.forEach((s, si) => {
     if (s.dir !== 'D') return;
     const row = document.createElement('div');
-    row.className = 'crow' + (si === curSlot ? ' active' : '');
+    row.className = 'crow' + (si === curSlot ? ' active' : '') + (slotIsFull(s) ? ' done' : '');
     row.textContent = (s.number || '') + '. ' + s.clue;
     row.addEventListener('click', () => { curSlot = si; curCellInSlot = 0; renderClueLine(); focusCurrent(); });
     box.appendChild(row);
   });
 }
 
-function checkWin(silent) {
+function todayKey() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function recordSolve() {
+  const today = todayKey();
+  if (STATS.lastSolveDay === today) {
+    // already solved today: still counts toward totals, but streak doesn't bump twice
+  } else {
+    const y = new Date(Date.now() - 864e5).toISOString().slice(0, 10);
+    STATS.streak = (STATS.lastSolveDay === y) ? STATS.streak + 1 : 1;
+    STATS.lastSolveDay = today;
+  }
+  STATS.solved += 1;
+
+  // nerd score: base points, bonus for speed, bonus for streak
+  const seconds = Math.round(elapsedMs / 1000);
+  const speedBonus = Math.max(0, 60 - seconds); // faster than a minute earns extra
+  const streakBonus = Math.min(STATS.streak, 10) * 2;
+  const points = 20 + speedBonus + streakBonus;
+  STATS.score += points;
+
+  STATS.history.unshift({ title: puzzle.title, mode, timeMs: elapsedMs, points, date: today });
+  STATS.history = STATS.history.slice(0, 30);
+
+  const bestKey = mode;
+  if (!STATS.bestTimeMs[bestKey] || elapsedMs < STATS.bestTimeMs[bestKey]) {
+    STATS.bestTimeMs[bestKey] = elapsedMs;
+  }
+
+  saveStats(STATS);
+  renderStatsChips();
+  renderHistory();
+
+  const nerdMsg = document.getElementById('nerdMsg');
+  nerdMsg.style.display = 'block';
+  nerdMsg.innerHTML = `+<b>${points}</b> nerd points · streak <b>${STATS.streak}</b> 🤓`;
+}
+
+function checkWin() {
   let allFilled = true, allCorrect = true;
   slots.forEach(s => {
     slotCells(s).forEach(([r, c], i) => {
@@ -341,48 +529,58 @@ function checkWin(silent) {
   });
   if (allFilled && allCorrect && !solved) {
     solved = true;
+    stopTimer();
+    document.getElementById('statTimer').textContent = formatTime(elapsedMs);
+    document.querySelectorAll('.xcell:not(.black)').forEach(el => el.classList.remove('wrong'));
     document.querySelectorAll('.xcell:not(.black)').forEach(el => el.classList.add('correct'));
     const m = document.getElementById('winMsg');
-    m.textContent = 'solved! nicely done.';
+    m.textContent = `solved in ${formatTime(elapsedMs)} 🎉`;
     m.classList.add('show');
+    recordSolve();
   }
 }
 
 function checkNow() {
-  let anyWrong = false;
-  // for every filled cell, compare against whichever slot covers it
   for (let r = 0; r < size; r++) for (let c = 0; c < size; c++) {
     if (!cellEls[r][c]) continue;
     const v = cellEls[r][c].value;
-    if (!v) continue;
+    const cellDiv = cellEls[r][c].closest('.xcell');
+    if (!v) { cellDiv.classList.remove('correct', 'wrong'); continue; }
     const cs = cellSlots[r][c];
     const slotIdx = cs.A !== null ? cs.A : cs.D;
     const s = slots[slotIdx];
     const cells = slotCells(s);
     const idx = cells.findIndex(([rr, cc]) => rr === r && cc === c);
     const correct = s.answer[idx] === v;
-    cellEls[r][c].closest('.xcell').classList.toggle('correct', correct);
-    if (!correct) { cellEls[r][c].closest('.xcell').classList.remove('correct'); anyWrong = true; }
+    cellDiv.classList.toggle('correct', correct);
+    cellDiv.classList.toggle('wrong', !correct);
   }
-  checkWin(true);
 }
 
 function revealAll() {
   slots.forEach(s => {
     slotCells(s).forEach(([r, c], i) => { cellEls[r][c].value = s.answer[i]; });
   });
-  document.querySelectorAll('.xcell:not(.black)').forEach(el => el.classList.add('correct'));
+  document.querySelectorAll('.xcell:not(.black)').forEach(el => { el.classList.remove('wrong'); el.classList.add('correct'); });
   solved = true;
+  stopTimer();
   const m = document.getElementById('winMsg');
   m.textContent = 'here you go.';
   m.classList.add('show');
+  renderClueList();
 }
 
 function clearAll() {
   document.querySelectorAll('.xcell input').forEach(inp => inp.value = '');
-  document.querySelectorAll('.xcell').forEach(el => el.classList.remove('correct'));
+  document.querySelectorAll('.xcell').forEach(el => el.classList.remove('correct', 'wrong'));
   solved = false;
+  stopTimer();
+  startTime = null;
+  elapsedMs = 0;
+  document.getElementById('statTimer').textContent = '0:00';
   document.getElementById('winMsg').className = 'winmsg';
+  document.getElementById('nerdMsg').style.display = 'none';
+  renderClueList();
 }
 
 document.getElementById('prevClue').addEventListener('click', () => switchClue(-1));
@@ -404,6 +602,8 @@ document.getElementById('modeIndia').addEventListener('click', () => {
   startPuzzle();
 });
 
+renderStatsChips();
+renderHistory();
 loadData().then(startPuzzle);
 </script>
 </body>

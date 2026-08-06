@@ -5,18 +5,18 @@
       "size": 5,
       "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
       "across": [
-        { "row": 0, "col": 0, "answer": "THAT", "clue": "\"___'s a good idea\"" },
-        { "row": 1, "col": 0, "answer": "HOURS", "clue": "9-to-5, e.g." },
-        { "row": 2, "col": 0, "answer": "AUDIO", "clue": "Podcast format" },
-        { "row": 3, "col": 0, "answer": "TRIAL", "clue": "Courtroom event, or a free software period" },
-        { "row": 4, "col": 1, "answer": "SOLD", "clue": "No longer available, on a listing" }
+        { "row": 0, "col": 0, "answer": "THAT", "clue": "\"Well, ___ escalated quickly\"" },
+        { "row": 1, "col": 0, "answer": "HOURS", "clue": "What you'd give for one more of, before a deadline" },
+        { "row": 2, "col": 0, "answer": "AUDIO", "clue": "What earbuds deliver" },
+        { "row": 3, "col": 0, "answer": "TRIAL", "clue": "30-day free ___ (that renews without asking)" },
+        { "row": 4, "col": 1, "answer": "SOLD", "clue": "Status of the good seats, always, somehow" }
       ],
       "down": [
-        { "row": 0, "col": 0, "answer": "THAT", "clue": "The opposite of \"this\"" },
-        { "row": 0, "col": 1, "answer": "HOURS", "clue": "Business ___" },
-        { "row": 0, "col": 2, "answer": "AUDIO", "clue": "Sound, as opposed to video" },
-        { "row": 0, "col": 3, "answer": "TRIAL", "clue": "Test run" },
-        { "row": 1, "col": 4, "answer": "SOLD", "clue": "Convinced, as in \"I'm ___ on this idea\"" }
+        { "row": 0, "col": 0, "answer": "THAT", "clue": "\"Did you hear ___?\"" },
+        { "row": 0, "col": 1, "answer": "HOURS", "clue": "\"Store ___ may vary\"" },
+        { "row": 0, "col": 2, "answer": "AUDIO", "clue": "Book format for the commute" },
+        { "row": 0, "col": 3, "answer": "TRIAL", "clue": "Courtroom drama, or a beta test" },
+        { "row": 1, "col": 4, "answer": "SOLD", "clue": "\"I'm ___\" (you've convinced me)" }
       ]
     },
     {
@@ -24,18 +24,18 @@
       "size": 5,
       "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
       "across": [
-        { "row": 0, "col": 0, "answer": "HAVE", "clue": "Possess" },
-        { "row": 1, "col": 0, "answer": "ABOVE", "clue": "Higher than" },
-        { "row": 2, "col": 0, "answer": "VOCAL", "clue": "Outspoken, or relating to singing" },
-        { "row": 3, "col": 0, "answer": "EVANS", "clue": "Chris ___, actor who played Captain America" },
-        { "row": 4, "col": 1, "answer": "ELSE", "clue": "\"Anything ___?\"" }
+        { "row": 0, "col": 0, "answer": "HAVE", "clue": "\"You can't ___ it both ways\"" },
+        { "row": 1, "col": 0, "answer": "ABOVE", "clue": "Where the fine print says \"see ___\"" },
+        { "row": 2, "col": 0, "answer": "VOCAL", "clue": "Loudly opinionated" },
+        { "row": 3, "col": 0, "answer": "EVANS", "clue": "Chris who's played both a soldier and a toy cowboy" },
+        { "row": 4, "col": 1, "answer": "ELSE", "clue": "\"Or ___!\" (a threat, sort of)" }
       ],
       "down": [
-        { "row": 0, "col": 0, "answer": "HAVE", "clue": "\"I ___ a dream\"" },
-        { "row": 0, "col": 1, "answer": "ABOVE", "clue": "Overhead" },
-        { "row": 0, "col": 2, "answer": "VOCAL", "clue": "___ cords" },
-        { "row": 0, "col": 3, "answer": "EVANS", "clue": "Actress Evans or actor Evans, take your pick" },
-        { "row": 1, "col": 4, "answer": "ELSE", "clue": "Otherwise" }
+        { "row": 0, "col": 0, "answer": "HAVE", "clue": "\"___ you met Ted?\"" },
+        { "row": 0, "col": 1, "answer": "ABOVE", "clue": "Higher up, on an org chart" },
+        { "row": 0, "col": 2, "answer": "VOCAL", "clue": "___ cords, put to good use" },
+        { "row": 0, "col": 3, "answer": "EVANS", "clue": "Either Marvel Chris, take your pick" },
+        { "row": 1, "col": 4, "answer": "ELSE", "clue": "\"What ___ is new?\"" }
       ]
     },
     {
@@ -43,18 +43,18 @@
       "size": 5,
       "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
       "across": [
-        { "row": 0, "col": 0, "answer": "THIS", "clue": "\"___ is the way\"" },
-        { "row": 1, "col": 0, "answer": "HINTS", "clue": "Subtle clues" },
-        { "row": 2, "col": 0, "answer": "INDIA", "clue": "Home to the Taj Mahal" },
-        { "row": 3, "col": 0, "answer": "STILL", "clue": "Motionless, or \"nevertheless\"" },
-        { "row": 4, "col": 1, "answer": "SALE", "clue": "50% off event" }
+        { "row": 0, "col": 0, "answer": "THIS", "clue": "\"___ is fine\" (said while everything is on fire)" },
+        { "row": 1, "col": 0, "answer": "HINTS", "clue": "What a good crossword clue gives, not tells" },
+        { "row": 2, "col": 0, "answer": "INDIA", "clue": "Home to the world's tallest statue" },
+        { "row": 3, "col": 0, "answer": "STILL", "clue": "\"...and ___, I'd do it again\"" },
+        { "row": 4, "col": 1, "answer": "SALE", "clue": "The reason your cart has 40 unrelated items" }
       ],
       "down": [
-        { "row": 0, "col": 0, "answer": "THIS", "clue": "Not that, but ___" },
-        { "row": 0, "col": 1, "answer": "HINTS", "clue": "Gives away, in small pieces" },
-        { "row": 0, "col": 2, "answer": "INDIA", "clue": "NATO alphabet letter for \"I\"" },
-        { "row": 0, "col": 3, "answer": "STILL", "clue": "Even now" },
-        { "row": 1, "col": 4, "answer": "SALE", "clue": "\"For ___\" sign" }
+        { "row": 0, "col": 0, "answer": "THIS", "clue": "\"Not that, ___ one\"" },
+        { "row": 0, "col": 1, "answer": "HINTS", "clue": "Not-so-subtle drops" },
+        { "row": 0, "col": 2, "answer": "INDIA", "clue": "NATO alphabet's letter for I" },
+        { "row": 0, "col": 3, "answer": "STILL", "clue": "\"Are you ___ there?\" (a video call classic)" },
+        { "row": 1, "col": 4, "answer": "SALE", "clue": "\"Everything must go\" sign" }
       ]
     },
     {
@@ -62,18 +62,18 @@
       "size": 5,
       "grid": ["#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#"],
       "across": [
-        { "row": 0, "col": 1, "answer": "FROM", "clue": "Originating at" },
-        { "row": 1, "col": 0, "answer": "FRAME", "clue": "Picture holder" },
-        { "row": 2, "col": 0, "answer": "RATES", "clue": "Interest ___" },
-        { "row": 3, "col": 0, "answer": "OMEGA", "clue": "Last letter of the Greek alphabet" },
-        { "row": 4, "col": 0, "answer": "MESA", "clue": "Flat-topped landform" }
+        { "row": 0, "col": 1, "answer": "FROM", "clue": "\"Where are you really ___?\"" },
+        { "row": 1, "col": 0, "answer": "FRAME", "clue": "What a good photo needs, and a bad excuse needs too" },
+        { "row": 2, "col": 0, "answer": "RATES", "clue": "What everyone's watching the central bank for" },
+        { "row": 3, "col": 0, "answer": "OMEGA", "clue": "The Greek alphabet's grand finale" },
+        { "row": 4, "col": 0, "answer": "MESA", "clue": "A plateau that got its own zip code" }
       ],
       "down": [
-        { "row": 0, "col": 1, "answer": "FRAME", "clue": "Bone structure, informally" },
-        { "row": 0, "col": 2, "answer": "RATES", "clue": "Judges, as a movie" },
-        { "row": 0, "col": 3, "answer": "OMEGA", "clue": "Watch brand, or the end" },
-        { "row": 0, "col": 4, "answer": "MESA", "clue": "Arizona city" },
-        { "row": 1, "col": 0, "answer": "FROM", "clue": "\"Where are you ___?\"" }
+        { "row": 0, "col": 1, "answer": "FRAME", "clue": "Comic book panel, or your bone structure" },
+        { "row": 0, "col": 2, "answer": "RATES", "clue": "Critically scores, as a movie" },
+        { "row": 0, "col": 3, "answer": "OMEGA", "clue": "Watch brand worn by fictional spies" },
+        { "row": 0, "col": 4, "answer": "MESA", "clue": "Arizona city, or Spanish for \"table\"" },
+        { "row": 1, "col": 0, "answer": "FROM", "clue": "\"A gift ___ me to you\"" }
       ]
     },
     {
@@ -81,18 +81,18 @@
       "size": 5,
       "grid": ["#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#"],
       "across": [
-        { "row": 0, "col": 1, "answer": "WHAT", "clue": "\"___'s up?\"" },
-        { "row": 1, "col": 0, "answer": "WHOLE", "clue": "Entire, complete" },
-        { "row": 2, "col": 0, "answer": "HOMES", "clue": "Where people live" },
-        { "row": 3, "col": 0, "answer": "ALERT", "clue": "Wide awake, or a warning notice" },
-        { "row": 4, "col": 0, "answer": "TEST", "clue": "Exam" }
+        { "row": 0, "col": 1, "answer": "WHAT", "clue": "\"___ do you mean?\"" },
+        { "row": 1, "col": 0, "answer": "WHOLE", "clue": "The ___ nine yards" },
+        { "row": 2, "col": 0, "answer": "HOMES", "clue": "What a real estate app lets you window-shop for at 2 a.m." },
+        { "row": 3, "col": 0, "answer": "ALERT", "clue": "What your phone won't stop buzzing with" },
+        { "row": 4, "col": 0, "answer": "TEST", "clue": "The thing you swore you studied for" }
       ],
       "down": [
-        { "row": 0, "col": 1, "answer": "WHOLE", "clue": "Not partial" },
-        { "row": 0, "col": 2, "answer": "HOMES", "clue": "Real estate listings" },
-        { "row": 0, "col": 3, "answer": "ALERT", "clue": "On high ___" },
-        { "row": 0, "col": 4, "answer": "TEST", "clue": "Pop quiz" },
-        { "row": 1, "col": 0, "answer": "WHAT", "clue": "Question word" }
+        { "row": 0, "col": 1, "answer": "WHOLE", "clue": "Not just a slice — the ___ pie" },
+        { "row": 0, "col": 2, "answer": "HOMES", "clue": "\"There's no place like\" these" },
+        { "row": 0, "col": 3, "answer": "ALERT", "clue": "On high ___, nervously" },
+        { "row": 0, "col": 4, "answer": "TEST", "clue": "Pop quiz, dreaded" },
+        { "row": 1, "col": 0, "answer": "WHAT", "clue": "\"Say ___?\" — a request to repeat" }
       ]
     },
     {
@@ -100,18 +100,18 @@
       "size": 5,
       "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
       "across": [
-        { "row": 0, "col": 0, "answer": "THAT", "clue": "\"___ one, please\" (pointing)" },
-        { "row": 1, "col": 0, "answer": "HUMAN", "clue": "Not a robot" },
-        { "row": 2, "col": 0, "answer": "AMINO", "clue": "___ acid, protein building block" },
-        { "row": 3, "col": 0, "answer": "TANKS", "clue": "Military vehicles, or fish homes" },
-        { "row": 4, "col": 1, "answer": "NOSE", "clue": "Sniffer" }
+        { "row": 0, "col": 0, "answer": "THAT", "clue": "\"I can't believe ___ just happened\"" },
+        { "row": 1, "col": 0, "answer": "HUMAN", "clue": "What the CAPTCHA is trying to confirm you are" },
+        { "row": 2, "col": 0, "answer": "AMINO", "clue": "___ acid, life's building block" },
+        { "row": 3, "col": 0, "answer": "TANKS", "clue": "What a bad Rotten Tomatoes score means a movie does" },
+        { "row": 4, "col": 1, "answer": "NOSE", "clue": "What follows your gut, kind of literally" }
       ],
       "down": [
-        { "row": 0, "col": 0, "answer": "THAT", "clue": "\"I can't believe ___ happened\"" },
-        { "row": 0, "col": 1, "answer": "HUMAN", "clue": "Person" },
-        { "row": 0, "col": 2, "answer": "AMINO", "clue": "Part of a protein's chemical name" },
-        { "row": 0, "col": 3, "answer": "TANKS", "clue": "Fails badly, in slang" },
-        { "row": 1, "col": 4, "answer": "NOSE", "clue": "\"By a ___\" (close race finish)" }
+        { "row": 0, "col": 0, "answer": "THAT", "clue": "\"Take ___, world!\"" },
+        { "row": 0, "col": 1, "answer": "HUMAN", "clue": "The species behind every meme" },
+        { "row": 0, "col": 2, "answer": "AMINO", "clue": "Part of a protein's full chemical name" },
+        { "row": 0, "col": 3, "answer": "TANKS", "clue": "Flops, in slang, or armored vehicles" },
+        { "row": 1, "col": 4, "answer": "NOSE", "clue": "How a photo finish is decided, \"by a ___\"" }
       ]
     },
     {
@@ -119,18 +119,18 @@
       "size": 5,
       "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
       "across": [
-        { "row": 0, "col": 0, "answer": "THIS", "clue": "Not that, ___" },
-        { "row": 1, "col": 0, "answer": "HENCE", "clue": "Therefore" },
-        { "row": 2, "col": 0, "answer": "INDEX", "clue": "Book's back-page lookup" },
-        { "row": 3, "col": 0, "answer": "SCENE", "clue": "Movie segment" },
-        { "row": 4, "col": 1, "answer": "EXEC", "clue": "Company officer, for short" }
+        { "row": 0, "col": 0, "answer": "THIS", "clue": "\"Not that one — ___ one\"" },
+        { "row": 1, "col": 0, "answer": "HENCE", "clue": "Fancy word for \"so\"" },
+        { "row": 2, "col": 0, "answer": "INDEX", "clue": "What you scroll straight past to get to the chapter" },
+        { "row": 3, "col": 0, "answer": "SCENE", "clue": "What you'd rather not make, in public" },
+        { "row": 4, "col": 1, "answer": "EXEC", "clue": "Corner-office type, for short" }
       ],
       "down": [
-        { "row": 0, "col": 0, "answer": "THIS", "clue": "\"___ just in\" (news bulletin)" },
-        { "row": 0, "col": 1, "answer": "HENCE", "clue": "As a result" },
-        { "row": 0, "col": 2, "answer": "INDEX", "clue": "___ finger" },
-        { "row": 0, "col": 3, "answer": "SCENE", "clue": "\"Behind the ___\"" },
-        { "row": 1, "col": 4, "answer": "EXEC", "clue": "CEO, e.g., informally" }
+        { "row": 0, "col": 0, "answer": "THIS", "clue": "\"___ just in...\"" },
+        { "row": 0, "col": 1, "answer": "HENCE", "clue": "Therefore, if you're feeling formal" },
+        { "row": 0, "col": 2, "answer": "INDEX", "clue": "The finger you point with, if you're rude" },
+        { "row": 0, "col": 3, "answer": "SCENE", "clue": "\"Behind the ___\" footage" },
+        { "row": 1, "col": 4, "answer": "EXEC", "clue": "The person whose calendar is somehow always full" }
       ]
     },
     {
@@ -138,18 +138,18 @@
       "size": 5,
       "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
       "across": [
-        { "row": 0, "col": 0, "answer": "WITH", "clue": "Accompanied by" },
-        { "row": 1, "col": 0, "answer": "ISAAC", "clue": "Biblical patriarch, son of Abraham" },
-        { "row": 2, "col": 0, "answer": "TAMIL", "clue": "Language of Tamil Nadu and Sri Lanka" },
+        { "row": 0, "col": 0, "answer": "WITH", "clue": "\"You're either ___ us or against us\"" },
+        { "row": 1, "col": 0, "answer": "ISAAC", "clue": "Biblical son of Abraham, or gravity's favorite physicist" },
+        { "row": 2, "col": 0, "answer": "TAMIL", "clue": "Language spoken in Chennai and Jaffna alike" },
         { "row": 3, "col": 0, "answer": "HAITI", "clue": "Caribbean nation sharing an island with the Dominican Republic" },
-        { "row": 4, "col": 1, "answer": "CLIP", "clue": "Paper fastener" }
+        { "row": 4, "col": 1, "answer": "CLIP", "clue": "What you send instead of explaining the joke" }
       ],
       "down": [
-        { "row": 0, "col": 0, "answer": "WITH", "clue": "\"___ or without you\"" },
-        { "row": 0, "col": 1, "answer": "ISAAC", "clue": "Newton, of gravity fame" },
-        { "row": 0, "col": 2, "answer": "TAMIL", "clue": "One of India's classical languages" },
-        { "row": 0, "col": 3, "answer": "HAITI", "clue": "Port-au-Prince is its capital" },
-        { "row": 1, "col": 4, "answer": "CLIP", "clue": "Short video snippet" }
+        { "row": 0, "col": 0, "answer": "WITH", "clue": "\"___ or without you\", per U2" },
+        { "row": 0, "col": 1, "answer": "ISAAC", "clue": "Newton, of the falling-apple legend" },
+        { "row": 0, "col": 2, "answer": "TAMIL", "clue": "One of the world's oldest living languages, still spoken daily" },
+        { "row": 0, "col": 3, "answer": "HAITI", "clue": "Its capital is Port-au-Prince" },
+        { "row": 1, "col": 4, "answer": "CLIP", "clue": "A 15-second video, endlessly rewatched" }
       ]
     }
   ],
@@ -159,18 +159,18 @@
       "size": 5,
       "grid": ["#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#"],
       "across": [
-        { "row": 0, "col": 1, "answer": "DIAL", "clue": "Turn, like an old phone" },
-        { "row": 1, "col": 0, "answer": "DENSE", "clue": "Thickly packed, like Mumbai's population" },
-        { "row": 2, "col": 0, "answer": "INDIA", "clue": "Country with 22 official languages" },
-        { "row": 3, "col": 0, "answer": "ASIAN", "clue": "Continental adjective for India" },
-        { "row": 4, "col": 0, "answer": "LEAN", "clue": "Not much fat on this cut of meat" }
+        { "row": 0, "col": 1, "answer": "DIAL", "clue": "What a rotary phone had instead of buttons" },
+        { "row": 1, "col": 0, "answer": "DENSE", "clue": "How Mumbai's local trains feel at rush hour" },
+        { "row": 2, "col": 0, "answer": "INDIA", "clue": "Nation with 22 official languages and one very good cricket team" },
+        { "row": 3, "col": 0, "answer": "ASIAN", "clue": "Continental adjective covering everything from Delhi to Tokyo" },
+        { "row": 4, "col": 0, "answer": "LEAN", "clue": "What a good keema cut should be" }
       ],
       "down": [
-        { "row": 0, "col": 1, "answer": "DENSE", "clue": "Hard to see through, like fog" },
-        { "row": 0, "col": 2, "answer": "INDIA", "clue": "NATO alphabet's \"I\"" },
-        { "row": 0, "col": 3, "answer": "ASIAN", "clue": "From the world's largest continent" },
-        { "row": 0, "col": 4, "answer": "LEAN", "clue": "Tilt to one side" },
-        { "row": 1, "col": 0, "answer": "DIAL", "clue": "Sundial's face" }
+        { "row": 0, "col": 1, "answer": "DENSE", "clue": "Hard to see through, like Delhi smog in winter" },
+        { "row": 0, "col": 2, "answer": "INDIA", "clue": "NATO alphabet's letter for I" },
+        { "row": 0, "col": 3, "answer": "ASIAN", "clue": "From the continent that's home to over half of humanity" },
+        { "row": 0, "col": 4, "answer": "LEAN", "clue": "Tilt, like a rickshaw on a sharp turn" },
+        { "row": 1, "col": 0, "answer": "DIAL", "clue": "A sundial's business end" }
       ]
     },
     {
@@ -178,18 +178,18 @@
       "size": 5,
       "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
       "across": [
-        { "row": 0, "col": 0, "answer": "LOTS", "clue": "Plenty" },
-        { "row": 1, "col": 0, "answer": "OMAHA", "clue": "Nebraska's largest city" },
-        { "row": 2, "col": 0, "answer": "TAMIL", "clue": "Language of Tamil Nadu and Sri Lanka" },
-        { "row": 3, "col": 0, "answer": "SHIPS", "clue": "Cargo vessels" },
-        { "row": 4, "col": 1, "answer": "ALSO", "clue": "In addition" }
+        { "row": 0, "col": 0, "answer": "LOTS", "clue": "How much chai you can drink and still want more" },
+        { "row": 1, "col": 0, "answer": "OMAHA", "clue": "Nebraska's biggest city, if geography's your thing" },
+        { "row": 2, "col": 0, "answer": "TAMIL", "clue": "Language of Tamil Nadu, and of Jaffna across the strait" },
+        { "row": 3, "col": 0, "answer": "SHIPS", "clue": "What Chennai's busy port handles by the thousand" },
+        { "row": 4, "col": 1, "answer": "ALSO", "clue": "\"And ___, don't forget the pickle\"" }
       ],
       "down": [
-        { "row": 0, "col": 0, "answer": "LOTS", "clue": "\"___ of love\"" },
-        { "row": 0, "col": 1, "answer": "OMAHA", "clue": "One of the D-Day landing beaches" },
-        { "row": 0, "col": 2, "answer": "TAMIL", "clue": "One of India's classical languages" },
-        { "row": 0, "col": 3, "answer": "SHIPS", "clue": "\"When my ___ come in\"" },
-        { "row": 1, "col": 4, "answer": "ALSO", "clue": "Too, as well" }
+        { "row": 0, "col": 0, "answer": "LOTS", "clue": "\"Sending you ___ of love\"" },
+        { "row": 0, "col": 1, "answer": "OMAHA", "clue": "One of the five D-Day landing beaches" },
+        { "row": 0, "col": 2, "answer": "TAMIL", "clue": "One of the world's oldest classical languages, still spoken today" },
+        { "row": 0, "col": 3, "answer": "SHIPS", "clue": "\"When my ___ come in\" — a hopeful idiom" },
+        { "row": 1, "col": 4, "answer": "ALSO", "clue": "As well, in other words" }
       ]
     },
     {
@@ -197,18 +197,18 @@
       "size": 5,
       "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
       "across": [
-        { "row": 0, "col": 0, "answer": "TAGS", "clue": "Price ___" },
-        { "row": 1, "col": 0, "answer": "AGAIN", "clue": "Once more" },
-        { "row": 2, "col": 0, "answer": "GANGA", "clue": "The Ganges River, in Hindi" },
-        { "row": 3, "col": 0, "answer": "SIGNS", "clue": "Roadside indicators" },
-        { "row": 4, "col": 1, "answer": "NASA", "clue": "US space agency" }
+        { "row": 0, "col": 0, "answer": "TAGS", "clue": "What you check before realizing the sweater's out of budget" },
+        { "row": 1, "col": 0, "answer": "AGAIN", "clue": "\"Say that ___?\" when you've zoned out" },
+        { "row": 2, "col": 0, "answer": "GANGA", "clue": "The river that flows through Varanasi's ghats" },
+        { "row": 3, "col": 0, "answer": "SIGNS", "clue": "What you'd need more of on unmarked Indian highways" },
+        { "row": 4, "col": 1, "answer": "NASA", "clue": "ISRO's counterpart across the Pacific" }
       ],
       "down": [
-        { "row": 0, "col": 0, "answer": "TAGS", "clue": "Labels" },
-        { "row": 0, "col": 1, "answer": "AGAIN", "clue": "\"Here we go ___\"" },
-        { "row": 0, "col": 2, "answer": "GANGA", "clue": "India's most sacred river" },
-        { "row": 0, "col": 3, "answer": "SIGNS", "clue": "Zodiac ___" },
-        { "row": 1, "col": 4, "answer": "NASA", "clue": "ISRO's American counterpart" }
+        { "row": 0, "col": 0, "answer": "TAGS", "clue": "Price stickers, or what you do to friends in photos" },
+        { "row": 0, "col": 1, "answer": "AGAIN", "clue": "\"Here we go ___\" — a sequel's unofficial motto" },
+        { "row": 0, "col": 2, "answer": "GANGA", "clue": "India's most sacred river, in Hindi" },
+        { "row": 0, "col": 3, "answer": "SIGNS", "clue": "The zodiac has twelve of these" },
+        { "row": 1, "col": 4, "answer": "NASA", "clue": "Sent Chandrayaan's counterpart missions to the Moon too" }
       ]
     },
     {
@@ -216,18 +216,18 @@
       "size": 5,
       "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
       "across": [
-        { "row": 0, "col": 0, "answer": "WILL", "clue": "\"Where there's a ___...\"" },
-        { "row": 1, "col": 0, "answer": "IDEAS", "clue": "Brainstorm results" },
-        { "row": 2, "col": 0, "answer": "LEONE", "clue": "Sierra ___, West African nation" },
-        { "row": 3, "col": 0, "answer": "LANKA", "clue": "Sri ___, island nation south of India" },
-        { "row": 4, "col": 1, "answer": "SEAT", "clue": "Chair, or a seat in Parliament" }
+        { "row": 0, "col": 0, "answer": "WILL", "clue": "\"Where there's a ___, there's a way\"" },
+        { "row": 1, "col": 0, "answer": "IDEAS", "clue": "What a good brainstorm session produces, eventually" },
+        { "row": 2, "col": 0, "answer": "LEONE", "clue": "Sierra ___, the West African nation, not the spaghetti-western director" },
+        { "row": 3, "col": 0, "answer": "LANKA", "clue": "Sri ___, the teardrop island just south of India" },
+        { "row": 4, "col": 1, "answer": "SEAT", "clue": "What everyone fights over on a crowded train" }
       ],
       "down": [
-        { "row": 0, "col": 0, "answer": "WILL", "clue": "Legal document, or determination" },
-        { "row": 0, "col": 1, "answer": "IDEAS", "clue": "Concepts" },
-        { "row": 0, "col": 2, "answer": "LEONE", "clue": "Sergio ___, spaghetti-western director" },
-        { "row": 0, "col": 3, "answer": "LANKA", "clue": "Home to Adam's Peak" },
-        { "row": 1, "col": 4, "answer": "SEAT", "clue": "\"Take a ___\"" }
+        { "row": 0, "col": 0, "answer": "WILL", "clue": "Legal document, or sheer determination" },
+        { "row": 0, "col": 1, "answer": "IDEAS", "clue": "What a whiteboard fills up with, then erases" },
+        { "row": 0, "col": 2, "answer": "LEONE", "clue": "Sergio ___, who basically invented the spaghetti western" },
+        { "row": 0, "col": 3, "answer": "LANKA", "clue": "Home to Adam's Peak and some very good tea" },
+        { "row": 1, "col": 4, "answer": "SEAT", "clue": "\"Take a ___\" — an invitation to stay a while" }
       ]
     }
   ]
