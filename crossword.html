@@ -24,15 +24,13 @@ body.night .modebtn.on{background:#e8e6e0;color:#232838}
 .newbtn:hover{color:var(--ink);border-color:var(--faint)}
 body.night .newbtn{border-color:rgba(255,255,255,.16);color:#a8a49b}
 
-/* ---------------- stats strip ---------------- */
-.statsrow{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 20px}
-.statchip{flex:1;min-width:100px;background:#f1ede4;border-radius:12px;padding:10px 14px;text-align:center}
-.statchip .sv{font-size:1.15rem;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
-.statchip .sk{font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);margin-top:2px}
-body.night .statchip{background:#2e3345}
-body.night .statchip .sv{color:#e8e6e0}
-.statchip.timer .sv{color:#5a8a52}
-body.night .statchip.timer .sv{color:#a8c9a0}
+/* ---------------- big timer ---------------- */
+.bigtimer{display:inline-flex;align-items:baseline;gap:10px;margin:14px 0 20px;
+  background:#f1ede4;border-radius:16px;padding:14px 24px}
+.bigtimer .tv{font-size:2.2rem;font-weight:800;color:#5a8a52;font-variant-numeric:tabular-nums;line-height:1}
+.bigtimer .tk{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+body.night .bigtimer{background:#2e3345}
+body.night .bigtimer .tv{color:#a8c9a0}
 
 /* ---------------- side-by-side layout ---------------- */
 .xlayout{display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:start;margin:10px 0 18px}
@@ -136,9 +134,9 @@ body.night .histrow b{color:#e8e6e0}
     </div>
   </div>
 
-  <div class="statsrow fade in">
-    <div class="statchip timer"><div class="sv" id="statTimer">0:00</div><div class="sk">time</div></div>
-    <div class="statchip"><div class="sv" id="statSolved">0</div><div class="sk">solved</div></div>
+  <div class="bigtimer fade in">
+    <span class="tv" id="statTimer">0:00</span>
+    <span class="tk">time</span>
   </div>
 
   <div class="xlayout">
@@ -202,10 +200,6 @@ function saveStats(s) {
   try { localStorage.setItem(STATS_KEY, JSON.stringify(s)); } catch (e) {}
 }
 let STATS = loadStats();
-
-function renderStatsChips() {
-  document.getElementById('statSolved').textContent = STATS.solved;
-}
 
 function renderHistory() {
   const box = document.getElementById('histList');
@@ -493,7 +487,6 @@ function recordSolve() {
   }
 
   saveStats(STATS);
-  renderStatsChips();
   renderHistory();
 }
 
@@ -580,7 +573,6 @@ Object.entries(MODE_BTNS).forEach(([m, id]) => {
   document.getElementById(id).addEventListener('click', () => setMode(m));
 });
 
-renderStatsChips();
 renderHistory();
 loadData().then(startPuzzle);
 </script>
