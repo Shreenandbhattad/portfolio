@@ -171,6 +171,7 @@ let cellSlots = [];      // [r][c] -> {A: slotIdx|null, D: slotIdx|null}
 let slots = [];          // flat list: {dir, row, col, len, answer, clue, number}
 let curSlot = 0;
 let curCellInSlot = 0;
+let mousedownWasFocused = false;
 let solved = false;
 let startTime = null;
 let timerHandle = null;
@@ -313,7 +314,9 @@ function startPuzzle() {
         const inp = document.createElement('input');
         inp.maxLength = 1;
         inp.dataset.r = r; inp.dataset.c = c;
+        inp.addEventListener('mousedown', () => { mousedownWasFocused = document.activeElement === inp; });
         inp.addEventListener('focus', () => onFocusCell(r, c));
+        inp.addEventListener('click', () => onClickCell(r, c));
         inp.addEventListener('input', () => onType(r, c));
         inp.addEventListener('keydown', e => onKey(e, r, c));
         cell.appendChild(inp);
@@ -378,6 +381,22 @@ function onFocusCell(r, c) {
   let slotIdx = (s && cs[s.dir] !== null) ? cs[s.dir] : (cs.A !== null ? cs.A : cs.D);
   if (slotIdx === null) return;
   curSlot = slotIdx;
+  const cells = slotCells(slots[curSlot]);
+  curCellInSlot = cells.findIndex(([rr, cc]) => rr === r && cc === c);
+  renderClueLine();
+}
+
+/* clicking a cell that was ALREADY focused (a genuine second click/tap on the
+   same square, not the click bundled with its first focus) flips across<->down
+   when that cell belongs to both a word going across and one going down —
+   the standard mini-crossword shortcut for switching direction on the fly */
+function onClickCell(r, c) {
+  if (!mousedownWasFocused) return;
+  const cs = cellSlots[r][c];
+  const s = slots[curSlot];
+  if (cs.A === null || cs.D === null) return;
+  const otherDir = s.dir === 'A' ? 'D' : 'A';
+  curSlot = cs[otherDir];
   const cells = slotCells(slots[curSlot]);
   curCellInSlot = cells.findIndex(([rr, cc]) => rr === r && cc === c);
   renderClueLine();

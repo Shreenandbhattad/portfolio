@@ -11,7 +11,8 @@
 <link rel="stylesheet" href="style.css">
 <style>
 main{max-width:900px}
-.nerdbadge{position:fixed;top:20px;right:clamp(20px,4vw,52px);z-index:11;display:flex;align-items:center;gap:10px;
+.pagehead{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.nerdbadge{display:flex;align-items:center;gap:10px;
   background:var(--tile-3);border-radius:999px;padding:8px 16px 8px 10px;box-shadow:0 8px 20px rgba(122,92,28,.18);
   opacity:0;transform:translateY(-8px) scale(.94);animation:badgein .6s ease .3s forwards}
 @keyframes badgein{to{opacity:1;transform:none}}
@@ -20,7 +21,7 @@ main{max-width:900px}
 .nerdbadge .nv{font-weight:800;font-size:1rem;color:var(--tile-3-ink);font-variant-numeric:tabular-nums;line-height:1.1}
 .nerdbadge .nk{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tile-3-ink);opacity:.7}
 body.night .nerdbadge{filter:brightness(.85) saturate(.9)}
-@media(max-width:520px){.nerdbadge{top:14px;padding:6px 12px 6px 8px}.nerdbadge .face{font-size:1.1rem}.nerdbadge .nv{font-size:.88rem}}
+@media(max-width:520px){.nerdbadge{padding:6px 12px 6px 8px}.nerdbadge .face{font-size:1.1rem}.nerdbadge .nv{font-size:.88rem}}
 </style>
 </head>
 <body>
@@ -39,16 +40,17 @@ body.night .nerdbadge{filter:brightness(.85) saturate(.9)}
   </div>
 </nav>
 
-<div class="nerdbadge fade in" id="nerdBadge" title="your nerd score, earned by solving crosswords">
-  <span class="face">🤓</span>
-  <div>
-    <div class="nv" id="nerdScoreVal">0</div>
-    <div class="nk">nerd score</div>
-  </div>
-</div>
-
 <main>
-  <h1 class="page fade in"><em>puzzles</em></h1>
+  <div class="pagehead">
+    <h1 class="page fade in" style="margin-bottom:0"><em>puzzles</em></h1>
+    <div class="nerdbadge fade in" id="nerdBadge" title="your nerd score, earned by solving crosswords">
+      <span class="face">🤓</span>
+      <div>
+        <div class="nv" id="nerdScoreVal">0</div>
+        <div class="nk">nerd score</div>
+      </div>
+    </div>
+  </div>
   <p class="sub fade in">a mini crossword.</p>
 
   <div class="cardgrid">
