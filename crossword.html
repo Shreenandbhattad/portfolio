@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>crossword · nerds · Shreenand Bhattad</title>
+<title>crossword · puzzles · Shreenand Bhattad</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@ body.night .statchip.timer .sv{color:#a8c9a0}
 @media(max-width:720px){.xlayout{grid-template-columns:1fr}}
 
 .xwrap{display:flex;flex-direction:column;align-items:center}
-.xgrid{display:grid;gap:2px;background:var(--ink);border-radius:8px;padding:2px;box-shadow:0 10px 26px rgba(58,54,47,.12)}
+.xgrid{display:grid;gap:2px;background:var(--ink);border-radius:8px;padding:2px;box-shadow:0 10px 26px rgba(58,54,47,.12);overflow:hidden}
 body.night .xgrid{background:#181c28}
 .xcell{position:relative;width:52px;height:52px;background:#fffdf9;display:flex;align-items:center;justify-content:center}
 .xcell.black{background:var(--ink)}
@@ -130,6 +130,7 @@ body.night .histrow b{color:#e8e6e0}
       <div class="modeswitch">
         <button class="modebtn on" id="modeGlobal">global</button>
         <button class="modebtn" id="modeIndia">india</button>
+        <button class="modebtn" id="modeEasy">easy ones</button>
       </div>
       <button class="newbtn" id="newBtn">new</button>
     </div>
@@ -167,14 +168,14 @@ body.night .histrow b{color:#e8e6e0}
     <div id="histList"></div>
   </div>
 
-  <div class="next fade in"><a href="nerds">← back to nerds</a></div>
+  <div class="next fade in"><a href="puzzles">← back to puzzles</a></div>
 </main>
 
 <footer>✈ click anywhere to send a plane</footer>
 
 <script src="site.js"></script>
 <script>
-let DATA = { global: [], india: [] };
+let DATA = { global: [], india: [], easy: [] };
 let mode = 'global';
 let puzzle = null;
 let size = 5;
@@ -566,17 +567,17 @@ document.getElementById('checkBtn').addEventListener('click', checkNow);
 document.getElementById('revealBtn').addEventListener('click', revealAll);
 document.getElementById('clearBtn').addEventListener('click', clearAll);
 document.getElementById('newBtn').addEventListener('click', startPuzzle);
-document.getElementById('modeGlobal').addEventListener('click', () => {
-  mode = 'global';
-  document.getElementById('modeGlobal').classList.add('on');
-  document.getElementById('modeIndia').classList.remove('on');
+
+const MODE_BTNS = { global: 'modeGlobal', india: 'modeIndia', easy: 'modeEasy' };
+function setMode(next) {
+  mode = next;
+  Object.entries(MODE_BTNS).forEach(([m, id]) => {
+    document.getElementById(id).classList.toggle('on', m === next);
+  });
   startPuzzle();
-});
-document.getElementById('modeIndia').addEventListener('click', () => {
-  mode = 'india';
-  document.getElementById('modeIndia').classList.add('on');
-  document.getElementById('modeGlobal').classList.remove('on');
-  startPuzzle();
+}
+Object.entries(MODE_BTNS).forEach(([m, id]) => {
+  document.getElementById(id).addEventListener('click', () => setMode(m));
 });
 
 renderStatsChips();

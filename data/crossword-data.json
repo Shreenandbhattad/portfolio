@@ -230,5 +230,102 @@
         { "row": 1, "col": 4, "answer": "SEAT", "clue": "\"Take a ___\" — an invitation to stay a while" }
       ]
     }
+  ],
+  "easy": [
+    {
+      "title": "Easy Mini 1",
+      "size": 5,
+      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
+      "across": [
+        { "row": 0, "col": 0, "answer": "STEP", "clue": "One move in a dance, or a stair" },
+        { "row": 1, "col": 0, "answer": "TEXAS", "clue": "The Lone Star State" },
+        { "row": 2, "col": 0, "answer": "EXTRA", "clue": "More than needed" },
+        { "row": 3, "col": 0, "answer": "PARTY", "clue": "Birthday celebration" },
+        { "row": 4, "col": 1, "answer": "SAYS", "clue": "\"She ___ hi\"" }
+      ],
+      "down": [
+        { "row": 0, "col": 0, "answer": "STEP", "clue": "\"Watch your ___\"" },
+        { "row": 0, "col": 1, "answer": "TEXAS", "clue": "Home to Austin and Houston" },
+        { "row": 0, "col": 2, "answer": "EXTRA", "clue": "Bonus, as in \"an ___ hour of sleep\"" },
+        { "row": 0, "col": 3, "answer": "PARTY", "clue": "Fun gathering with cake" },
+        { "row": 1, "col": 4, "answer": "SAYS", "clue": "\"What she ___ goes\"" }
+      ]
+    },
+    {
+      "title": "Easy Mini 2",
+      "size": 5,
+      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
+      "across": [
+        { "row": 0, "col": 0, "answer": "CARD", "clue": "Birthday ___, sent in the mail" },
+        { "row": 1, "col": 0, "answer": "AWARD", "clue": "Trophy or medal" },
+        { "row": 2, "col": 0, "answer": "RADIO", "clue": "Plays music in the car" },
+        { "row": 3, "col": 0, "answer": "DRIVE", "clue": "Take the car for a spin" },
+        { "row": 4, "col": 1, "answer": "DOES", "clue": "\"She ___ her homework\"" }
+      ],
+      "down": [
+        { "row": 0, "col": 0, "answer": "CARD", "clue": "Playing ___, dealt from a deck" },
+        { "row": 0, "col": 1, "answer": "AWARD", "clue": "What a gold medal is" },
+        { "row": 0, "col": 2, "answer": "RADIO", "clue": "Old-school way to hear the news" },
+        { "row": 0, "col": 3, "answer": "DRIVE", "clue": "Motivation, or a road trip" },
+        { "row": 1, "col": 4, "answer": "DOES", "clue": "\"He ___ his best\"" }
+      ]
+    },
+    {
+      "title": "Easy Mini 3",
+      "size": 5,
+      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
+      "across": [
+        { "row": 0, "col": 0, "answer": "NEWS", "clue": "What's on TV at 9 o'clock" },
+        { "row": 1, "col": 0, "answer": "EMAIL", "clue": "You've got mail, digitally" },
+        { "row": 2, "col": 0, "answer": "WASTE", "clue": "Don't ___ your time" },
+        { "row": 3, "col": 0, "answer": "SITES", "clue": "Web pages, for short" },
+        { "row": 4, "col": 1, "answer": "LESS", "clue": "\"___ is more\"" }
+      ],
+      "down": [
+        { "row": 0, "col": 0, "answer": "NEWS", "clue": "Headlines and breaking stories" },
+        { "row": 0, "col": 1, "answer": "EMAIL", "clue": "Gmail or Outlook, e.g." },
+        { "row": 0, "col": 2, "answer": "WASTE", "clue": "Garbage, or to squander" },
+        { "row": 0, "col": 3, "answer": "SITES", "clue": "Places, or websites" },
+        { "row": 1, "col": 4, "answer": "LESS", "clue": "The opposite of more" }
+      ]
+    },
+    {
+      "title": "Easy Mini 4",
+      "size": 5,
+      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
+      "across": [
+        { "row": 0, "col": 0, "answer": "LAST", "clue": "Final, or the ___ straw" },
+        { "row": 1, "col": 0, "answer": "AFTER", "clue": "\"See you ___ lunch\"" },
+        { "row": 2, "col": 0, "answer": "STORE", "clue": "Where you buy groceries" },
+        { "row": 3, "col": 0, "answer": "TERMS", "clue": "Rules of an agreement" },
+        { "row": 4, "col": 1, "answer": "REST", "clue": "Take a break and ___" }
+      ],
+      "down": [
+        { "row": 0, "col": 0, "answer": "LAST", "clue": "Not first, but ___" },
+        { "row": 0, "col": 1, "answer": "AFTER", "clue": "Later than, in time" },
+        { "row": 0, "col": 2, "answer": "STORE", "clue": "Shop, or to save for later" },
+        { "row": 0, "col": 3, "answer": "TERMS", "clue": "\"On good ___ with\"" },
+        { "row": 1, "col": 4, "answer": "REST", "clue": "Everyone else, \"the ___ of us\"" }
+      ]
+    },
+    {
+      "title": "Easy Mini 5",
+      "size": 5,
+      "grid": ["#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#"],
+      "across": [
+        { "row": 0, "col": 1, "answer": "ALSO", "clue": "As well, too" },
+        { "row": 1, "col": 0, "answer": "AGAIN", "clue": "Once more" },
+        { "row": 2, "col": 0, "answer": "LARGE", "clue": "Big size" },
+        { "row": 3, "col": 0, "answer": "SIGNS", "clue": "Road ___, giving directions" },
+        { "row": 4, "col": 0, "answer": "ONES", "clue": "The ___ you love" }
+      ],
+      "down": [
+        { "row": 0, "col": 1, "answer": "AGAIN", "clue": "\"Try it one more time\"" },
+        { "row": 0, "col": 2, "answer": "LARGE", "clue": "Extra ___, on a coffee menu" },
+        { "row": 0, "col": 3, "answer": "SIGNS", "clue": "Clues, or things you point to" },
+        { "row": 0, "col": 4, "answer": "ONES", "clue": "Not the twos, not the threes" },
+        { "row": 1, "col": 0, "answer": "ALSO", "clue": "\"I ___ like pizza\"" }
+      ]
+    }
   ]
 }
