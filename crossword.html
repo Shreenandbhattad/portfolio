@@ -19,10 +19,6 @@ main{max-width:920px}
 .modebtn.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 body.night .modebtn{border-color:rgba(255,255,255,.16);color:#a8a49b}
 body.night .modebtn.on{background:#e8e6e0;color:#232838}
-.newbtn{border:1px solid var(--line);background:transparent;color:var(--soft);border-radius:999px;padding:6px 14px;
-  font-family:var(--sans);font-size:.78rem;cursor:pointer;transition:all .25s}
-.newbtn:hover{color:var(--ink);border-color:var(--faint)}
-body.night .newbtn{border-color:rgba(255,255,255,.16);color:#a8a49b}
 
 /* ---------------- big timer ---------------- */
 .bigtimer{display:inline-flex;align-items:baseline;gap:10px;margin:14px 0 20px;
@@ -124,13 +120,10 @@ body.night .histrow b{color:#e8e6e0}
       <h1 class="page fade in">mini crossword</h1>
       <p class="sub fade in" style="margin-bottom:0">a proper 5×5.</p>
     </div>
-    <div style="display:flex;gap:10px;flex-wrap:wrap">
-      <div class="modeswitch">
-        <button class="modebtn on" id="modeGlobal">global</button>
-        <button class="modebtn" id="modeIndia">india</button>
-        <button class="modebtn" id="modeEasy">easy ones</button>
-      </div>
-      <button class="newbtn" id="newBtn">new</button>
+    <div class="modeswitch">
+      <button class="modebtn on" id="modeGlobal">global</button>
+      <button class="modebtn" id="modeIndia">india</button>
+      <button class="modebtn" id="modeEasy">easy ones</button>
     </div>
   </div>
 
@@ -559,7 +552,6 @@ document.getElementById('nextClue').addEventListener('click', () => switchClue(1
 document.getElementById('checkBtn').addEventListener('click', checkNow);
 document.getElementById('revealBtn').addEventListener('click', revealAll);
 document.getElementById('clearBtn').addEventListener('click', clearAll);
-document.getElementById('newBtn').addEventListener('click', startPuzzle);
 
 const MODE_BTNS = { global: 'modeGlobal', india: 'modeIndia', easy: 'modeEasy' };
 function setMode(next) {
