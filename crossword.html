@@ -81,9 +81,6 @@ body.night .actbtn:hover{background:#e8e6e0;color:#232838}
 .winmsg{font-size:1.05rem;font-weight:700;color:#5a8a52;margin:14px 0;opacity:0;transition:opacity .4s;transform:translateY(-6px)}
 .winmsg.show{opacity:1;transform:none}
 body.night .winmsg{color:#a8c9a0}
-.nerdscore{font-size:.82rem;color:var(--soft);margin-top:-8px;margin-bottom:14px}
-.nerdscore b{color:#5a8a52}
-body.night .nerdscore b{color:#a8c9a0}
 
 .cluelist{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;font-size:.92rem;color:var(--soft)}
 .cluelist h4{grid-column:1/-1;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin:14px 0 6px}
@@ -141,8 +138,6 @@ body.night .histrow b{color:#e8e6e0}
   <div class="statsrow fade in">
     <div class="statchip timer"><div class="sv" id="statTimer">0:00</div><div class="sk">time</div></div>
     <div class="statchip"><div class="sv" id="statSolved">0</div><div class="sk">solved</div></div>
-    <div class="statchip"><div class="sv" id="statStreak">0</div><div class="sk">streak</div></div>
-    <div class="statchip"><div class="sv" id="statScore">0</div><div class="sk">nerd score 🤓</div></div>
   </div>
 
   <div class="xlayout">
@@ -163,7 +158,6 @@ body.night .histrow b{color:#e8e6e0}
         <button class="cluebtn" id="nextClue">→</button>
       </div>
       <div class="winmsg" id="winMsg"></div>
-      <div class="nerdscore" id="nerdMsg" style="display:none"></div>
       <div class="cluelist" id="clueList"></div>
     </div>
   </div>
@@ -201,7 +195,7 @@ function loadStats() {
     const raw = localStorage.getItem(STATS_KEY);
     if (raw) return JSON.parse(raw);
   } catch (e) {}
-  return { solved: 0, streak: 0, lastSolveDay: null, score: 0, history: [], bestTimeMs: {} };
+  return { solved: 0, score: 0, history: [], bestTimeMs: {} };
 }
 function saveStats(s) {
   try { localStorage.setItem(STATS_KEY, JSON.stringify(s)); } catch (e) {}
@@ -210,8 +204,6 @@ let STATS = loadStats();
 
 function renderStatsChips() {
   document.getElementById('statSolved').textContent = STATS.solved;
-  document.getElementById('statStreak').textContent = STATS.streak;
-  document.getElementById('statScore').textContent = STATS.score;
 }
 
 function renderHistory() {
@@ -285,7 +277,6 @@ function startPuzzle() {
   startTime = null;
   elapsedMs = 0;
   document.getElementById('statTimer').textContent = '0:00';
-  document.getElementById('nerdMsg').style.display = 'none';
 
   const bank = DATA[mode];
   puzzle = bank[Math.floor(Math.random() * bank.length)];
@@ -484,24 +475,15 @@ function todayKey() {
 }
 
 function recordSolve() {
-  const today = todayKey();
-  if (STATS.lastSolveDay === today) {
-    // already solved today: still counts toward totals, but streak doesn't bump twice
-  } else {
-    const y = new Date(Date.now() - 864e5).toISOString().slice(0, 10);
-    STATS.streak = (STATS.lastSolveDay === y) ? STATS.streak + 1 : 1;
-    STATS.lastSolveDay = today;
-  }
   STATS.solved += 1;
 
-  // nerd score: base points, bonus for speed, bonus for streak
+  // nerd score: base points plus a bonus for speed
   const seconds = Math.round(elapsedMs / 1000);
   const speedBonus = Math.max(0, 60 - seconds); // faster than a minute earns extra
-  const streakBonus = Math.min(STATS.streak, 10) * 2;
-  const points = 20 + speedBonus + streakBonus;
+  const points = 20 + speedBonus;
   STATS.score += points;
 
-  STATS.history.unshift({ title: puzzle.title, mode, timeMs: elapsedMs, points, date: today });
+  STATS.history.unshift({ title: puzzle.title, mode, timeMs: elapsedMs, points, date: todayKey() });
   STATS.history = STATS.history.slice(0, 30);
 
   const bestKey = mode;
@@ -512,10 +494,6 @@ function recordSolve() {
   saveStats(STATS);
   renderStatsChips();
   renderHistory();
-
-  const nerdMsg = document.getElementById('nerdMsg');
-  nerdMsg.style.display = 'block';
-  nerdMsg.innerHTML = `+<b>${points}</b> nerd points · streak <b>${STATS.streak}</b> 🤓`;
 }
 
 function checkWin() {
@@ -579,7 +557,6 @@ function clearAll() {
   elapsedMs = 0;
   document.getElementById('statTimer').textContent = '0:00';
   document.getElementById('winMsg').className = 'winmsg';
-  document.getElementById('nerdMsg').style.display = 'none';
   renderClueList();
 }
 
