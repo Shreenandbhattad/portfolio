@@ -116,7 +116,6 @@ body.night .histrow b{color:#e8e6e0}
   <div class="gamehead">
     <div>
       <h1 class="page fade in">mini crossword</h1>
-      <p class="sub fade in" style="margin-bottom:0">a proper 5×5.</p>
     </div>
     <div class="modeswitch">
       <button class="modebtn on" id="modeGlobal">global</button>
@@ -209,9 +208,10 @@ function renderHistory() {
     box.innerHTML = '<div class="emptyhist">solve one and it\'ll show up here.</div>';
     return;
   }
+  const MODE_ICON = { india: '🇮🇳', global: '🌍', easy: '🌱' };
   box.innerHTML = STATS.history.slice(0, 10).map(h => `
     <div class="histrow">
-      <span><b>${h.title}</b> · ${h.mode === 'india' ? '🇮🇳' : '🌍'}</span>
+      <span><b>${h.title}</b> · ${MODE_ICON[h.mode] || '🌍'}</span>
       <span>${formatTime(h.timeMs)} · +${h.points} pts</span>
     </div>`).join('');
 }
@@ -246,26 +246,20 @@ async function loadData() {
   DATA = await r.json();
 }
 
+/* the data ships as a flat "entries" list (each self-describing: n/dir/r/c/answer/clue)
+   plus a single grid string ("." open, "#" black), row-major. This turns that into the
+   {list, grid2d, numbering} shape the rest of the game logic already works with. */
 function buildSlots(p) {
-  const list = [];
-  const numbering = {}; // "r,c" -> number
-  let n = 1;
   const grid2d = [];
-  for (let r = 0; r < p.size; r++) grid2d.push(p.grid.slice(r * p.size, (r + 1) * p.size));
+  for (let r = 0; r < p.size; r++) grid2d.push(p.grid.slice(r * p.size, (r + 1) * p.size).split(''));
 
-  function needsNumber(r, c) {
-    if (grid2d[r][c] === '#') return false;
-    const startsAcross = (c === 0 || grid2d[r][c - 1] === '#') && c + 1 < p.size && grid2d[r][c + 1] !== '#';
-    const startsDown = (r === 0 || grid2d[r - 1][c] === '#') && r + 1 < p.size && grid2d[r + 1][c] !== '#';
-    return startsAcross || startsDown;
-  }
-  for (let r = 0; r < p.size; r++) {
-    for (let c = 0; c < p.size; c++) {
-      if (needsNumber(r, c)) numbering[r + ',' + c] = n++;
-    }
-  }
-  p.across.forEach(e => list.push({ dir: 'A', row: e.row, col: e.col, len: e.answer.length, answer: e.answer.toUpperCase(), clue: e.clue, number: numbering[e.row + ',' + e.col] }));
-  p.down.forEach(e => list.push({ dir: 'D', row: e.row, col: e.col, len: e.answer.length, answer: e.answer.toUpperCase(), clue: e.clue, number: numbering[e.row + ',' + e.col] }));
+  const numbering = {}; // "r,c" -> number, taken straight from the data
+  p.entries.forEach(e => { numbering[e.r + ',' + e.c] = e.n; });
+
+  const list = p.entries.map(e => ({
+    dir: e.dir, row: e.r, col: e.c, len: e.answer.length,
+    answer: e.answer.toUpperCase(), clue: e.clue, number: e.n
+  }));
   return { list, grid2d, numbering };
 }
 

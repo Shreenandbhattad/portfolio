@@ -1,330 +1,3791 @@
 {
   "global": [
     {
-      "title": "Global Mini 1",
+      "title": "Winter Watch",
+      "theme": "general",
       "size": 5,
-      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
-      "across": [
-        { "row": 0, "col": 0, "answer": "THAT", "clue": "\"Well, ___ escalated quickly\"" },
-        { "row": 1, "col": 0, "answer": "HOURS", "clue": "What you'd give for one more of, before a deadline" },
-        { "row": 2, "col": 0, "answer": "AUDIO", "clue": "What earbuds deliver" },
-        { "row": 3, "col": 0, "answer": "TRIAL", "clue": "30-day free ___ (that renews without asking)" },
-        { "row": 4, "col": 1, "answer": "SOLD", "clue": "Status of the good seats, always, somehow" }
-      ],
-      "down": [
-        { "row": 0, "col": 0, "answer": "THAT", "clue": "\"Did you hear ___?\"" },
-        { "row": 0, "col": 1, "answer": "HOURS", "clue": "\"Store ___ may vary\"" },
-        { "row": 0, "col": 2, "answer": "AUDIO", "clue": "Book format for the commute" },
-        { "row": 0, "col": 3, "answer": "TRIAL", "clue": "Courtroom drama, or a beta test" },
-        { "row": 1, "col": 4, "answer": "SOLD", "clue": "\"I'm ___\" (you've convinced me)" }
+      "grid": "....#...............#....",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "SPAS",
+          "clue": "Falls gently from the sky in winter"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "NOLAN",
+          "clue": "Christopher who directed Inception and Interstellar"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "OLIVE",
+          "clue": "Shade of green, or a branch offered in peace"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "WAVES",
+          "clue": "They roll onto the shore, one after another"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 1,
+          "answer": "REST",
+          "clue": "Take a break and ___"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "SNOW",
+          "clue": "What a skier waits all season for"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "POLAR",
+          "clue": "Icy, frosty region near the top of the globe"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "ALIVE",
+          "clue": "Full of energy, not dead"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "SAVES",
+          "clue": "Puts money aside, or rescues"
+        },
+        {
+          "n": 6,
+          "dir": "D",
+          "r": 1,
+          "c": 4,
+          "answer": "NEST",
+          "clue": "Bird's cozy home"
+        }
       ]
     },
     {
-      "title": "Global Mini 2",
+      "title": "Package Deal",
+      "theme": "general",
       "size": 5,
-      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
-      "across": [
-        { "row": 0, "col": 0, "answer": "HAVE", "clue": "\"You can't ___ it both ways\"" },
-        { "row": 1, "col": 0, "answer": "ABOVE", "clue": "Where the fine print says \"see ___\"" },
-        { "row": 2, "col": 0, "answer": "VOCAL", "clue": "Loudly opinionated" },
-        { "row": 3, "col": 0, "answer": "EVANS", "clue": "Chris who's played both a soldier and a toy cowboy" },
-        { "row": 4, "col": 1, "answer": "ELSE", "clue": "\"Or ___!\" (a threat, sort of)" }
-      ],
-      "down": [
-        { "row": 0, "col": 0, "answer": "HAVE", "clue": "\"___ you met Ted?\"" },
-        { "row": 0, "col": 1, "answer": "ABOVE", "clue": "Higher up, on an org chart" },
-        { "row": 0, "col": 2, "answer": "VOCAL", "clue": "___ cords, put to good use" },
-        { "row": 0, "col": 3, "answer": "EVANS", "clue": "Either Marvel Chris, take your pick" },
-        { "row": 1, "col": 4, "answer": "ELSE", "clue": "\"What ___ is new?\"" }
+      "grid": "#.......................#",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 1,
+          "answer": "LAWS",
+          "clue": "Rules everyone's supposed to follow"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "MOMOA",
+          "clue": "Jason who played Aquaman"
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "EVERY",
+          "clue": "\"___ single time\""
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "SENDS",
+          "clue": "Delivers, as a package"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "ADDS",
+          "clue": "Puts two numbers together"
+        },
+        {
+          "n": 5,
+          "dir": "D",
+          "r": 1,
+          "c": 0,
+          "answer": "MESA",
+          "clue": "Flat-topped hill, or a browser tab overload joke"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "LOVED",
+          "clue": "Cherished deeply"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "AMEND",
+          "clue": "Fixes a typo, or changes a law slightly"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "WORDS",
+          "clue": "What a dictionary is full of"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 4,
+          "answer": "SAYS",
+          "clue": "\"He ___ he's right\""
+        }
       ]
     },
     {
-      "title": "Global Mini 3",
+      "title": "Alien Nights",
+      "theme": "general",
       "size": 5,
-      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
-      "across": [
-        { "row": 0, "col": 0, "answer": "THIS", "clue": "\"___ is fine\" (said while everything is on fire)" },
-        { "row": 1, "col": 0, "answer": "HINTS", "clue": "What a good crossword clue gives, not tells" },
-        { "row": 2, "col": 0, "answer": "INDIA", "clue": "Home to the world's tallest statue" },
-        { "row": 3, "col": 0, "answer": "STILL", "clue": "\"...and ___, I'd do it again\"" },
-        { "row": 4, "col": 1, "answer": "SALE", "clue": "The reason your cart has 40 unrelated items" }
-      ],
-      "down": [
-        { "row": 0, "col": 0, "answer": "THIS", "clue": "\"Not that, ___ one\"" },
-        { "row": 0, "col": 1, "answer": "HINTS", "clue": "Not-so-subtle drops" },
-        { "row": 0, "col": 2, "answer": "INDIA", "clue": "NATO alphabet's letter for I" },
-        { "row": 0, "col": 3, "answer": "STILL", "clue": "\"Are you ___ there?\" (a video call classic)" },
-        { "row": 1, "col": 4, "answer": "SALE", "clue": "\"Everything must go\" sign" }
+      "grid": "....#...............#....",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "PADS",
+          "clue": "Sticky notes, or shoulder cushions"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "ALIEN",
+          "clue": "Sigourney Weaver franchise about a xenomorph"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "SLAVE",
+          "clue": "Bound and forced to serve, historically"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "TONES",
+          "clue": "Ringtones, or shades of a color"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 1,
+          "answer": "WANT",
+          "clue": "\"All I ___ is you\""
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "PAST",
+          "clue": "History, or what's behind you now"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "ALLOW",
+          "clue": "Permits, gives the green light"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "DIANA",
+          "clue": "Princess who married a British prince, familiarly"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "SEVEN",
+          "clue": "One more than six"
+        },
+        {
+          "n": 6,
+          "dir": "D",
+          "r": 1,
+          "c": 4,
+          "answer": "NEST",
+          "clue": "Cozy little home, for a bird"
+        }
       ]
     },
     {
-      "title": "Global Mini 4",
+      "title": "Beta Test",
+      "theme": "general",
       "size": 5,
-      "grid": ["#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#"],
-      "across": [
-        { "row": 0, "col": 1, "answer": "FROM", "clue": "\"Where are you really ___?\"" },
-        { "row": 1, "col": 0, "answer": "FRAME", "clue": "What a good photo needs, and a bad excuse needs too" },
-        { "row": 2, "col": 0, "answer": "RATES", "clue": "What everyone's watching the central bank for" },
-        { "row": 3, "col": 0, "answer": "OMEGA", "clue": "The Greek alphabet's grand finale" },
-        { "row": 4, "col": 0, "answer": "MESA", "clue": "A plateau that got its own zip code" }
-      ],
-      "down": [
-        { "row": 0, "col": 1, "answer": "FRAME", "clue": "Comic book panel, or your bone structure" },
-        { "row": 0, "col": 2, "answer": "RATES", "clue": "Critically scores, as a movie" },
-        { "row": 0, "col": 3, "answer": "OMEGA", "clue": "Watch brand worn by fictional spies" },
-        { "row": 0, "col": 4, "answer": "MESA", "clue": "Arizona city, or Spanish for \"table\"" },
-        { "row": 1, "col": 0, "answer": "FROM", "clue": "\"A gift ___ me to you\"" }
+      "grid": "....#...............#....",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "SEPT",
+          "clue": "Month after August, for short"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "TRIAL",
+          "clue": "Courtroom event, or a beta test"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "ARENA",
+          "clue": "Where gladiators once fought, or a sports stadium"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "ROCKS",
+          "clue": "\"___ the boat\" — doesn't hold back"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 1,
+          "answer": "REST",
+          "clue": "What you do on a Sunday, ideally"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "STAR",
+          "clue": "Celebrity, or point of a compass"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "ERROR",
+          "clue": "Mistake, glitch, or 404 message"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "PIECE",
+          "clue": "A slice of something bigger"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "TANKS",
+          "clue": "Armored military vehicles"
+        },
+        {
+          "n": 6,
+          "dir": "D",
+          "r": 1,
+          "c": 4,
+          "answer": "LAST",
+          "clue": "Final, or \"at ___\""
+        }
       ]
     },
     {
-      "title": "Global Mini 5",
+      "title": "Ocean Deep",
+      "theme": "general",
       "size": 5,
-      "grid": ["#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#"],
-      "across": [
-        { "row": 0, "col": 1, "answer": "WHAT", "clue": "\"___ do you mean?\"" },
-        { "row": 1, "col": 0, "answer": "WHOLE", "clue": "The ___ nine yards" },
-        { "row": 2, "col": 0, "answer": "HOMES", "clue": "What a real estate app lets you window-shop for at 2 a.m." },
-        { "row": 3, "col": 0, "answer": "ALERT", "clue": "What your phone won't stop buzzing with" },
-        { "row": 4, "col": 0, "answer": "TEST", "clue": "The thing you swore you studied for" }
-      ],
-      "down": [
-        { "row": 0, "col": 1, "answer": "WHOLE", "clue": "Not just a slice — the ___ pie" },
-        { "row": 0, "col": 2, "answer": "HOMES", "clue": "\"There's no place like\" these" },
-        { "row": 0, "col": 3, "answer": "ALERT", "clue": "On high ___, nervously" },
-        { "row": 0, "col": 4, "answer": "TEST", "clue": "Pop quiz, dreaded" },
-        { "row": 1, "col": 0, "answer": "WHAT", "clue": "\"Say ___?\" — a request to repeat" }
+      "grid": "....#...............#....",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "HALF",
+          "clue": "50%, or a football period"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "OCEAN",
+          "clue": "Covers most of Earth's surface"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "STORE",
+          "clue": "Where you buy groceries"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "TONES",
+          "clue": "Ringtones, or musical pitches"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 1,
+          "answer": "REST",
+          "clue": "Relax and unwind"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "HOST",
+          "clue": "Party thrown for a guest of honor"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "ACTOR",
+          "clue": "Someone in a movie, professionally"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "LEONE",
+          "clue": "Sergio who directed spaghetti westerns"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "FARES",
+          "clue": "Bus or train ticket prices"
+        },
+        {
+          "n": 6,
+          "dir": "D",
+          "r": 1,
+          "c": 4,
+          "answer": "NEST",
+          "clue": "Cozy little home, for a bird"
+        }
       ]
     },
     {
-      "title": "Global Mini 6",
+      "title": "World Atlas",
+      "theme": "general",
       "size": 5,
-      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
-      "across": [
-        { "row": 0, "col": 0, "answer": "THAT", "clue": "\"I can't believe ___ just happened\"" },
-        { "row": 1, "col": 0, "answer": "HUMAN", "clue": "What the CAPTCHA is trying to confirm you are" },
-        { "row": 2, "col": 0, "answer": "AMINO", "clue": "___ acid, life's building block" },
-        { "row": 3, "col": 0, "answer": "TANKS", "clue": "What a bad Rotten Tomatoes score means a movie does" },
-        { "row": 4, "col": 1, "answer": "NOSE", "clue": "What follows your gut, kind of literally" }
-      ],
-      "down": [
-        { "row": 0, "col": 0, "answer": "THAT", "clue": "\"Take ___, world!\"" },
-        { "row": 0, "col": 1, "answer": "HUMAN", "clue": "The species behind every meme" },
-        { "row": 0, "col": 2, "answer": "AMINO", "clue": "Part of a protein's full chemical name" },
-        { "row": 0, "col": 3, "answer": "TANKS", "clue": "Flops, in slang, or armored vehicles" },
-        { "row": 1, "col": 4, "answer": "NOSE", "clue": "How a photo finish is decided, \"by a ___\"" }
+      "grid": "....#...............#....",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "MOST",
+          "clue": "The majority, or \"___ likely\""
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "ATLAS",
+          "clue": "A big book of maps"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "SHAKE",
+          "clue": "\"___ hands on it\" — get a hold of"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "SEVEN",
+          "clue": "One more than six"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 1,
+          "answer": "RENT",
+          "clue": "Money paid monthly for an apartment"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "MASS",
+          "clue": "Big crowd, or units of weight"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "OTHER",
+          "clue": "Someone else entirely"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "SLAVE",
+          "clue": "Bound and forced to serve, historically"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "TAKEN",
+          "clue": "Captured, or seized"
+        },
+        {
+          "n": 6,
+          "dir": "D",
+          "r": 1,
+          "c": 4,
+          "answer": "SENT",
+          "clue": "Delivered, as in mail"
+        }
       ]
     },
     {
-      "title": "Global Mini 7",
+      "title": "Road Ready",
+      "theme": "general",
       "size": 5,
-      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
-      "across": [
-        { "row": 0, "col": 0, "answer": "THIS", "clue": "\"Not that one — ___ one\"" },
-        { "row": 1, "col": 0, "answer": "HENCE", "clue": "Fancy word for \"so\"" },
-        { "row": 2, "col": 0, "answer": "INDEX", "clue": "What you scroll straight past to get to the chapter" },
-        { "row": 3, "col": 0, "answer": "SCENE", "clue": "What you'd rather not make, in public" },
-        { "row": 4, "col": 1, "answer": "EXEC", "clue": "Corner-office type, for short" }
-      ],
-      "down": [
-        { "row": 0, "col": 0, "answer": "THIS", "clue": "\"___ just in...\"" },
-        { "row": 0, "col": 1, "answer": "HENCE", "clue": "Therefore, if you're feeling formal" },
-        { "row": 0, "col": 2, "answer": "INDEX", "clue": "The finger you point with, if you're rude" },
-        { "row": 0, "col": 3, "answer": "SCENE", "clue": "\"Behind the ___\" footage" },
-        { "row": 1, "col": 4, "answer": "EXEC", "clue": "The person whose calendar is somehow always full" }
+      "grid": "....#...............#....",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "REST",
+          "clue": "Take a break and ___"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "ALPHA",
+          "clue": "First letter of the Greek alphabet"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "TIRES",
+          "clue": "What a road trip runs on"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "STARK",
+          "clue": "Tony ___, Iron Man's real name"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 1,
+          "answer": "EYES",
+          "clue": "What you keep on the road while driving"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "RATS",
+          "clue": "Lab test subjects, often furry ones"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "ELITE",
+          "clue": "Top-tier, best of the best"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "SPRAY",
+          "clue": "A fine mist, like from a bottle"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "THERE",
+          "clue": "\"Over ___\" — in that place"
+        },
+        {
+          "n": 6,
+          "dir": "D",
+          "r": 1,
+          "c": 4,
+          "answer": "ASKS",
+          "clue": "Requests politely"
+        }
       ]
     },
     {
-      "title": "Global Mini 8",
+      "title": "Fish Tale",
+      "theme": "general",
       "size": 5,
-      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
-      "across": [
-        { "row": 0, "col": 0, "answer": "WITH", "clue": "\"You're either ___ us or against us\"" },
-        { "row": 1, "col": 0, "answer": "ISAAC", "clue": "Biblical son of Abraham, or gravity's favorite physicist" },
-        { "row": 2, "col": 0, "answer": "TAMIL", "clue": "Language spoken in Chennai and Jaffna alike" },
-        { "row": 3, "col": 0, "answer": "HAITI", "clue": "Caribbean nation sharing an island with the Dominican Republic" },
-        { "row": 4, "col": 1, "answer": "CLIP", "clue": "What you send instead of explaining the joke" }
-      ],
-      "down": [
-        { "row": 0, "col": 0, "answer": "WITH", "clue": "\"___ or without you\", per U2" },
-        { "row": 0, "col": 1, "answer": "ISAAC", "clue": "Newton, of the falling-apple legend" },
-        { "row": 0, "col": 2, "answer": "TAMIL", "clue": "One of the world's oldest living languages, still spoken daily" },
-        { "row": 0, "col": 3, "answer": "HAITI", "clue": "Its capital is Port-au-Prince" },
-        { "row": 1, "col": 4, "answer": "CLIP", "clue": "A 15-second video, endlessly rewatched" }
+      "grid": "....#...............#....",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "MESH",
+          "clue": "Fine netting, or an online forum"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "AUTOS",
+          "clue": "Cars, for short"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "TROUT",
+          "clue": "A fish you might catch in a stream"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "HORSE",
+          "clue": "You ride this at the races"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 1,
+          "answer": "SEEM",
+          "clue": "\"It would ___ that way\""
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "MATH",
+          "clue": "Subject with numbers, for short"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "EUROS",
+          "clue": "Currency shared by many EU countries"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "STORE",
+          "clue": "Where you buy groceries"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "HOUSE",
+          "clue": "Where you live, generally"
+        },
+        {
+          "n": 6,
+          "dir": "D",
+          "r": 1,
+          "c": 4,
+          "answer": "STEM",
+          "clue": "Plant's main support"
+        }
+      ]
+    },
+    {
+      "title": "Eagle Eye",
+      "theme": "general",
+      "size": 5,
+      "grid": "....#...............#....",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "SPAS",
+          "clue": "Relaxing retreats with hot tubs"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "EAGLE",
+          "clue": "Bird that appears on the US Great Seal"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "ARRAY",
+          "clue": "Neatly arranged collection"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "STEVE",
+          "clue": "Steven or Stephen, informally"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 1,
+          "answer": "SEES",
+          "clue": "Witnesses, notices"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "SEAS",
+          "clue": "Oceans, collectively"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "PARTS",
+          "clue": "Components, pieces"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "AGREE",
+          "clue": "Concur, see eye to eye"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "SLAVE",
+          "clue": "Bound and forced to serve, historically"
+        },
+        {
+          "n": 6,
+          "dir": "D",
+          "r": 1,
+          "c": 4,
+          "answer": "EYES",
+          "clue": "What you see with"
+        }
+      ]
+    },
+    {
+      "title": "Deep Blue",
+      "theme": "general",
+      "size": 5,
+      "grid": "....#...............#....",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "LOSS",
+          "clue": "What a losing team suffers"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "ATLAS",
+          "clue": "A big book of maps"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "WHALE",
+          "clue": "Huge marine mammal that sings underwater"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "SEVEN",
+          "clue": "One more than six"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 1,
+          "answer": "REST",
+          "clue": "Take a break and ___"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "LAWS",
+          "clue": "Rules everyone's supposed to follow"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "OTHER",
+          "clue": "Someone else entirely"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "SLAVE",
+          "clue": "Bound and forced to serve, historically"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "SALES",
+          "clue": "Discount events at a store"
+        },
+        {
+          "n": 6,
+          "dir": "D",
+          "r": 1,
+          "c": 4,
+          "answer": "SENT",
+          "clue": "Delivered, as in mail"
+        }
+      ]
+    },
+    {
+      "title": "Fast Facts",
+      "theme": "general",
+      "size": 5,
+      "grid": "....#...............#....",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "FACT",
+          "clue": "Something undeniably true"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "ALLAN",
+          "clue": "Edgar ___ Poe, master of the macabre"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "SLOPE",
+          "clue": "Gentle hillside incline"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "TONES",
+          "clue": "Ringtones, or shades of a color"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 1,
+          "answer": "WEST",
+          "clue": "Direction the sun sets"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "FAST",
+          "clue": "Speedy, quick"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "ALLOW",
+          "clue": "Permits, gives the green light"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "CLONE",
+          "clue": "Genetically identical copy"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "TAPES",
+          "clue": "Recorded music, in the pre-streaming era"
+        },
+        {
+          "n": 6,
+          "dir": "D",
+          "r": 1,
+          "c": 4,
+          "answer": "NEST",
+          "clue": "Cozy little home, for a bird"
+        }
+      ]
+    },
+    {
+      "title": "Cargo Run",
+      "theme": "general",
+      "size": 5,
+      "grid": "#.......................#",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 1,
+          "answer": "SWAP",
+          "clue": "Trade one thing for another"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "CARGO",
+          "clue": "What a ship carries"
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "ALIAS",
+          "clue": "A fake identity"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "KATIE",
+          "clue": "___ Perry, pop star and \"Roar\" singer"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "EDEN",
+          "clue": "Biblical garden, or a peaceful paradise"
+        },
+        {
+          "n": 5,
+          "dir": "D",
+          "r": 1,
+          "c": 0,
+          "answer": "CAKE",
+          "clue": "Sweet treat at a birthday party"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "SALAD",
+          "clue": "Bowl of greens with dressing"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "WRITE",
+          "clue": "Puts pen to paper"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "AGAIN",
+          "clue": "Once more, repeat"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 4,
+          "answer": "POSE",
+          "clue": "Strikes a confident stance for a photo"
+        }
+      ]
+    },
+    {
+      "title": "Grass Roots",
+      "theme": "general",
+      "size": 5,
+      "grid": ".........#.....#.........",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "GRASS",
+          "clue": "What a lawn is made of"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "IOWA",
+          "clue": "US state nicknamed the Hawkeye State"
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "SMALL",
+          "clue": "Not large, tiny"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 1,
+          "answer": "AREA",
+          "clue": "Square footage, roughly"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "ENEMY",
+          "clue": "Rival, opponent"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "GIS",
+          "clue": "Geographic Information System, for short"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "ROMAN",
+          "clue": "Empire that once ruled from Britain to the Middle East"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "AWARE",
+          "clue": "Conscious, informed of something"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "SALEM",
+          "clue": "City in Massachusetts famous for witch trials"
+        },
+        {
+          "n": 7,
+          "dir": "D",
+          "r": 2,
+          "c": 4,
+          "answer": "LAY",
+          "clue": "Rest down, place"
+        }
+      ]
+    },
+    {
+      "title": "Court King",
+      "theme": "general",
+      "size": 5,
+      "grid": ".........#.....#.........",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "JAMES",
+          "clue": "LeBron, king of the court"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "ALEX",
+          "clue": "Common name, or a Greek prefix meaning \"protector\""
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "MEDAL",
+          "clue": "What an Olympic winner takes home"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 1,
+          "answer": "RICE",
+          "clue": "Condoleezza, former US Secretary of State"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "STATE",
+          "clue": "Country, or a condition of being"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "JAM",
+          "clue": "Sweet spread for toast"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "ALERT",
+          "clue": "Warning, or on high ___"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "MEDIA",
+          "clue": "News, social, and everything in between"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "EXACT",
+          "clue": "Precisely correct"
+        },
+        {
+          "n": 7,
+          "dir": "D",
+          "r": 2,
+          "c": 4,
+          "answer": "LEE",
+          "clue": "Bruce, martial arts legend"
+        }
+      ]
+    },
+    {
+      "title": "Solo Dance",
+      "theme": "general",
+      "size": 5,
+      "grid": ".#.....................#.",
+      "entries": [
+        {
+          "n": 2,
+          "dir": "A",
+          "r": 0,
+          "c": 2,
+          "answer": "COS",
+          "clue": "Lettuce variety in a Caesar salad"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "ALONE",
+          "clue": "Solo, without company"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "DANCE",
+          "clue": "Move rhythmically to music"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "ENDED",
+          "clue": "Finished, over"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "NEO",
+          "clue": "The Matrix's chosen one"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "LADEN",
+          "clue": "Weighed down, loaded up"
+        },
+        {
+          "n": 6,
+          "dir": "D",
+          "r": 1,
+          "c": 1,
+          "answer": "LANE",
+          "clue": "Narrow street, or a bowling alley"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "CONDO",
+          "clue": "Apartment you own rather than rent"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "ONCE",
+          "clue": "A single time"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 4,
+          "answer": "SEEDS",
+          "clue": "What you plant to grow flowers"
+        }
       ]
     }
   ],
   "india": [
     {
-      "title": "India Mini 1",
+      "title": "Capital Ideas",
+      "theme": "india",
       "size": 5,
-      "grid": ["#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#"],
-      "across": [
-        { "row": 0, "col": 1, "answer": "DIAL", "clue": "What a rotary phone had instead of buttons" },
-        { "row": 1, "col": 0, "answer": "DENSE", "clue": "How Mumbai's local trains feel at rush hour" },
-        { "row": 2, "col": 0, "answer": "INDIA", "clue": "Nation with 22 official languages and one very good cricket team" },
-        { "row": 3, "col": 0, "answer": "ASIAN", "clue": "Continental adjective covering everything from Delhi to Tokyo" },
-        { "row": 4, "col": 0, "answer": "LEAN", "clue": "What a good keema cut should be" }
-      ],
-      "down": [
-        { "row": 0, "col": 1, "answer": "DENSE", "clue": "Hard to see through, like Delhi smog in winter" },
-        { "row": 0, "col": 2, "answer": "INDIA", "clue": "NATO alphabet's letter for I" },
-        { "row": 0, "col": 3, "answer": "ASIAN", "clue": "From the continent that's home to over half of humanity" },
-        { "row": 0, "col": 4, "answer": "LEAN", "clue": "Tilt, like a rickshaw on a sharp turn" },
-        { "row": 1, "col": 0, "answer": "DIAL", "clue": "A sundial's business end" }
+      "grid": "#.......................#",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 1,
+          "answer": "FAST",
+          "clue": "Quick, speedy"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "DELHI",
+          "clue": "India's capital city"
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "UNION",
+          "clue": "Labor movement, or the European ___"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "SCARY",
+          "clue": "Spooky, frightening"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "TEST",
+          "clue": "Pop quiz"
+        },
+        {
+          "n": 5,
+          "dir": "D",
+          "r": 1,
+          "c": 0,
+          "answer": "DUST",
+          "clue": "What accumulates on shelves if you never clean"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "FENCE",
+          "clue": "Garden barrier, or a boundary"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "ALIAS",
+          "clue": "A fake name, or \"goes by the ___ of\""
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "SHORT",
+          "clue": "Brief, not long"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 4,
+          "answer": "TINY",
+          "clue": "Very small"
+        }
       ]
     },
     {
-      "title": "India Mini 2",
+      "title": "Captain's Call",
+      "theme": "india",
       "size": 5,
-      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
-      "across": [
-        { "row": 0, "col": 0, "answer": "LOTS", "clue": "How much chai you can drink and still want more" },
-        { "row": 1, "col": 0, "answer": "OMAHA", "clue": "Nebraska's biggest city, if geography's your thing" },
-        { "row": 2, "col": 0, "answer": "TAMIL", "clue": "Language of Tamil Nadu, and of Jaffna across the strait" },
-        { "row": 3, "col": 0, "answer": "SHIPS", "clue": "What Chennai's busy port handles by the thousand" },
-        { "row": 4, "col": 1, "answer": "ALSO", "clue": "\"And ___, don't forget the pickle\"" }
-      ],
-      "down": [
-        { "row": 0, "col": 0, "answer": "LOTS", "clue": "\"Sending you ___ of love\"" },
-        { "row": 0, "col": 1, "answer": "OMAHA", "clue": "One of the five D-Day landing beaches" },
-        { "row": 0, "col": 2, "answer": "TAMIL", "clue": "One of the world's oldest classical languages, still spoken today" },
-        { "row": 0, "col": 3, "answer": "SHIPS", "clue": "\"When my ___ come in\" — a hopeful idiom" },
-        { "row": 1, "col": 4, "answer": "ALSO", "clue": "As well, in other words" }
+      "grid": "#.......................#",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 1,
+          "answer": "WHAT",
+          "clue": "Question word"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "DHONI",
+          "clue": "MS ___, legendary Indian cricket captain"
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "RANGE",
+          "clue": "Extent, or a mountain chain"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "ELDER",
+          "clue": "Older sibling"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "WEAR",
+          "clue": "Put on clothing"
+        },
+        {
+          "n": 5,
+          "dir": "D",
+          "r": 1,
+          "c": 0,
+          "answer": "DREW",
+          "clue": "Pulled, as in a sketch"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "WHALE",
+          "clue": "Largest animal in the ocean"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "HONDA",
+          "clue": "Japanese car brand"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "ANGER",
+          "clue": "Frustration, or rage"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 4,
+          "answer": "TIER",
+          "clue": "Level, or a row of seats"
+        }
       ]
     },
     {
-      "title": "India Mini 3",
+      "title": "All-Rounder",
+      "theme": "india",
       "size": 5,
-      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
-      "across": [
-        { "row": 0, "col": 0, "answer": "TAGS", "clue": "What you check before realizing the sweater's out of budget" },
-        { "row": 1, "col": 0, "answer": "AGAIN", "clue": "\"Say that ___?\" when you've zoned out" },
-        { "row": 2, "col": 0, "answer": "GANGA", "clue": "The river that flows through Varanasi's ghats" },
-        { "row": 3, "col": 0, "answer": "SIGNS", "clue": "What you'd need more of on unmarked Indian highways" },
-        { "row": 4, "col": 1, "answer": "NASA", "clue": "ISRO's counterpart across the Pacific" }
-      ],
-      "down": [
-        { "row": 0, "col": 0, "answer": "TAGS", "clue": "Price stickers, or what you do to friends in photos" },
-        { "row": 0, "col": 1, "answer": "AGAIN", "clue": "\"Here we go ___\" — a sequel's unofficial motto" },
-        { "row": 0, "col": 2, "answer": "GANGA", "clue": "India's most sacred river, in Hindi" },
-        { "row": 0, "col": 3, "answer": "SIGNS", "clue": "The zodiac has twelve of these" },
-        { "row": 1, "col": 4, "answer": "NASA", "clue": "Sent Chandrayaan's counterpart missions to the Moon too" }
+      "grid": ".#.....................#.",
+      "entries": [
+        {
+          "n": 2,
+          "dir": "A",
+          "r": 0,
+          "c": 2,
+          "answer": "WOW",
+          "clue": "Expression of surprise"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "RAINA",
+          "clue": "Suresh ___, former Indian cricket all-rounder"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "ACRES",
+          "clue": "Units of land measurement"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "CREST",
+          "clue": "Peak, highest point"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "TED",
+          "clue": "Nickname for someone named Theodore"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "TRACT",
+          "clue": "A stretch of land, or a chapter"
+        },
+        {
+          "n": 6,
+          "dir": "D",
+          "r": 1,
+          "c": 1,
+          "answer": "ACRE",
+          "clue": "Singular of \"acres\""
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "WIRED",
+          "clue": "Connected, or plugged in"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "ONES",
+          "clue": "Plural of \"one\""
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 4,
+          "answer": "WASTE",
+          "clue": "Squander, don't use wisely"
+        }
       ]
     },
     {
-      "title": "India Mini 4",
+      "title": "Tea Country",
+      "theme": "india",
       "size": 5,
-      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
-      "across": [
-        { "row": 0, "col": 0, "answer": "WILL", "clue": "\"Where there's a ___, there's a way\"" },
-        { "row": 1, "col": 0, "answer": "IDEAS", "clue": "What a good brainstorm session produces, eventually" },
-        { "row": 2, "col": 0, "answer": "LEONE", "clue": "Sierra ___, the West African nation, not the spaghetti-western director" },
-        { "row": 3, "col": 0, "answer": "LANKA", "clue": "Sri ___, the teardrop island just south of India" },
-        { "row": 4, "col": 1, "answer": "SEAT", "clue": "What everyone fights over on a crowded train" }
-      ],
-      "down": [
-        { "row": 0, "col": 0, "answer": "WILL", "clue": "Legal document, or sheer determination" },
-        { "row": 0, "col": 1, "answer": "IDEAS", "clue": "What a whiteboard fills up with, then erases" },
-        { "row": 0, "col": 2, "answer": "LEONE", "clue": "Sergio ___, who basically invented the spaghetti western" },
-        { "row": 0, "col": 3, "answer": "LANKA", "clue": "Home to Adam's Peak and some very good tea" },
-        { "row": 1, "col": 4, "answer": "SEAT", "clue": "\"Take a ___\" — an invitation to stay a while" }
+      "grid": "#.......................#",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 1,
+          "answer": "MISS",
+          "clue": "Beauty contest, or fail to attend"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "PASTA",
+          "clue": "Italian noodle dish"
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "ASSAM",
+          "clue": "Northeastern Indian state famous for its tea"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "ROUTE",
+          "clue": "Path or way to get somewhere"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "KNEE",
+          "clue": "Joint between your thigh and shin"
+        },
+        {
+          "n": 5,
+          "dir": "D",
+          "r": 1,
+          "c": 0,
+          "answer": "PARK",
+          "clue": "Green space in a city"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "MASON",
+          "clue": "Freemason, or a builder with bricks"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "ISSUE",
+          "clue": "Topic, or a copy of a magazine"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "STATE",
+          "clue": "US division, or India's national identity"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 4,
+          "answer": "SAME",
+          "clue": "Identical, unchanged"
+        }
+      ]
+    },
+    {
+      "title": "Taj City",
+      "theme": "india",
+      "size": 5,
+      "grid": ".........#.....#.........",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "SAUDI",
+          "clue": "Middle Eastern kingdom, home to Mecca"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "AGRA",
+          "clue": "Home to the Taj Mahal"
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "ORBIT",
+          "clue": "Path a satellite takes around Earth"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 1,
+          "answer": "EASE",
+          "clue": "Comfort, lack of difficulty"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "KENYA",
+          "clue": "East African nation famous for marathon runners"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "SAO",
+          "clue": "São ___, common start to Brazilian city names"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "AGREE",
+          "clue": "Concur, see eye to eye"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "URBAN",
+          "clue": "City-dwelling, not rural"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "DAISY",
+          "clue": "Flower named after a certain farm animal"
+        },
+        {
+          "n": 7,
+          "dir": "D",
+          "r": 2,
+          "c": 4,
+          "answer": "TEA",
+          "clue": "Hot drink, especially the Indian kind"
+        }
+      ]
+    },
+    {
+      "title": "South Spread",
+      "theme": "india",
+      "size": 5,
+      "grid": ".........#.....#.........",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "APART",
+          "clue": "Not together, separated by space"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "DOSA",
+          "clue": "South Indian crepe made from fermented batter"
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "SWING",
+          "clue": "Motion back and forth, like on a playground"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 1,
+          "answer": "EDGE",
+          "clue": "Border, boundary line"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "GREEN",
+          "clue": "Bright color often used for \"go\""
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "ADS",
+          "clue": "Marketing messages"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "POWER",
+          "clue": "Electricity provider, or motivation"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "ASIDE",
+          "clue": "To the side, out of the way"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "RANGE",
+          "clue": "Extent, or a mountain chain"
+        },
+        {
+          "n": 7,
+          "dir": "D",
+          "r": 2,
+          "c": 4,
+          "answer": "GEN",
+          "clue": "General, or a genre, for short"
+        }
+      ]
+    },
+    {
+      "title": "Morning Chai",
+      "theme": "india",
+      "size": 5,
+      "grid": ".#.....................#.",
+      "entries": [
+        {
+          "n": 2,
+          "dir": "A",
+          "r": 0,
+          "c": 2,
+          "answer": "TEA",
+          "clue": "Hot beverage, especially the Indian kind"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "ISAAC",
+          "clue": "Isaac ___, physicist behind gravity"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "LASSI",
+          "clue": "Yogurt-based drink, often mango-flavored"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "LIKED",
+          "clue": "Enjoyed, was fond of"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "ADS",
+          "clue": "Advertisements, for short"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "VILLA",
+          "clue": "Grand estate, or a fancy house"
+        },
+        {
+          "n": 6,
+          "dir": "D",
+          "r": 1,
+          "c": 1,
+          "answer": "SAID",
+          "clue": "Spoke the truth, past tense"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "TASKS",
+          "clue": "To-do list items"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "EASE",
+          "clue": "Comfort, lack of difficulty"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 4,
+          "answer": "ACIDS",
+          "clue": "Sour compounds found in citrus fruit"
+        }
+      ]
+    },
+    {
+      "title": "Billion Strong",
+      "theme": "india",
+      "size": 5,
+      "grid": ".........#.....#.........",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "ADOBE",
+          "clue": "Software company behind PDF and Photoshop"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "TALE",
+          "clue": "A short story"
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "INDIA",
+          "clue": "Country with the world's largest population"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 1,
+          "answer": "CENT",
+          "clue": "Penny, in American currency"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "MERGE",
+          "clue": "Blend together"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "ATI",
+          "clue": "Graphics chip maker, once a rival to Nvidia"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "DANCE",
+          "clue": "Move to music"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "OLDER",
+          "clue": "Not younger, more senior"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "BEING",
+          "clue": "Existing, alive"
+        },
+        {
+          "n": 7,
+          "dir": "D",
+          "r": 2,
+          "c": 4,
+          "answer": "ATE",
+          "clue": "Consumed food, past tense"
+        }
+      ]
+    },
+    {
+      "title": "Continental",
+      "theme": "india",
+      "size": 5,
+      "grid": ".........#.....#.........",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "WATCH",
+          "clue": "Look at, observe"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "ASIA",
+          "clue": "Continent home to India, China, and Japan"
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "SIGMA",
+          "clue": "Greek letter used in statistics"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 1,
+          "answer": "DEPT",
+          "clue": "University division, for short"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "VERSE",
+          "clue": "A section of a song"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "WAS",
+          "clue": "Past tense of \"is\""
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "ASIDE",
+          "clue": "To the side, out of the way"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "TIGER",
+          "clue": "Big cat native to India"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "CAMPS",
+          "clue": "Places where people stay outdoors"
+        },
+        {
+          "n": 7,
+          "dir": "D",
+          "r": 2,
+          "c": 4,
+          "answer": "ATE",
+          "clue": "Consumed food, past tense"
+        }
+      ]
+    },
+    {
+      "title": "Draped in Silk",
+      "theme": "india",
+      "size": 5,
+      "grid": ".........#.....#.........",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "ALPHA",
+          "clue": "First letter of the Greek alphabet"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "SARI",
+          "clue": "Traditional Indian garment worn by women"
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "PRINT",
+          "clue": "What comes out of a newspaper press"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 1,
+          "answer": "GOTO",
+          "clue": "Jump to a specific line of code"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "VERSE",
+          "clue": "A section of a song"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "ASP",
+          "clue": "A snake known for its deadly bite"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "LARGE",
+          "clue": "Big, sizable"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "PRIOR",
+          "clue": "Coming before, earlier"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "HINTS",
+          "clue": "Subtle clues"
+        },
+        {
+          "n": 7,
+          "dir": "D",
+          "r": 2,
+          "c": 4,
+          "answer": "TOE",
+          "clue": "Part of your foot, or the tip of a shoe"
+        }
+      ]
+    },
+    {
+      "title": "Currency Check",
+      "theme": "india",
+      "size": 5,
+      "grid": "....#...............#....",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "PROS",
+          "clue": "Advantages, or those in favor"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "RUPEE",
+          "clue": "India's official currency"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "ARENA",
+          "clue": "Stadium where athletes compete"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "YARDS",
+          "clue": "Units of measurement in American football"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 1,
+          "answer": "LAST",
+          "clue": "Final, most recent"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "PRAY",
+          "clue": "Ask for something spiritually"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "RURAL",
+          "clue": "Countryside, not urban"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "OPERA",
+          "clue": "Musical drama with singing throughout"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "SENDS",
+          "clue": "Delivers, as a package"
+        },
+        {
+          "n": 6,
+          "dir": "D",
+          "r": 1,
+          "c": 4,
+          "answer": "EAST",
+          "clue": "Direction the sun rises"
+        }
+      ]
+    },
+    {
+      "title": "Big Cat",
+      "theme": "india",
+      "size": 5,
+      "grid": ".#.....................#.",
+      "entries": [
+        {
+          "n": 2,
+          "dir": "A",
+          "r": 0,
+          "c": 2,
+          "answer": "SPA",
+          "clue": "Relaxing retreat with hot tubs"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "USUAL",
+          "clue": "Ordinary, typical"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "LARGE",
+          "clue": "Big, sizable"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "TIGER",
+          "clue": "Big cat native to India, the national animal"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "IDE",
+          "clue": "A coding environment, for short"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "MULTI",
+          "clue": "Involving many parts at once"
+        },
+        {
+          "n": 6,
+          "dir": "D",
+          "r": 1,
+          "c": 1,
+          "answer": "SAID",
+          "clue": "Spoke the truth, past tense"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "SURGE",
+          "clue": "A sudden rush, or increase"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "PAGE",
+          "clue": "What you turn in a book, or a website"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 4,
+          "answer": "ALERT",
+          "clue": "On high ___, watchful"
+        }
+      ]
+    },
+    {
+      "title": "Mango Season",
+      "theme": "india",
+      "size": 5,
+      "grid": ".........#.....#.........",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "ELLEN",
+          "clue": "DeGeneres, talk show host"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "LEAD",
+          "clue": "To guide or be in charge"
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "MANGO",
+          "clue": "Sweet tropical fruit, India's national fruit"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 1,
+          "answer": "SEEN",
+          "clue": "Perceived, past tense of \"see\""
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "JESSE",
+          "clue": "Popular first name, or a character on Full House"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "ELM",
+          "clue": "Type of tree with a leafy canopy"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "LEASE",
+          "clue": "Rent or hire an apartment"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "LANES",
+          "clue": "Roads for driving, plural"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "EDGES",
+          "clue": "Boundaries, or the sides of something"
+        },
+        {
+          "n": 7,
+          "dir": "D",
+          "r": 2,
+          "c": 4,
+          "answer": "ONE",
+          "clue": "Single, the number"
+        }
       ]
     }
   ],
   "easy": [
     {
-      "title": "Easy Mini 1",
+      "title": "Slow Sunday",
+      "theme": "general",
       "size": 5,
-      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
-      "across": [
-        { "row": 0, "col": 0, "answer": "STEP", "clue": "One move in a dance, or a stair" },
-        { "row": 1, "col": 0, "answer": "TEXAS", "clue": "The Lone Star State" },
-        { "row": 2, "col": 0, "answer": "EXTRA", "clue": "More than needed" },
-        { "row": 3, "col": 0, "answer": "PARTY", "clue": "Birthday celebration" },
-        { "row": 4, "col": 1, "answer": "SAYS", "clue": "\"She ___ hi\"" }
-      ],
-      "down": [
-        { "row": 0, "col": 0, "answer": "STEP", "clue": "\"Watch your ___\"" },
-        { "row": 0, "col": 1, "answer": "TEXAS", "clue": "Home to Austin and Houston" },
-        { "row": 0, "col": 2, "answer": "EXTRA", "clue": "Bonus, as in \"an ___ hour of sleep\"" },
-        { "row": 0, "col": 3, "answer": "PARTY", "clue": "Fun gathering with cake" },
-        { "row": 1, "col": 4, "answer": "SAYS", "clue": "\"What she ___ goes\"" }
+      "grid": "#.......................#",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 1,
+          "answer": "SNAP",
+          "clue": "Sound of snapping fingers, or a quick photo"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "SHADE",
+          "clue": "What a big tree gives you on a hot day"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "NODES",
+          "clue": "Points on a network diagram"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "AREAS",
+          "clue": "Zones on a map"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 4,
+          "answer": "PENS",
+          "clue": "They run out of ink eventually"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "SHORE",
+          "clue": "Where the ocean meets the sand"
+        },
+        {
+          "n": 5,
+          "dir": "D",
+          "r": 1,
+          "c": 0,
+          "answer": "SLIM",
+          "clue": "Not chubby, just ___"
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "LADEN",
+          "clue": "Loaded down, as in \"fully ___\""
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "IDEAS",
+          "clue": "Brainstorm results"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "MESS",
+          "clue": "What your room becomes overnight"
+        }
       ]
     },
     {
-      "title": "Easy Mini 2",
+      "title": "Two Wheels",
+      "theme": "general",
       "size": 5,
-      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
-      "across": [
-        { "row": 0, "col": 0, "answer": "CARD", "clue": "Birthday ___, sent in the mail" },
-        { "row": 1, "col": 0, "answer": "AWARD", "clue": "Trophy or medal" },
-        { "row": 2, "col": 0, "answer": "RADIO", "clue": "Plays music in the car" },
-        { "row": 3, "col": 0, "answer": "DRIVE", "clue": "Take the car for a spin" },
-        { "row": 4, "col": 1, "answer": "DOES", "clue": "\"She ___ her homework\"" }
-      ],
-      "down": [
-        { "row": 0, "col": 0, "answer": "CARD", "clue": "Playing ___, dealt from a deck" },
-        { "row": 0, "col": 1, "answer": "AWARD", "clue": "What a gold medal is" },
-        { "row": 0, "col": 2, "answer": "RADIO", "clue": "Old-school way to hear the news" },
-        { "row": 0, "col": 3, "answer": "DRIVE", "clue": "Motivation, or a road trip" },
-        { "row": 1, "col": 4, "answer": "DOES", "clue": "\"He ___ his best\"" }
+      "grid": "#...#...............#...#",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 1,
+          "answer": "RID",
+          "clue": "\"Get ___ of it\""
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "RIDER",
+          "clue": "Someone on a bike or a horse"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "INDIA",
+          "clue": "Home to the Taj Mahal"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "DAIRY",
+          "clue": "Milk, cheese, and butter, collectively"
+        },
+        {
+          "n": 4,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "FINAL",
+          "clue": "Last one, no do-overs"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 1,
+          "c": 0,
+          "answer": "FEW",
+          "clue": "Not many, just a ___"
+        },
+        {
+          "n": 5,
+          "dir": "D",
+          "r": 1,
+          "c": 4,
+          "answer": "LED",
+          "clue": "Guided the way, past tense"
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "EDDIE",
+          "clue": "Common nickname for Edward"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "WEIRD",
+          "clue": "Strange, in a good way maybe"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 4,
+          "c": 1,
+          "answer": "RAY",
+          "clue": "A beam of sunlight"
+        }
       ]
     },
     {
-      "title": "Easy Mini 3",
+      "title": "Small Talk",
+      "theme": "general",
       "size": 5,
-      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
-      "across": [
-        { "row": 0, "col": 0, "answer": "NEWS", "clue": "What's on TV at 9 o'clock" },
-        { "row": 1, "col": 0, "answer": "EMAIL", "clue": "You've got mail, digitally" },
-        { "row": 2, "col": 0, "answer": "WASTE", "clue": "Don't ___ your time" },
-        { "row": 3, "col": 0, "answer": "SITES", "clue": "Web pages, for short" },
-        { "row": 4, "col": 1, "answer": "LESS", "clue": "\"___ is more\"" }
-      ],
-      "down": [
-        { "row": 0, "col": 0, "answer": "NEWS", "clue": "Headlines and breaking stories" },
-        { "row": 0, "col": 1, "answer": "EMAIL", "clue": "Gmail or Outlook, e.g." },
-        { "row": 0, "col": 2, "answer": "WASTE", "clue": "Garbage, or to squander" },
-        { "row": 0, "col": 3, "answer": "SITES", "clue": "Places, or websites" },
-        { "row": 1, "col": 4, "answer": "LESS", "clue": "The opposite of more" }
+      "grid": ".........#.....#.........",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "ALLAN",
+          "clue": "Poe's middle name"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "ADS",
+          "clue": "Commercials, for short"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "LEASE",
+          "clue": "What you sign before moving into an apartment"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "LEMON",
+          "clue": "Sour yellow fruit, or a shady used car"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "ARBOR",
+          "clue": "\"Arbor Day\" celebrates these leafy things"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "DEER",
+          "clue": "Caught in headlights, famously"
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "SAMBA",
+          "clue": "Lively Brazilian dance"
+        },
+        {
+          "n": 7,
+          "dir": "D",
+          "r": 2,
+          "c": 4,
+          "answer": "ANY",
+          "clue": "\"Got ___ spare change?\""
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 1,
+          "answer": "SOON",
+          "clue": "\"See you ___!\""
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "HENRY",
+          "clue": "A common English king's name, eight of them at least"
+        }
       ]
     },
     {
-      "title": "Easy Mini 4",
+      "title": "Road Trip",
+      "theme": "general",
       "size": 5,
-      "grid": [".", ".", ".", ".", "#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#", ".", ".", ".", "."],
-      "across": [
-        { "row": 0, "col": 0, "answer": "LAST", "clue": "Final, or the ___ straw" },
-        { "row": 1, "col": 0, "answer": "AFTER", "clue": "\"See you ___ lunch\"" },
-        { "row": 2, "col": 0, "answer": "STORE", "clue": "Where you buy groceries" },
-        { "row": 3, "col": 0, "answer": "TERMS", "clue": "Rules of an agreement" },
-        { "row": 4, "col": 1, "answer": "REST", "clue": "Take a break and ___" }
-      ],
-      "down": [
-        { "row": 0, "col": 0, "answer": "LAST", "clue": "Not first, but ___" },
-        { "row": 0, "col": 1, "answer": "AFTER", "clue": "Later than, in time" },
-        { "row": 0, "col": 2, "answer": "STORE", "clue": "Shop, or to save for later" },
-        { "row": 0, "col": 3, "answer": "TERMS", "clue": "\"On good ___ with\"" },
-        { "row": 1, "col": 4, "answer": "REST", "clue": "Everyone else, \"the ___ of us\"" }
+      "grid": ".#.....................#.",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "TAMPA",
+          "clue": "Florida city on the Gulf Coast"
+        },
+        {
+          "n": 2,
+          "dir": "A",
+          "r": 0,
+          "c": 2,
+          "answer": "TIP",
+          "clue": "Extra cash left for good service"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "TOURS",
+          "clue": "Guided walks around a city"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "INNS",
+          "clue": "Cozy roadside places to sleep"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 4,
+          "answer": "PETER",
+          "clue": "Peter Pan's first name, or a common boy's name"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "ALONE",
+          "clue": "\"Home ___\", the holiday movie"
+        },
+        {
+          "n": 6,
+          "dir": "D",
+          "r": 1,
+          "c": 1,
+          "answer": "LOUD",
+          "clue": "Not quiet, at all"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "MOUNT",
+          "clue": "To climb up onto, like a horse"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "PURSE",
+          "clue": "Handbag for your essentials"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "ADS",
+          "clue": "Old billboard messages, for short"
+        }
       ]
     },
     {
-      "title": "Easy Mini 5",
+      "title": "Backstage Pass",
+      "theme": "general",
       "size": 5,
-      "grid": ["#", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", "#"],
-      "across": [
-        { "row": 0, "col": 1, "answer": "ALSO", "clue": "As well, too" },
-        { "row": 1, "col": 0, "answer": "AGAIN", "clue": "Once more" },
-        { "row": 2, "col": 0, "answer": "LARGE", "clue": "Big size" },
-        { "row": 3, "col": 0, "answer": "SIGNS", "clue": "Road ___, giving directions" },
-        { "row": 4, "col": 0, "answer": "ONES", "clue": "The ___ you love" }
-      ],
-      "down": [
-        { "row": 0, "col": 1, "answer": "AGAIN", "clue": "\"Try it one more time\"" },
-        { "row": 0, "col": 2, "answer": "LARGE", "clue": "Extra ___, on a coffee menu" },
-        { "row": 0, "col": 3, "answer": "SIGNS", "clue": "Clues, or things you point to" },
-        { "row": 0, "col": 4, "answer": "ONES", "clue": "Not the twos, not the threes" },
-        { "row": 1, "col": 0, "answer": "ALSO", "clue": "\"I ___ like pizza\"" }
+      "grid": "....#...............#....",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "PASS",
+          "clue": "What you need to get backstage"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "PAGE",
+          "clue": "One sheet in a book"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "ADULT",
+          "clue": "Grown-up, officially"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "SMILE",
+          "clue": "\"Say cheese\" prompts this"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "SIDES",
+          "clue": "The extra dishes next to the main course"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "ADMIT",
+          "clue": "\"I have to ___, that was funny\""
+        },
+        {
+          "n": 6,
+          "dir": "D",
+          "r": 1,
+          "c": 4,
+          "answer": "TENT",
+          "clue": "Home base on a camping trip"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "GUIDE",
+          "clue": "Someone who shows you the way"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "ELLEN",
+          "clue": "Talk-show host known for dancing on air"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 1,
+          "answer": "TEST",
+          "clue": "Pop quiz, basically"
+        }
+      ]
+    },
+    {
+      "title": "Ski Trip",
+      "theme": "general",
+      "size": 5,
+      "grid": "#.......................#",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 1,
+          "answer": "SHOT",
+          "clue": "Attempt, as in \"give it a ___\""
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "SLAVE",
+          "clue": "Chained to your desk, figuratively (\"___ to the job\")"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "HOPES",
+          "clue": "Fingers crossed for these"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "OPENS",
+          "clue": "What a door does when unlocked"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 4,
+          "answer": "TEST",
+          "clue": "Pop quiz, basically"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "SLOPE",
+          "clue": "A ski hill's incline"
+        },
+        {
+          "n": 5,
+          "dir": "D",
+          "r": 1,
+          "c": 0,
+          "answer": "STEM",
+          "clue": "The part of a flower below the bloom"
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "TAPES",
+          "clue": "Old cassette or VHS ___"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "EVENT",
+          "clue": "Big happening on the calendar"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "MESS",
+          "clue": "What your room becomes overnight"
+        }
+      ]
+    },
+    {
+      "title": "Old Web",
+      "theme": "general",
+      "size": 5,
+      "grid": "#...#...............#...#",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 1,
+          "answer": "THY",
+          "clue": "Old-fashioned word for \"your\""
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "TREAT",
+          "clue": "Something sweet, just because"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "HELLO",
+          "clue": "The first word of almost every phone call"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "YAHOO",
+          "clue": "Old-school search engine and email inbox"
+        },
+        {
+          "n": 4,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "AREAS",
+          "clue": "Zones on a map"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 1,
+          "c": 0,
+          "answer": "ADS",
+          "clue": "Old billboard messages, for short"
+        },
+        {
+          "n": 5,
+          "dir": "D",
+          "r": 1,
+          "c": 4,
+          "answer": "SIN",
+          "clue": "A no-no, morally speaking"
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "DELHI",
+          "clue": "Capital city of India"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "SALON",
+          "clue": "Where you get your hair done"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 4,
+          "c": 1,
+          "answer": "TOO",
+          "clue": "\"Me ___!\""
+        }
+      ]
+    },
+    {
+      "title": "Under the Hood",
+      "theme": "general",
+      "size": 5,
+      "grid": ".........#.....#.........",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "MOTOR",
+          "clue": "The engine part that makes a car go"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "MEN",
+          "clue": "The opposite of women"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "OXIDE",
+          "clue": "Rust is iron ___"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "TIGER",
+          "clue": "Big striped cat, king of the jungle in some stories"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "OTHER",
+          "clue": "Not this one, the ___ one"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "EXIT",
+          "clue": "The way out"
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "NIGHT",
+          "clue": "When the stars come out"
+        },
+        {
+          "n": 7,
+          "dir": "D",
+          "r": 2,
+          "c": 4,
+          "answer": "TRY",
+          "clue": "\"Give it a ___\""
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 1,
+          "answer": "DEER",
+          "clue": "Caught in headlights, famously"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "JERRY",
+          "clue": "Tom's cartoon mouse nemesis"
+        }
+      ]
+    },
+    {
+      "title": "Fender Bender",
+      "theme": "general",
+      "size": 5,
+      "grid": ".#.....................#.",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "TOAST",
+          "clue": "Bread after the toaster"
+        },
+        {
+          "n": 2,
+          "dir": "A",
+          "r": 0,
+          "c": 2,
+          "answer": "ARC",
+          "clue": "A curved line, like a rainbow's shape"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "AHEAD",
+          "clue": "Further along, in front"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "RENT",
+          "clue": "Monthly payment to your landlord"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 4,
+          "answer": "CRASH",
+          "clue": "What happens when two cars don't yield"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "OTHER",
+          "clue": "Tall, leafy, and great for shade"
+        },
+        {
+          "n": 6,
+          "dir": "D",
+          "r": 1,
+          "c": 1,
+          "answer": "TREE",
+          "clue": "Where the big game is played"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "ARENA",
+          "clue": "Where the fans sit"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "SEATS",
+          "clue": "Places to sit, plural"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "TED",
+          "clue": "Short for Theodore"
+        }
+      ]
+    },
+    {
+      "title": "Wish List",
+      "theme": "general",
+      "size": 5,
+      "grid": "....#...............#....",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "PADS",
+          "clue": "Cushioning, like knee ___"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "PAST",
+          "clue": "Yesterday, last year, all of history really"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "ALLOW",
+          "clue": "To give the green light to"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "DIANA",
+          "clue": "Princess of Wales, by first name"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "SEVEN",
+          "clue": "Lucky number, or days in a week"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "ALIEN",
+          "clue": "Visitor from outer space"
+        },
+        {
+          "n": 6,
+          "dir": "D",
+          "r": 1,
+          "c": 4,
+          "answer": "NEST",
+          "clue": "A bird's cozy home"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "SLAVE",
+          "clue": "Bound and forced to serve, historically"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "TONES",
+          "clue": "Ringtones, or shades of a color"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 1,
+          "answer": "WANT",
+          "clue": "To really, really desire"
+        }
+      ]
+    },
+    {
+      "title": "Wish Upon a Star",
+      "theme": "general",
+      "size": 5,
+      "grid": "#.......................#",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 1,
+          "answer": "STAR",
+          "clue": "What you wish upon at night"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "SLIDE",
+          "clue": "Playground favorite, or a PowerPoint page"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "TILES",
+          "clue": "What covers a bathroom floor"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "ATLAS",
+          "clue": "Big book of maps"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 4,
+          "answer": "REAL",
+          "clue": "Not fake, the genuine article"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "ELITE",
+          "clue": "The absolute best of the best"
+        },
+        {
+          "n": 5,
+          "dir": "D",
+          "r": 1,
+          "c": 0,
+          "answer": "EVIL",
+          "clue": "The villain's whole vibe"
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "VILLA",
+          "clue": "Fancy vacation house, often in Italy"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "IDEAL",
+          "clue": "Perfect, in theory"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "LESS",
+          "clue": "The opposite of more"
+        }
+      ]
+    },
+    {
+      "title": "Snake in the Grass",
+      "theme": "general",
+      "size": 5,
+      "grid": "#...#...............#...#",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 1,
+          "answer": "SAP",
+          "clue": "Sticky stuff inside a tree trunk"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "SCALE",
+          "clue": "What you step on to weigh yourself"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "ARRAY",
+          "clue": "A wide ___ of choices"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "PEACE",
+          "clue": "The opposite of war"
+        },
+        {
+          "n": 4,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "ACRES",
+          "clue": "How farmland is measured"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 1,
+          "c": 0,
+          "answer": "ASP",
+          "clue": "Cleopatra's famous snake"
+        },
+        {
+          "n": 5,
+          "dir": "D",
+          "r": 1,
+          "c": 4,
+          "answer": "SHE",
+          "clue": "Pronoun for a woman"
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "SARAH",
+          "clue": "Common girl's name, also a biblical matriarch"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "PLACE",
+          "clue": "A spot, a location"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 4,
+          "c": 1,
+          "answer": "EYE",
+          "clue": "You blink with it"
+        }
+      ]
+    },
+    {
+      "title": "Photo Finish",
+      "theme": "general",
+      "size": 5,
+      "grid": ".........#.....#.........",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "RACES",
+          "clue": "Sprints to the finish line"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "RAW",
+          "clue": "Uncooked, like sushi fish"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "ALICE",
+          "clue": "She fell down the rabbit hole"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "CANON",
+          "clue": "The official, accepted storyline"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "ENEMY",
+          "clue": "The hero's arch-rival"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "ALAN",
+          "clue": "Common first name, as in Alan Turing"
+        },
+        {
+          "n": 6,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "WINES",
+          "clue": "What a sommelier pairs with dinner"
+        },
+        {
+          "n": 7,
+          "dir": "D",
+          "r": 2,
+          "c": 4,
+          "answer": "SPA",
+          "clue": "Where you go for a massage and a robe"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 1,
+          "answer": "COMP",
+          "clue": "Free ticket, in industry slang"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "KENYA",
+          "clue": "East African country famous for marathon runners"
+        }
+      ]
+    },
+    {
+      "title": "Cookie Aisle",
+      "theme": "general",
+      "size": 5,
+      "grid": ".#.....................#.",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "SAMOA",
+          "clue": "Pacific island nation, also a Girl Scout cookie"
+        },
+        {
+          "n": 2,
+          "dir": "A",
+          "r": 0,
+          "c": 2,
+          "answer": "BUY",
+          "clue": "\"I'll ___ that\" (I believe you)"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "BANDS",
+          "clue": "Rock groups, collectively"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "URGE",
+          "clue": "A sudden, strong impulse"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 4,
+          "answer": "YEARS",
+          "clue": "Twelve months, times however many candles"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "AWARE",
+          "clue": "In the know, alert"
+        },
+        {
+          "n": 6,
+          "dir": "D",
+          "r": 1,
+          "c": 1,
+          "answer": "WARD",
+          "clue": "Hospital section, or a guardian's charge"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "MANGA",
+          "clue": "Japanese comic book style"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "ORDER",
+          "clue": "What you place at a restaurant"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 0,
+          "answer": "ADS",
+          "clue": "Old billboard messages, for short"
+        }
+      ]
+    },
+    {
+      "title": "Window Shopping",
+      "theme": "general",
+      "size": 5,
+      "grid": "....#...............#....",
+      "entries": [
+        {
+          "n": 1,
+          "dir": "A",
+          "r": 0,
+          "c": 0,
+          "answer": "MALL",
+          "clue": "Where you go to window shop"
+        },
+        {
+          "n": 1,
+          "dir": "D",
+          "r": 0,
+          "c": 0,
+          "answer": "MOST",
+          "clue": "The majority of"
+        },
+        {
+          "n": 2,
+          "dir": "D",
+          "r": 0,
+          "c": 1,
+          "answer": "ACTOR",
+          "clue": "Someone who plays a role on screen"
+        },
+        {
+          "n": 3,
+          "dir": "D",
+          "r": 0,
+          "c": 2,
+          "answer": "LEONE",
+          "clue": "Sergio ___, spaghetti western director"
+        },
+        {
+          "n": 4,
+          "dir": "D",
+          "r": 0,
+          "c": 3,
+          "answer": "LANES",
+          "clue": "Highway divisions, or bowling alley tracks"
+        },
+        {
+          "n": 5,
+          "dir": "A",
+          "r": 1,
+          "c": 0,
+          "answer": "OCEAN",
+          "clue": "Way bigger than a sea"
+        },
+        {
+          "n": 6,
+          "dir": "D",
+          "r": 1,
+          "c": 4,
+          "answer": "NEST",
+          "clue": "A bird's cozy home"
+        },
+        {
+          "n": 7,
+          "dir": "A",
+          "r": 2,
+          "c": 0,
+          "answer": "STONE",
+          "clue": "What the Flintstones' age is named after"
+        },
+        {
+          "n": 8,
+          "dir": "A",
+          "r": 3,
+          "c": 0,
+          "answer": "TONES",
+          "clue": "Different shades of the same color"
+        },
+        {
+          "n": 9,
+          "dir": "A",
+          "r": 4,
+          "c": 1,
+          "answer": "REST",
+          "clue": "What you do on a lazy Sunday"
+        }
       ]
     }
   ]
