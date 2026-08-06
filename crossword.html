@@ -127,6 +127,10 @@ body.night .histrow b{color:#e8e6e0}
 
   <div class="xlayout">
     <div class="xwrap">
+      <div class="bigtimer fade in">
+        <span class="tv" id="statTimer">0:00</span>
+        <span class="tk">time</span>
+      </div>
       <div class="xgrid" id="xgrid"></div>
       <div class="xcontrols" style="margin-top:16px">
         <button class="actbtn" id="checkBtn">check</button>
@@ -136,10 +140,6 @@ body.night .histrow b{color:#e8e6e0}
     </div>
 
     <div>
-      <div class="bigtimer fade in">
-        <span class="tv" id="statTimer">0:00</span>
-        <span class="tk">time</span>
-      </div>
       <div class="clueline">
         <span class="dir" id="clueDir"></span>
         <span id="clueText"></span>
@@ -180,11 +180,23 @@ let elapsedMs = 0;
 /* ================= stats: localStorage, per-browser ================= */
 const STATS_KEY = 'nerds_crossword_stats';
 function loadStats() {
+  const fallback = { solved: 0, score: 0, history: [], bestTimeMs: {}, solvedTitles: [] };
   try {
     const raw = localStorage.getItem(STATS_KEY);
-    if (raw) return JSON.parse(raw);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      // merge onto the known-good shape so older saved data (from earlier
+      // versions of this feature) can't leave a field missing and break rendering
+      return {
+        ...fallback,
+        ...parsed,
+        history: Array.isArray(parsed.history) ? parsed.history : [],
+        bestTimeMs: parsed.bestTimeMs && typeof parsed.bestTimeMs === 'object' ? parsed.bestTimeMs : {},
+        solvedTitles: Array.isArray(parsed.solvedTitles) ? parsed.solvedTitles : []
+      };
+    }
   } catch (e) {}
-  return { solved: 0, score: 0, history: [], bestTimeMs: {} };
+  return fallback;
 }
 function saveStats(s) {
   try { localStorage.setItem(STATS_KEY, JSON.stringify(s)); } catch (e) {}
@@ -257,14 +269,26 @@ function buildSlots(p) {
   return { list, grid2d, numbering };
 }
 
+function puzzleKey(m, p) {
+  return m + ':' + p.title;
+}
+
+/* pick a puzzle from the mode's bank the player hasn't already solved,
+   falling back to the full bank once everything in it has been solved */
+function pickPuzzle(m) {
+  const bank = DATA[m];
+  const unsolved = bank.filter(p => !STATS.solvedTitles.includes(puzzleKey(m, p)));
+  const pool = unsolved.length ? unsolved : bank;
+  return pool[Math.floor(Math.random() * pool.length)];
+}
+
 function startPuzzle() {
   stopTimer();
   startTime = null;
   elapsedMs = 0;
   document.getElementById('statTimer').textContent = '0:00';
 
-  const bank = DATA[mode];
-  puzzle = bank[Math.floor(Math.random() * bank.length)];
+  puzzle = pickPuzzle(mode);
   size = puzzle.size;
   const built = buildSlots(puzzle);
   slots = built.list;
@@ -475,6 +499,9 @@ function recordSolve() {
   if (!STATS.bestTimeMs[bestKey] || elapsedMs < STATS.bestTimeMs[bestKey]) {
     STATS.bestTimeMs[bestKey] = elapsedMs;
   }
+
+  const key = puzzleKey(mode, puzzle);
+  if (!STATS.solvedTitles.includes(key)) STATS.solvedTitles.push(key);
 
   saveStats(STATS);
   renderHistory();
