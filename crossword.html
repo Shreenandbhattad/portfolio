@@ -13,7 +13,7 @@
 main{max-width:920px}
 .gamehead{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;flex-wrap:wrap;gap:10px}
 .modeswitch{display:flex;gap:6px}
-.modebtn{border:1px solid var(--line);background:transparent;color:var(--soft);border-radius:999px;padding:6px 14px;
+.modebtn{border:1px solid var(--line);background:transparent;color:#4a453c;border-radius:999px;padding:6px 14px;
   font-family:var(--sans);font-size:.78rem;cursor:pointer;transition:all .25s}
 .modebtn:hover{color:var(--ink);border-color:var(--faint)}
 .modebtn.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
@@ -23,7 +23,7 @@ body.night .modebtn.on{background:#e8e6e0;color:#232838}
 /* ---------------- big timer (transparent, sits on the page's own background) ---------------- */
 .bigtimer{display:inline-flex;align-items:baseline;gap:10px;margin:0 0 14px;background:none}
 .bigtimer .tv{font-size:2.2rem;font-weight:800;color:#5a8a52;font-variant-numeric:tabular-nums;line-height:1}
-.bigtimer .tk{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+.bigtimer .tk{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:#4a453c}
 body.night .bigtimer .tv{color:#a8c9a0}
 
 /* ---------------- side-by-side layout ---------------- */
@@ -48,7 +48,7 @@ body.night .xcell.inword input{background:rgba(143,174,126,.1)}
 body.night .xcell.correct input{background:rgba(143,174,126,.25);color:#a8c9a0}
 .xcell.wrong input{background:#faeaea;color:#a4454f}
 body.night .xcell.wrong input{background:rgba(194,85,98,.2);color:#e0a3aa}
-.xnum{position:absolute;top:2px;left:4px;font-size:.55rem;font-weight:700;color:var(--soft);pointer-events:none}
+.xnum{position:absolute;top:2px;left:4px;font-size:.55rem;font-weight:700;color:#5a5548;pointer-events:none}
 body.night .xnum{color:#8b8880}
 @media(max-width:480px){.xcell{width:16vw;height:16vw;max-width:58px;max-height:58px}}
 
@@ -58,7 +58,7 @@ body.night .xnum{color:#8b8880}
 body.night .clueline{color:#e8e6e0;background:#2e3345}
 .clueline .dir{font-weight:800;color:#5a8a52;flex-shrink:0}
 body.night .clueline .dir{color:#a8c9a0}
-.cluebtn{background:none;border:1px solid var(--line);color:var(--soft);border-radius:999px;width:28px;height:28px;
+.cluebtn{background:none;border:1px solid var(--line);color:#4a453c;border-radius:999px;width:28px;height:28px;
   font-size:.8rem;cursor:pointer;flex-shrink:0;transition:all .2s;margin-left:auto}
 .cluebtn:hover{color:var(--ink);border-color:var(--faint)}
 body.night .cluebtn{border-color:rgba(255,255,255,.16);color:#a8a49b}
@@ -88,7 +88,7 @@ body.night .cluelist{color:#c4c1b8}
 /* ---------------- history panel ---------------- */
 .histwrap{margin-top:36px}
 .histwrap h2{margin:0 0 14px}
-.histrow{display:flex;justify-content:space-between;font-size:.85rem;color:var(--soft);padding:8px 0;border-bottom:1px solid var(--line)}
+.histrow{display:flex;justify-content:space-between;font-size:.85rem;color:#4a453c;padding:8px 0;border-bottom:1px solid var(--line)}
 .histrow:first-of-type{border-top:1px solid var(--line)}
 .histrow b{color:var(--ink);font-weight:600}
 body.night .histrow{border-color:rgba(255,255,255,.1);color:#a8a49b}
