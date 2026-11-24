@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shreenand Bhattad · desktop edition</title>
 <meta name="description" content="Shreenand Bhattad's portfolio, rebuilt as a tiny desktop. Machine learning, data, and the systems that hold them together.">
-<meta name="theme-color" content="#e5e7e0">
+<meta name="theme-color" content="#2aa5c7">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23151515'/><text x='50' y='66' font-size='44' font-weight='800' text-anchor='middle' fill='white' font-family='Arial'>SB</text></svg>">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -30,47 +30,44 @@
     <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6.500"/><path d="m16 16 4.500 4.500"/></g></symbol>
     <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" d="m6 6 12 12M18 6 6 18"/></symbol>
     <symbol id="i-max" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-wifi" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2.500 9a14 14 0 0 1 19 0M5.500 12.500a9.500 9.500 0 0 1 13 0M8.700 16a5 5 0 0 1 6.600 0"/></g><circle cx="12" cy="19" r="1.400" fill="currentColor"/></symbol>
+    <symbol id="i-batt" viewBox="0 0 28 24"><rect x="2" y="7" width="20" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="1.400" opacity=".6"/><rect x="4" y="9" width="14" height="6" rx="1.500" fill="currentColor"/><path d="M24 10v4" stroke="currentColor" stroke-width="1.600" stroke-linecap="round" opacity=".6"/></symbol>
+    <symbol id="i-ctl" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round"><path d="M4 8h9M17 8h3M4 16h3M11 16h9"/><circle cx="15" cy="8" r="2"/><circle cx="9" cy="16" r="2"/></g></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.800" stroke-linejoin="round" d="M21 3 3 10.500l7 3 3 7z"/></symbol>
   </defs>
 </svg>
 
-<div id="wall">
-  <div class="sun"></div>
-  <svg viewBox="0 0 1200 300" preserveAspectRatio="none" id="grass"></svg>
-</div>
+<div id="wall"></div>
 
-<header id="bar">
-  <a class="mark" href="#home" title="home">SB</a>
-  <nav id="nav">
-    <button data-open="home">Home</button>
-    <button data-open="about">About</button>
-    <button data-open="work">Work</button>
-    <button data-open="projects">Projects</button>
-    <button data-open="play">Play</button>
-    <button data-open="contact">Contact</button>
-  </nav>
+<header id="mb">
+  <button class="m logo" id="mLogo" aria-label="Menu"><i></i></button>
+  <button class="m app" id="mApp">Shreenand</button>
+  <button class="m hide-s" data-menu="file">File</button>
+  <button class="m hide-s" data-menu="go">Go</button>
+  <button class="m hide-s" data-menu="window">Window</button>
+  <button class="m hide-s" data-menu="help">Help</button>
   <span class="sp"></span>
+  <span class="st hide-s"><svg><use href="#i-batt"/></svg><svg><use href="#i-wifi"/></svg></span>
+  <button class="m" id="searchBtn" aria-label="Search" title="Search (⌘K)"><svg style="width:15px;height:15px;vertical-align:-3px"><use href="#i-search"/></svg></button>
+  <button class="m hide-s" aria-label="Control centre" id="ctlBtn"><svg style="width:15px;height:15px;vertical-align:-3px"><use href="#i-ctl"/></svg></button>
   <span id="clock"></span>
-  <a class="cta" href="#contact" data-open="contact">Say hi</a>
-  <button class="ibtn" id="searchBtn" title="Search (⌘K)" aria-label="Search"><svg><use href="#i-search"/></svg></button>
 </header>
+<div class="menu" id="menu"></div>
 
-<aside class="icons l" id="iconsL"></aside>
-<aside class="icons r" id="iconsR"></aside>
+<aside class="dt" id="dt"></aside>
 <div id="wins"></div>
 
-<div id="spot" role="dialog" aria-label="Search">
+<div id="dockwrap"><nav id="dock" aria-label="Dock"></nav></div>
+
+<div id="spot" role="dialog" aria-label="Spotlight search">
   <div class="panel">
-    <input id="spotIn" placeholder="Jump to… work, projects, a game, résumé" autocomplete="off">
+    <div class="ttl"><span>Find</span></div>
+    <div class="row"><svg><use href="#i-search"/></svg><input id="spotIn" placeholder="Find anything…" autocomplete="off"></div>
     <div class="res" id="spotRes"></div>
   </div>
 </div>
 
-<div id="toast">
-  <button id="toastX" aria-label="Dismiss">×</button>
-  <b>Legally-required cookie banner</b>
-  <p>This site sets no cookies and loads no trackers. The only thing it remembers, in your browser, is whether you closed this box.</p>
-  <p>No data goes to a third party. Nobody is asking you to accept anything.</p>
-</div>
+<div id="toast"><div class="ti">🍪</div><div><b>No cookies here</b>This site sets no cookies and loads no trackers. It only remembers, in your browser, that you clicked OK.<button class="btn ok" id="toastX">OK</button></div></div>
 
 <script src="app.js"></script>
 </body>
