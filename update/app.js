@@ -113,26 +113,42 @@ const ART = {
     return svg(`${cells}<g font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="#fff"><rect x="12" y="132" width="132" height="16" rx="8" fill="#000" opacity=".45"/><text x="22" y="143">burn scar → regrowth</text></g>`);
   },
   locryp() {
-    const g = gid();
-    const rows = [['FIELD-PRIME', 'Fp', 'pocklington'], ['SUBGROUP-PRIME', 'secp256k1', 'morrison'], ['GENERATOR-ORDER', 'G', 'scalar mult'], ['CURVE-CARDINALITY', 'E', 'exact count'], ['EMBEDDING-DEGREE', 'r', '≥ 100']];
-    const body = rows.map((r, i) => `<g transform="translate(14,${34 + i * 22})"><rect width="38" height="14" rx="2" fill="#3cc45a" stroke="#000"/><text x="19" y="10.500" font-size="8" font-weight="800" text-anchor="middle" fill="#04200a" font-family="ui-monospace,Menlo,monospace">PASS</text><text x="46" y="10.500" font-size="9" font-weight="700" fill="#e8f6ff" font-family="ui-monospace,Menlo,monospace">${r[0]}</text><text x="196" y="10.500" font-size="8" fill="#7fe3ff" font-family="ui-monospace,Menlo,monospace">${r[1]}</text><text x="250" y="10.500" font-size="8" fill="#9aa7c4" font-family="ui-monospace,Menlo,monospace">${r[2]}</text></g>`).join('');
-    return svg(`<defs>${grad(g, '#0b1226', '#141d3d')}</defs><rect width="320" height="160" fill="url(#${g})"/><rect x="0" y="0" width="320" height="20" fill="#000" opacity=".45"/><g fill="#ff5f57"><circle cx="12" cy="10" r="3"/></g><g fill="#febc2e"><circle cx="23" cy="10" r="3"/></g><g fill="#28c840"><circle cx="34" cy="10" r="3"/></g>
-      <text x="160" y="14" font-size="8" text-anchor="middle" fill="#9aa7c4" font-family="ui-monospace,Menlo,monospace">locryp check examples/secp256k1.toml</text>${body}
-      <text x="306" y="150" font-size="22" text-anchor="end" fill="#fff" opacity=".1" font-family="Georgia,serif" font-style="italic">∀ p ∈ ℙ</text>`);
+    const sx = x => 16 + (x + 1.35) / 3.4 * 160, sy = y => 86 - y * 21.5;
+    const f = x => x * x * x - x + 1, up = [], lo = [];
+    for (let x = -1.3247; x <= 2.04; x += .03) { const y = Math.sqrt(Math.max(0, f(x))); up.push(`${sx(x).toFixed(1)},${sy(y).toFixed(1)}`); lo.unshift(`${sx(x).toFixed(1)},${sy(-y).toFixed(1)}`); }
+    const curve = 'M' + up.join('L') + 'L' + lo.join('L');
+    const dot = (x, y, c, l, dx, dy) => `<circle cx="${sx(x).toFixed(1)}" cy="${sy(y).toFixed(1)}" r="3.2" fill="${c}" stroke="#111" stroke-width="1"/><text x="${(sx(x) + dx).toFixed(1)}" y="${(sy(y) + dy).toFixed(1)}" font-size="9.500" font-style="italic" font-family="Georgia,serif" fill="#111">${l}</text>`;
+    const claim = (y, t, sub) => `<g transform="translate(188,${y})"><rect width="126" height="26" rx="4" fill="#fff" stroke="#111" stroke-width="1.100"/><circle cx="13" cy="13" r="7" fill="#1f9d55"/><path d="M9.500 13.200l2.600 2.600 4.600-5.200" fill="none" stroke="#fff" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"/><text x="26" y="11.500" font-size="7.600" font-weight="700" fill="#111" font-family="ui-monospace,Menlo,monospace">${t}</text><text x="26" y="21" font-size="6.800" fill="#666" font-family="Inter,sans-serif">${sub}</text></g>`;
+    const grid = [...Array(21)].map((_, i) => `<line x1="${i * 16}" y1="0" x2="${i * 16}" y2="160" stroke="#e7e3d6" stroke-width=".6"/>`).join('') + [...Array(11)].map((_, i) => `<line x1="0" y1="${i * 16}" x2="320" y2="${i * 16}" stroke="#e7e3d6" stroke-width=".6"/>`).join('');
+    return svg(`<defs><clipPath id="lc"><rect x="12" y="24" width="170" height="118"/></clipPath></defs><rect width="320" height="160" fill="#fbf9f1"/>${grid}
+      <g clip-path="url(#lc)"><line x1="12" y1="${sy(0)}" x2="182" y2="${sy(0)}" stroke="#9a968a" stroke-width=".9"/><line x1="${sx(0)}" y1="24" x2="${sx(0)}" y2="142" stroke="#9a968a" stroke-width=".9"/>
+        <path d="${curve}" fill="none" stroke="#1d4aff" stroke-width="2.300" stroke-linejoin="round"/>
+        <line x1="12" y1="${sy(1)}" x2="182" y2="${sy(1)}" stroke="#111" stroke-width="1.100"/>
+        <line x1="${sx(0)}" y1="${sy(1)}" x2="${sx(0)}" y2="${sy(-1)}" stroke="#111" stroke-width="1" stroke-dasharray="3 3"/></g>
+      ${dot(-1, 1, '#fff', 'P', -11, -5)}${dot(1, 1, '#fff', 'Q', 6, -5)}${dot(0, 1, '#ffd12a', 'R', 5, -6)}${dot(0, -1, '#1f9d55', 'P + Q', 6, 12)}
+      <text x="16" y="17" font-size="10" font-style="italic" font-family="Georgia,serif" fill="#111">y² = x³ − x + 1</text>
+      <text x="16" y="154" font-size="6.800" fill="#777" font-family="Inter,sans-serif">group law on an elliptic curve</text>
+      ${claim(18, 'p is prime', 'Pocklington certificate')}${claim(50, '#E(F_p) = N', 'exact point count')}${claim(82, 'embedding deg. ≥ 100', 'exhaustive search')}
+      <g transform="translate(188,118)"><rect width="126" height="26" rx="13" fill="#1d4aff"/><path d="M16 6.500l7 2.700v5c0 4.400-3 7-7 8.500-4-1.500-7-4.100-7-8.500v-5z" fill="#fff"/><path d="M12.600 14.300l2.400 2.400 4-4.600" fill="none" stroke="#1d4aff" stroke-width="1.700" stroke-linecap="round" stroke-linejoin="round" transform="translate(-1,-.5)"/><text x="30" y="16.500" font-size="7.600" font-weight="700" fill="#fff" font-family="Inter,sans-serif">independently verified</text></g>`);
   },
   argmin() {
-    const g = gid(), f = gid(), r = rng(41); let sp = '';
-    for (let i = 0; i < 90; i++) {
-      const t = r(), x = 40 + t * 240, wall = r() > .45, y = wall ? 20 + r() * 80 : 100 + r() * 36, c = ['#ff7ac8', '#7fe3ff', '#ffd479', '#a78bff', '#7fffb0'][i % 5];
-      sp += `<ellipse cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="${(5 + r() * 9).toFixed(1)}" ry="${(3 + r() * 6).toFixed(1)}" fill="${c}" opacity="${(.25 + r() * .5).toFixed(2)}" transform="rotate(${(r() * 180).toFixed(0)} ${x.toFixed(1)} ${y.toFixed(1)})"/>`;
-    }
-    const cam = (x, y, a) => `<g transform="translate(${x},${y}) rotate(${a})"><path d="M0 0L16-9V9z" fill="#fff" opacity=".18" stroke="#fff" stroke-width=".8"/><circle r="3" fill="#ffd12a" stroke="#000"/></g>`;
-    return svg(`<defs>${grad(g, '#0a0f24', '#2a1550')}<filter id="${f}"><feGaussianBlur stdDeviation="2.200"/></filter></defs><rect width="320" height="160" fill="url(#${g})"/>
-      <path d="M30 140L110 60H210L290 140z" fill="#fff" opacity=".05"/><path d="M110 60H210V20H110z" fill="#fff" opacity=".04"/>
-      <g filter="url(#${f})">${sp}</g>
-      <path d="M44 140C90 120 120 128 160 112S250 100 282 124" fill="none" stroke="#ffd12a" stroke-width="2" stroke-dasharray="4 5" stroke-linecap="round"/>
-      ${cam(60, 136, -25)}${cam(136, 120, -10)}${cam(206, 106, -20)}${cam(274, 120, 25)}
-      <g font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="#fff"><rect x="12" y="12" width="82" height="16" rx="8" fill="#000" opacity=".5"/><text x="22" y="23">3D Gaussian splat</text></g>`);
+    const g = gid(), r = rng(7), cols = ['#ff7ac8', '#7fe3ff', '#ffd479', '#a78bff', '#7fffb0'];
+    const X = i => 5 + i * 84, panel = (i, label, sub, inner) => `<g transform="translate(${X(i)},24)"><rect width="58" height="88" rx="7" fill="#fff" fill-opacity=".06" stroke="#fff" stroke-opacity=".28"/>${inner}<text x="29" y="106" font-size="8" font-weight="700" text-anchor="middle" fill="#fff" font-family="Inter,sans-serif">${label}</text><text x="29" y="117" font-size="6.200" text-anchor="middle" fill="#9fb0d8" font-family="Inter,sans-serif">${sub}</text></g>`;
+    const arrow = i => `<g transform="translate(${X(i) + 60},68)" stroke="#7fe3ff" stroke-width="1.500" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h17"/><path d="M13-3.500L18 0l-5 3.500"/></g>`;
+    const frame = (x, y, k) => `<g transform="translate(${x},${y})"><rect width="38" height="24" rx="2.500" fill="url(#${g}f)" stroke="#fff" stroke-opacity=".7"/><path d="M0 17L10 11l8 4 9-6 11 8" fill="none" stroke="#fff" stroke-opacity="${.35 + k * .2}" stroke-width="1.200"/></g>`;
+    let pts = '', mini = '', mini2 = '';
+    for (let i = 0; i < 44; i++) pts += `<circle cx="${(10 + r() * 38).toFixed(1)}" cy="${(14 + r() * 50).toFixed(1)}" r="${(.7 + r() * .7).toFixed(1)}" fill="#fff" opacity="${(.4 + r() * .6).toFixed(2)}"/>`;
+    for (let i = 0; i < 34; i++) { const x = 9 + r() * 40, y = 14 + r() * 50, c = cols[i % 5]; mini += `<ellipse cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="${(2.4 + r() * 4).toFixed(1)}" ry="${(1.6 + r() * 2.8).toFixed(1)}" fill="${c}" opacity="${(.5 + r() * .4).toFixed(2)}" transform="rotate(${(r() * 160).toFixed(0)} ${x.toFixed(1)} ${y.toFixed(1)})"/>`; }
+    for (let i = 0; i < 26; i++) { const x = 20 + r() * 20, y = 24 + r() * 40, c = cols[i % 5]; mini2 += `<ellipse cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="${(1.6 + r() * 2.8).toFixed(1)}" ry="${(1 + r() * 2).toFixed(1)}" fill="${c}" opacity="${(.55 + r() * .4).toFixed(2)}" transform="rotate(${(r() * 160).toFixed(0)} ${x.toFixed(1)} ${y.toFixed(1)})"/>`; }
+    const cam = (x, y, a) => `<g transform="translate(${x},${y}) rotate(${a})"><path d="M0 0L8-4.500V4.500z" fill="#ffd12a" fill-opacity=".25" stroke="#ffd12a" stroke-width="1"/><circle r="1.800" fill="#ffd12a"/></g>`;
+    return svg(`<defs>${grad(g, '#0a1030', '#1b1f55')}<linearGradient id="${g}f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a6fd8"/><stop offset="1" stop-color="#1b2f6e"/></linearGradient></defs><rect width="320" height="160" fill="url(#${g})"/>
+      ${panel(0, 'Phone video', 'sharpest frames', frame(10, 14, 0) + frame(10, 40, 1) + frame(10, 66, 2))}
+      ${panel(1, 'Camera poses', 'COLMAP SfM', pts + '<path d="M8 62C20 52 30 56 40 44S50 34 52 28" fill="none" stroke="#ffd12a" stroke-width="1.100" stroke-dasharray="3 3"/>' + cam(12, 60, -35) + cam(30, 53, -25) + cam(44, 40, -50))}
+      ${panel(2, 'Gaussian splat', 'GPU training', mini)}
+      ${panel(3, 'Phone viewer', 'orbit and replay', '<rect x="13" y="8" width="32" height="64" rx="5" fill="#0a1030" stroke="#fff" stroke-opacity=".8" stroke-width="1.400"/>' + mini2 + '<path d="M18 74c6 5 16 5 22 0" fill="none" stroke="#7fe3ff" stroke-width="1.200"/><path d="M38 70l3 3-4 1" fill="none" stroke="#7fe3ff" stroke-width="1.200"/>')}
+      ${arrow(0)}${arrow(1)}${arrow(2)}
+      <text x="160" y="14" font-size="8.500" font-weight="700" text-anchor="middle" fill="#fff" opacity=".9" font-family="Inter,sans-serif" letter-spacing=".8">ONE WALK-THROUGH  →  A NAVIGABLE 3D SCENE</text>
+      <text x="160" y="154" font-size="6.800" text-anchor="middle" fill="#9fb0d8" font-family="Inter,sans-serif">no GPS · no LiDAR · no prior map</text>`);
   },
   void() {
     const g = gid(), f = gid(), r = rng(8);
