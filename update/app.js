@@ -35,6 +35,10 @@ const JOBS = [
     tags: ['Python', 'R', 'Multiprocessing', 'CNNs', 'Statistics'] }
 ];
 const PROJECTS = [
+  { name: 'locryp: proof-carrying verification for cryptographic parameters', kind: 'cryptography', art: 'locryp', url: 'https://github.com/Shreenandbhattad/locryp',
+    text: 'Decides claims like “this modulus is prime” or “this curve has exactly N points” by exact computation, and writes an evidence report where every positive answer carries a certificate anyone can re-verify. Pure Python standard library.', tags: ['Python', 'Number theory', 'Elliptic curves', 'Certificates', 'Zero dependencies'] },
+  { name: 'argmin: GPS-free 3D mapping from a phone video', kind: '3D vision', art: 'argmin', url: 'https://github.com/Shreenandbhattad/argmin',
+    text: 'Film a space with any smartphone and get a navigable 3D Gaussian splat plus the camera trajectory, with no GPS, LiDAR or prior map. COLMAP poses, GPU splat training, and a mobile viewer. Runs on Colab or Apple Silicon.', tags: ['COLMAP', 'Gaussian splatting', 'gsplat', 'three.js', 'Python'] },
   { name: 'Visual recognition & novel view synthesis', kind: 'deep learning', art: 'nerf', url: 'https://github.com/Shreenandbhattad/Computer-Vision-CS-4932',
     text: 'Image classification, zero-shot segmentation, and a small NeRF that learns to see a scene from new angles.', tags: ['PyTorch', 'ConvNeXt', 'SAM', 'CLIP', 'NeRF', 'Python'] },
   { name: 'Bank statement intelligence', kind: 'applied NLP', art: 'bank', url: 'https://github.com/Shreenandbhattad/Deepvue',
@@ -107,6 +111,28 @@ const ART = {
       cells += `<rect x="${(x * w).toFixed(1)}" y="${(y * h).toFixed(1)}" width="${(w + .4).toFixed(1)}" height="${(h + .4).toFixed(1)}" fill="rgb(${c.map(v => Math.round(v + (r() - .5) * 18)).join(',')})"/>`;
     }
     return svg(`${cells}<g font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="#fff"><rect x="12" y="132" width="132" height="16" rx="8" fill="#000" opacity=".45"/><text x="22" y="143">burn scar → regrowth</text></g>`);
+  },
+  locryp() {
+    const g = gid();
+    const rows = [['FIELD-PRIME', 'Fp', 'pocklington'], ['SUBGROUP-PRIME', 'secp256k1', 'morrison'], ['GENERATOR-ORDER', 'G', 'scalar mult'], ['CURVE-CARDINALITY', 'E', 'exact count'], ['EMBEDDING-DEGREE', 'r', '≥ 100']];
+    const body = rows.map((r, i) => `<g transform="translate(14,${34 + i * 22})"><rect width="38" height="14" rx="2" fill="#3cc45a" stroke="#000"/><text x="19" y="10.500" font-size="8" font-weight="800" text-anchor="middle" fill="#04200a" font-family="ui-monospace,Menlo,monospace">PASS</text><text x="46" y="10.500" font-size="9" font-weight="700" fill="#e8f6ff" font-family="ui-monospace,Menlo,monospace">${r[0]}</text><text x="196" y="10.500" font-size="8" fill="#7fe3ff" font-family="ui-monospace,Menlo,monospace">${r[1]}</text><text x="250" y="10.500" font-size="8" fill="#9aa7c4" font-family="ui-monospace,Menlo,monospace">${r[2]}</text></g>`).join('');
+    return svg(`<defs>${grad(g, '#0b1226', '#141d3d')}</defs><rect width="320" height="160" fill="url(#${g})"/><rect x="0" y="0" width="320" height="20" fill="#000" opacity=".45"/><g fill="#ff5f57"><circle cx="12" cy="10" r="3"/></g><g fill="#febc2e"><circle cx="23" cy="10" r="3"/></g><g fill="#28c840"><circle cx="34" cy="10" r="3"/></g>
+      <text x="160" y="14" font-size="8" text-anchor="middle" fill="#9aa7c4" font-family="ui-monospace,Menlo,monospace">locryp check examples/secp256k1.toml</text>${body}
+      <text x="306" y="150" font-size="22" text-anchor="end" fill="#fff" opacity=".1" font-family="Georgia,serif" font-style="italic">∀ p ∈ ℙ</text>`);
+  },
+  argmin() {
+    const g = gid(), f = gid(), r = rng(41); let sp = '';
+    for (let i = 0; i < 90; i++) {
+      const t = r(), x = 40 + t * 240, wall = r() > .45, y = wall ? 20 + r() * 80 : 100 + r() * 36, c = ['#ff7ac8', '#7fe3ff', '#ffd479', '#a78bff', '#7fffb0'][i % 5];
+      sp += `<ellipse cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="${(5 + r() * 9).toFixed(1)}" ry="${(3 + r() * 6).toFixed(1)}" fill="${c}" opacity="${(.25 + r() * .5).toFixed(2)}" transform="rotate(${(r() * 180).toFixed(0)} ${x.toFixed(1)} ${y.toFixed(1)})"/>`;
+    }
+    const cam = (x, y, a) => `<g transform="translate(${x},${y}) rotate(${a})"><path d="M0 0L16-9V9z" fill="#fff" opacity=".18" stroke="#fff" stroke-width=".8"/><circle r="3" fill="#ffd12a" stroke="#000"/></g>`;
+    return svg(`<defs>${grad(g, '#0a0f24', '#2a1550')}<filter id="${f}"><feGaussianBlur stdDeviation="2.200"/></filter></defs><rect width="320" height="160" fill="url(#${g})"/>
+      <path d="M30 140L110 60H210L290 140z" fill="#fff" opacity=".05"/><path d="M110 60H210V20H110z" fill="#fff" opacity=".04"/>
+      <g filter="url(#${f})">${sp}</g>
+      <path d="M44 140C90 120 120 128 160 112S250 100 282 124" fill="none" stroke="#ffd12a" stroke-width="2" stroke-dasharray="4 5" stroke-linecap="round"/>
+      ${cam(60, 136, -25)}${cam(136, 120, -10)}${cam(206, 106, -20)}${cam(274, 120, 25)}
+      <g font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="#fff"><rect x="12" y="12" width="82" height="16" rx="8" fill="#000" opacity=".5"/><text x="22" y="23">3D Gaussian splat</text></g>`);
   },
   void() {
     const g = gid(), f = gid(), r = rng(8);
