@@ -132,7 +132,7 @@ const FORTUNES = [
   'Premature optimization is the root of all evil. Mature optimization is the root of all weekends.', 'All models are wrong. Some are on fire.', 'The data is clean. (The data is not clean.)'];
 const NEOFETCH = [
   '   .------------.   shreenand@ashoka', '   | .--------. |   -----------------', '   | | ^    ^ | |   OS: Shreenand OS 9.2', '   | |  \\__/  | |   Host: Ashoka University',
-  "   | '--------' |   Kernel: machine learning", '   |  [=====]   |   Uptime: since 2023', "   '------------'   Shell: curiosity", '                    Now: ARTPARK x Eka.care'];
+  "   | '--------' |   Kernel: machine learning", '   |  [=====]   |   Uptime: since 2023', "   '------------'   Shell: zsh", '                    Now: ARTPARK x Eka.care'];
 const OPENABLE = ['home', 'about', 'work', 'projects', 'play', 'contact', 'resume', 'trash', 'sys', 'terminal'];
 const CMDS = {
   help: () => ['commands:', '  about  work  projects  play  contact  resume   open a window', '  open <name>        same thing, with more words', '  ls                 look around', '  whoami  neofetch   who is this?',
@@ -140,7 +140,7 @@ const CMDS = {
   ls: () => ['about/  work/  projects/  play/  contact/  resume.pdf  secret.txt'],
   whoami: () => ['shreenand. cs + economics @ ashoka. ml, data, and the systems that hold them together.'],
   neofetch: () => NEOFETCH, fortune: () => [FORTUNES[Math.random() * FORTUNES.length | 0]], date: () => [new Date().toString()],
-  echo: a => [a.join(' ')], pwd: () => ['/Users/shreenand/portfolio/update'], cat: a => a[0] === 'secret.txt' ? ['the real treasure was the friends we made along the way.', '(also: try ↑↑↓↓←→←→BA)'] : a[0] ? ['cat: ' + a[0] + ': is not that kind of file'] : ['cat: what?'],
+  echo: a => [a.join(' ')], pwd: () => ['/Users/shreenand/portfolio/update'], cat: a => a[0] === 'secret.txt' ? ['nothing secret in here. try ↑↑↓↓←→←→BA'] : a[0] ? ['cat: ' + a[0] + ': is not that kind of file'] : ['cat: what?'],
   sudo: () => ['nice try. you are not in the sudoers file. this incident will be reported (to nobody).'], hello: () => ['hi there 👋'], hi: () => ['hi there 👋'], vim: () => ['you can check in any time you like, but you can never leave.'], exit: () => ['there is no escape. (click the close box.)'],
   toaster: () => { setTimeout(startSaver, 300); return ['🍞 engaging flying toasters… (move the mouse to stop)']; }, party: () => { party(); return ['🎉']; },
   crash: () => { setTimeout(crash, 400); return ['initiating the bomb…']; },
@@ -182,8 +182,6 @@ PAGES.terminal = {
 PAGES.sys = {
   title: 'About This Macintosh', icon: 'user', w: 500, h: 520, x: 300, y: 70,
   html: () => `<div class="pad sys"><div class="top">${happyMac(7)}<div><h1 class="big" style="font-size:1.7rem">Shreenand OS</h1><div style="margin-top:3px">Version 9.2 · Platinum</div><div style="color:var(--mute);font-size:.82rem;margin-top:4px">© Shreenand Bhattad. Built by hand, with some help.</div></div></div>
-    <dl class="kv"><dt>Built-in Memory</dt><dd>64 MB of curiosity</dd><dt>Virtual Memory</dt><dd>Off (coffee on)</dd><dt>Largest Unused Block</dt><dd>1.2 GB of free time ☕</dd></dl>
-    <div class="mem">${[['ARTPARK.app', 62, '#2ec8e6'], ['Eka.care.app', 54, '#ff5fa2'], ['Classes.app', 38, '#ffd12a'], ['Side projects', 70, '#3cc45a'], ['Sleep', 12, '#9b6bff']].map(([n, v, c]) => `<div class="mrow"><span>${n}</span><div class="mbar"><i style="width:${v}%;background:${c}"></i></div></div>`).join('')}</div>
     <p class="hintline">psst: press <kbd>&#96;</kbd> (backtick) for a terminal. try the Konami code. leave the mouse alone for a minute.</p></div>`
 };
 
